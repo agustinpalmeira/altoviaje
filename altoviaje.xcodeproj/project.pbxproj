@@ -38,7 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E6C8E9EE4F29D60F20DBF2A /* Pods-altoviajeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviajeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-altoviajeUITests/Pods-altoviajeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A052A4399E10EA0919C00D6 /* Pods-altoviaje.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviaje.release.xcconfig"; path = "Target Support Files/Pods-altoviaje/Pods-altoviaje.release.xcconfig"; sourceTree = "<group>"; };
+		683D5A445DD7B92259BC933E /* Pods-altoviaje.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviaje.release.xcconfig"; path = "Pods/Target Support Files/Pods-altoviaje/Pods-altoviaje.release.xcconfig"; sourceTree = "<group>"; };
 		7286EEE722A0DBAB00634B9C /* altoviaje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = altoviaje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7286EEEA22A0DBAB00634B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7286EEEC22A0DBAB00634B9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,11 +57,15 @@
 		7286EF0F22A0DBAC00634B9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BB23B4B339873AD6F33E722 /* Pods-altoviajeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviajeTests.release.xcconfig"; path = "Target Support Files/Pods-altoviajeTests/Pods-altoviajeTests.release.xcconfig"; sourceTree = "<group>"; };
 		85E80E513199279E50A750CC /* Pods-altoviaje.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviaje.debug.xcconfig"; path = "Target Support Files/Pods-altoviaje/Pods-altoviaje.debug.xcconfig"; sourceTree = "<group>"; };
+		878206C3ED1F7C11661AD90E /* Pods-altoviaje.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviaje.debug.xcconfig"; path = "Pods/Target Support Files/Pods-altoviaje/Pods-altoviaje.debug.xcconfig"; sourceTree = "<group>"; };
 		89789D8B292F89BC5CDF91E4 /* Pods-altoviajeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviajeTests.debug.xcconfig"; path = "Target Support Files/Pods-altoviajeTests/Pods-altoviajeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BFAFDDBBC559ED6E75DB850 /* Pods_altoviajeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_altoviajeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1F84874F79DAFB0CD947BD /* Pods_altoviajeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_altoviajeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92AE396AEF070BD604D540F8 /* Pods-altoviajeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviajeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-altoviajeUITests/Pods-altoviajeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A90C3049A91C6D670E385B16 /* Pods-altoviajeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviajeUITests.release.xcconfig"; path = "Target Support Files/Pods-altoviajeUITests/Pods-altoviajeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C96ECC52D242F1CFB266B193 /* Pods-altoviajeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviajeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-altoviajeTests/Pods-altoviajeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCC805BC9EA736E222045CED /* Pods-altoviajeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviajeUITests.debug.xcconfig"; path = "Target Support Files/Pods-altoviajeUITests/Pods-altoviajeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F72B739EA2A439B7D627B81A /* Pods-altoviajeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-altoviajeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-altoviajeTests/Pods-altoviajeTests.release.xcconfig"; sourceTree = "<group>"; };
 		F7D004AB9B258FD57B25DD26 /* Pods_altoviaje.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_altoviaje.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +106,12 @@
 				7BB23B4B339873AD6F33E722 /* Pods-altoviajeTests.release.xcconfig */,
 				CCC805BC9EA736E222045CED /* Pods-altoviajeUITests.debug.xcconfig */,
 				A90C3049A91C6D670E385B16 /* Pods-altoviajeUITests.release.xcconfig */,
+				878206C3ED1F7C11661AD90E /* Pods-altoviaje.debug.xcconfig */,
+				683D5A445DD7B92259BC933E /* Pods-altoviaje.release.xcconfig */,
+				C96ECC52D242F1CFB266B193 /* Pods-altoviajeTests.debug.xcconfig */,
+				F72B739EA2A439B7D627B81A /* Pods-altoviajeTests.release.xcconfig */,
+				0E6C8E9EE4F29D60F20DBF2A /* Pods-altoviajeUITests.debug.xcconfig */,
+				92AE396AEF070BD604D540F8 /* Pods-altoviajeUITests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -304,15 +316,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-altoviajeUITests-checkManifestLockResult.txt",
 			);
@@ -326,15 +334,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-altoviajeTests-checkManifestLockResult.txt",
 			);
@@ -348,15 +352,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-altoviaje-checkManifestLockResult.txt",
 			);
@@ -547,7 +547,7 @@
 		};
 		7286EF1322A0DBAC00634B9C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85E80E513199279E50A750CC /* Pods-altoviaje.debug.xcconfig */;
+			baseConfigurationReference = 878206C3ED1F7C11661AD90E /* Pods-altoviaje.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -567,7 +567,7 @@
 		};
 		7286EF1422A0DBAC00634B9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A052A4399E10EA0919C00D6 /* Pods-altoviaje.release.xcconfig */;
+			baseConfigurationReference = 683D5A445DD7B92259BC933E /* Pods-altoviaje.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -587,7 +587,7 @@
 		};
 		7286EF1622A0DBAC00634B9C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89789D8B292F89BC5CDF91E4 /* Pods-altoviajeTests.debug.xcconfig */;
+			baseConfigurationReference = C96ECC52D242F1CFB266B193 /* Pods-altoviajeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -609,7 +609,7 @@
 		};
 		7286EF1722A0DBAC00634B9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BB23B4B339873AD6F33E722 /* Pods-altoviajeTests.release.xcconfig */;
+			baseConfigurationReference = F72B739EA2A439B7D627B81A /* Pods-altoviajeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -631,7 +631,7 @@
 		};
 		7286EF1922A0DBAC00634B9C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCC805BC9EA736E222045CED /* Pods-altoviajeUITests.debug.xcconfig */;
+			baseConfigurationReference = 0E6C8E9EE4F29D60F20DBF2A /* Pods-altoviajeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -652,7 +652,7 @@
 		};
 		7286EF1A22A0DBAC00634B9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A90C3049A91C6D670E385B16 /* Pods-altoviajeUITests.release.xcconfig */;
+			baseConfigurationReference = 92AE396AEF070BD604D540F8 /* Pods-altoviajeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
