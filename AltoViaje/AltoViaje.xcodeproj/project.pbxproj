@@ -13,6 +13,10 @@
 		CE9FEA9922A472E9007E48D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEA9822A472E9007E48D8 /* Assets.xcassets */; };
 		CE9FEA9C22A472E9007E48D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEA9A22A472E9007E48D8 /* LaunchScreen.storyboard */; };
 		CE9FEAA922A47364007E48D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEAA822A47364007E48D8 /* Main.storyboard */; };
+		CE9FEAAB22A47645007E48D8 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEAAA22A47645007E48D8 /* Dashboard.storyboard */; };
+		CE9FEAAD22A478FD007E48D8 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEAAC22A478FD007E48D8 /* DashboardViewController.swift */; };
+		CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEAAE22A47A12007E48D8 /* DashboardCell.swift */; };
+		CE9FEAB122A47A12007E48D8 /* DashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEAAF22A47A12007E48D8 /* DashboardCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		CE9FEA9B22A472E9007E48D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE9FEA9D22A472E9007E48D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE9FEAA822A47364007E48D8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE9FEAAA22A47645007E48D8 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		CE9FEAAC22A478FD007E48D8 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		CE9FEAAE22A47A12007E48D8 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
+		CE9FEAAF22A47A12007E48D8 /* DashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCell.xib; sourceTree = "<group>"; };
 		D3D215019061A7380F3130E1 /* Pods-AltoViaje.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.release.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +110,10 @@
 		CE9FEAA522A47321007E48D8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				CE9FEAAA22A47645007E48D8 /* Dashboard.storyboard */,
+				CE9FEAAC22A478FD007E48D8 /* DashboardViewController.swift */,
+				CE9FEAAE22A47A12007E48D8 /* DashboardCell.swift */,
+				CE9FEAAF22A47A12007E48D8 /* DashboardCell.xib */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -187,9 +199,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9FEAB122A47A12007E48D8 /* DashboardCell.xib in Resources */,
 				CE9FEAA922A47364007E48D8 /* Main.storyboard in Resources */,
 				CE9FEA9C22A472E9007E48D8 /* LaunchScreen.storyboard in Resources */,
 				CE9FEA9922A472E9007E48D8 /* Assets.xcassets in Resources */,
+				CE9FEAAB22A47645007E48D8 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9FEA9422A472E8007E48D8 /* ViewController.swift in Sources */,
+				CE9FEAAD22A478FD007E48D8 /* DashboardViewController.swift in Sources */,
+				CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */,
 				CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
