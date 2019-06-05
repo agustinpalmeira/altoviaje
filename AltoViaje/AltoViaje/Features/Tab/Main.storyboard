@@ -83,10 +83,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="LBy-ke-hos" kind="relationship" relationship="viewControllers" id="GbO-lO-ArE"/>
                         <segue destination="34k-gp-yCk" kind="relationship" relationship="viewControllers" id="drG-JC-92H"/>
                         <segue destination="Tzf-cf-yIW" kind="relationship" relationship="viewControllers" id="0U6-1f-361"/>
                         <segue destination="FYk-tI-lcD" kind="relationship" relationship="viewControllers" id="9qJ-cH-XiE"/>
-                        <segue destination="LBy-ke-hos" kind="relationship" relationship="viewControllers" id="GbO-lO-ArE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zLH-q9-nGr" userLabel="First Responder" sceneMemberID="firstResponder"/>

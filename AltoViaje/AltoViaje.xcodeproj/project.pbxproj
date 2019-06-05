@@ -17,6 +17,11 @@
 		CE9FEAAD22A478FD007E48D8 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEAAC22A478FD007E48D8 /* DashboardViewController.swift */; };
 		CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEAAE22A47A12007E48D8 /* DashboardCell.swift */; };
 		CE9FEAB122A47A12007E48D8 /* DashboardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEAAF22A47A12007E48D8 /* DashboardCell.xib */; };
+		CE9FEAB722A48968007E48D8 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEAB622A48968007E48D8 /* MenuView.swift */; };
+		CE9FEAB922A4899D007E48D8 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEAB822A4899D007E48D8 /* MenuView.xib */; };
+		CE9FEABC22A48A8F007E48D8 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEABA22A48A8F007E48D8 /* MenuCell.swift */; };
+		CE9FEABD22A48A8F007E48D8 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEABB22A48A8F007E48D8 /* MenuCell.xib */; };
+		CEB0AF1922A87E2E000014AB /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0AF1822A87E2E000014AB /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		CE9FEAAC22A478FD007E48D8 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		CE9FEAAE22A47A12007E48D8 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
 		CE9FEAAF22A47A12007E48D8 /* DashboardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardCell.xib; sourceTree = "<group>"; };
+		CE9FEAB622A48968007E48D8 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		CE9FEAB822A4899D007E48D8 /* MenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
+		CE9FEABA22A48A8F007E48D8 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		CE9FEABB22A48A8F007E48D8 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		CEB0AF1822A87E2E000014AB /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		D3D215019061A7380F3130E1 /* Pods-AltoViaje.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.release.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +120,7 @@
 		CE9FEAA522A47321007E48D8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				CE9FEAB522A48943007E48D8 /* Menu */,
 				CE9FEAAA22A47645007E48D8 /* Dashboard.storyboard */,
 				CE9FEAAC22A478FD007E48D8 /* DashboardViewController.swift */,
 				CE9FEAAE22A47A12007E48D8 /* DashboardCell.swift */,
@@ -130,6 +141,18 @@
 			children = (
 			);
 			path = MisViajes;
+			sourceTree = "<group>";
+		};
+		CE9FEAB522A48943007E48D8 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CE9FEAB622A48968007E48D8 /* MenuView.swift */,
+				CE9FEAB822A4899D007E48D8 /* MenuView.xib */,
+				CE9FEABA22A48A8F007E48D8 /* MenuCell.swift */,
+				CE9FEABB22A48A8F007E48D8 /* MenuCell.xib */,
+				CEB0AF1822A87E2E000014AB /* MenuItem.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		E4BE4A3774EFC604B3EB9898 /* Frameworks */ = {
@@ -200,6 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9FEAB122A47A12007E48D8 /* DashboardCell.xib in Resources */,
+				CE9FEAB922A4899D007E48D8 /* MenuView.xib in Resources */,
+				CE9FEABD22A48A8F007E48D8 /* MenuCell.xib in Resources */,
 				CE9FEAA922A47364007E48D8 /* Main.storyboard in Resources */,
 				CE9FEA9C22A472E9007E48D8 /* LaunchScreen.storyboard in Resources */,
 				CE9FEA9922A472E9007E48D8 /* Assets.xcassets in Resources */,
@@ -235,7 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB0AF1922A87E2E000014AB /* MenuItem.swift in Sources */,
+				CE9FEAB722A48968007E48D8 /* MenuView.swift in Sources */,
 				CE9FEA9422A472E8007E48D8 /* ViewController.swift in Sources */,
+				CE9FEABC22A48A8F007E48D8 /* MenuCell.swift in Sources */,
 				CE9FEAAD22A478FD007E48D8 /* DashboardViewController.swift in Sources */,
 				CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */,
 				CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */,

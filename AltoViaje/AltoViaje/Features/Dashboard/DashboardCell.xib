@@ -18,9 +18,48 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="426" height="191.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbn-HY-QzW">
+                        <rect key="frame" x="5" y="5" width="416" height="181.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bariloche" translatesAutoresizingMaskIntoConstraints="NO" id="ncu-VE-Aiq">
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="181.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrubrí Bariloche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaL-NI-WQN">
+                                <rect key="frame" x="20" y="10" width="181" height="17"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.15686274510000001" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ncu-VE-Aiq" secondAttribute="bottom" id="Ao2-mq-ry2"/>
+                            <constraint firstItem="ncu-VE-Aiq" firstAttribute="top" secondItem="gbn-HY-QzW" secondAttribute="top" id="Jxf-BM-w0A"/>
+                            <constraint firstItem="qaL-NI-WQN" firstAttribute="top" secondItem="gbn-HY-QzW" secondAttribute="top" constant="10" id="Tyb-QH-qaI"/>
+                            <constraint firstItem="ncu-VE-Aiq" firstAttribute="leading" secondItem="gbn-HY-QzW" secondAttribute="leading" id="cgP-pb-Jsi"/>
+                            <constraint firstItem="qaL-NI-WQN" firstAttribute="leading" secondItem="gbn-HY-QzW" secondAttribute="leading" constant="20" id="eVv-sK-kVF"/>
+                            <constraint firstAttribute="trailing" secondItem="ncu-VE-Aiq" secondAttribute="trailing" id="gcr-Co-ofK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="gbn-HY-QzW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ekw-HY-g9L"/>
+                    <constraint firstAttribute="trailing" secondItem="gbn-HY-QzW" secondAttribute="trailing" constant="5" id="VXm-kM-bc7"/>
+                    <constraint firstItem="gbn-HY-QzW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="lIC-iw-nzU"/>
+                    <constraint firstAttribute="bottom" secondItem="gbn-HY-QzW" secondAttribute="bottom" constant="5" id="xT7-xz-OYg"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="containerView" destination="gbn-HY-QzW" id="FTv-xP-9FU"/>
+                <outlet property="placeTitle" destination="qaL-NI-WQN" id="IgI-Nd-8dJ"/>
+            </connections>
             <point key="canvasLocation" x="222.40000000000001" y="220.3898050974513"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Bariloche" width="200" height="100"/>
+    </resources>
 </document>
