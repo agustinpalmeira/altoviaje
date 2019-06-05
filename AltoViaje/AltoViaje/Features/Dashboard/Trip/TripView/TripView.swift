@@ -21,7 +21,6 @@ class TripView: UIView {
 	@IBOutlet weak var beachSwitch: UISwitch!
 	@IBOutlet weak var mountainSwitch: UISwitch!
 
-
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		commonInit()
@@ -33,7 +32,8 @@ class TripView: UIView {
 	}
 
 	private func commonInit() {
-		Bundle.main.loadNibNamed("TripView", owner: self, options: nil)
+		let nib = UINib(nibName: "TripView", bundle: nil)
+		nib.instantiate(withOwner: self, options: nil)
 		addSubview(contentView)
 		contentView.frame = self.bounds
 		contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

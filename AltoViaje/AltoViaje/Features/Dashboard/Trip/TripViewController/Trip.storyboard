@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FG9-fT-vCd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TripViewController-->
+        <scene sceneID="8gW-aD-O55">
+            <objects>
+                <viewController id="FG9-fT-vCd" userLabel="TripViewController" customClass="TripViewController" customModule="AltoViaje" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="15L-or-hwK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="TripView" translatesAutoresizingMaskIntoConstraints="NO" id="2UI-8Z-izr" userLabel="TripView" customClass="TripView" customModule="AltoViaje" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="11I-vg-rJK"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2UI-8Z-izr" firstAttribute="width" secondItem="15L-or-hwK" secondAttribute="width" id="4Cc-8b-1P0"/>
+                            <constraint firstItem="R35-AS-Px0" firstAttribute="top" secondItem="2UI-8Z-izr" secondAttribute="top" constant="20" id="EZc-7Y-dU1"/>
+                            <constraint firstItem="2UI-8Z-izr" firstAttribute="leading" secondItem="R35-AS-Px0" secondAttribute="leading" id="mVM-Jb-8Vt"/>
+                            <constraint firstItem="2UI-8Z-izr" firstAttribute="height" secondItem="15L-or-hwK" secondAttribute="height" id="tNg-Fk-A3f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R35-AS-Px0"/>
+                    </view>
+                    <connections>
+                        <outlet property="tripView" destination="2UI-8Z-izr" id="s3h-xC-S3R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e9V-kk-kRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

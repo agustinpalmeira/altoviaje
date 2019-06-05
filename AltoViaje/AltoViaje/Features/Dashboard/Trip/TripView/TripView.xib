@@ -12,22 +12,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripView" customModule="AltoViaje" customModuleProvider="target">
             <connections>
-                <outlet property="beachSwitcg" destination="Dkm-O0-yj1" id="J59-OC-i7J"/>
                 <outlet property="beachSwitch" destination="Dkm-O0-yj1" id="Zhe-Sz-ORh"/>
                 <outlet property="campingSwitch" destination="G7R-eE-I5f" id="sBb-Rg-4ug"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="veu-DD-2g2"/>
-                <outlet property="descrip" destination="6ax-KJ-dBO" id="YvJ-qg-JCH"/>
                 <outlet property="descriptionLabel" destination="6ax-KJ-dBO" id="6rN-fD-DFB"/>
                 <outlet property="destinyImageView" destination="OGK-zC-DZJ" id="Xgr-3V-MoF"/>
                 <outlet property="fromDateLabel" destination="UxQ-hu-0il" id="cbY-aP-WKc"/>
                 <outlet property="mountainSwitch" destination="UJb-8H-ALd" id="Owq-OE-ez5"/>
                 <outlet property="toDateLabel" destination="7M0-uI-iGt" id="Y3e-T4-kkj"/>
                 <outlet property="trekkingSwitch" destination="85d-FU-4Ha" id="4gx-ea-Y43"/>
-                <outlet property="tripView" destination="iN0-l3-epB" id="aGg-iS-6nh"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View" customClass="TripView" customModule="AltoViaje" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Content View">
             <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		721D41A422A8613C00B756AF /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41A322A8613C00B756AF /* TripViewController.swift */; };
 		721D41A822A8686200B756AF /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41A722A8686200B756AF /* TripView.swift */; };
-		725FA3D922A481390062F17A /* TripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 725FA3D822A481390062F17A /* TripViewController.xib */; };
+		721D41AA22A8841800B756AF /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721D41A922A8841800B756AF /* Trip.storyboard */; };
 		725FA3DD22A484F90062F17A /* TripView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 725FA3DC22A484F90062F17A /* TripView.xib */; };
 		AEAA0D81CE26F0C8B2192340 /* Pods_AltoViaje.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0E24A0EC312937220A535 /* Pods_AltoViaje.framework */; };
 		CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEA9122A472E8007E48D8 /* AppDelegate.swift */; };
@@ -33,7 +33,7 @@
 		4856AA243C91CE1FE2A8D757 /* Pods-AltoViaje.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.debug.xcconfig"; sourceTree = "<group>"; };
 		721D41A322A8613C00B756AF /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		721D41A722A8686200B756AF /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
-		725FA3D822A481390062F17A /* TripViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TripViewController.xib; path = AltoViaje/Features/Dashboard/Trip/TripViewController/TripViewController.xib; sourceTree = SOURCE_ROOT; };
+		721D41A922A8841800B756AF /* Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
 		725FA3DC22A484F90062F17A /* TripView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TripView.xib; path = AltoViaje/Features/Dashboard/Trip/TripView/TripView.xib; sourceTree = SOURCE_ROOT; };
 		CE9FEA8E22A472E8007E48D8 /* AltoViaje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AltoViaje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9FEA9122A472E8007E48D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				721D41A322A8613C00B756AF /* TripViewController.swift */,
-				725FA3D822A481390062F17A /* TripViewController.xib */,
+				721D41A922A8841800B756AF /* Trip.storyboard */,
 			);
 			path = TripViewController;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 				CE9FEABD22A48A8F007E48D8 /* MenuCell.xib in Resources */,
 				CE9FEAA922A47364007E48D8 /* Main.storyboard in Resources */,
 				725FA3DD22A484F90062F17A /* TripView.xib in Resources */,
-				725FA3D922A481390062F17A /* TripViewController.xib in Resources */,
+				721D41AA22A8841800B756AF /* Trip.storyboard in Resources */,
 				CE9FEA9C22A472E9007E48D8 /* LaunchScreen.storyboard in Resources */,
 				CE9FEA9922A472E9007E48D8 /* Assets.xcassets in Resources */,
 				CE9FEAAB22A47645007E48D8 /* Dashboard.storyboard in Resources */,

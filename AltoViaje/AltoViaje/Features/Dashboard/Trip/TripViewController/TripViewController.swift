@@ -12,9 +12,13 @@ import UIKit
 class TripViewController: UIViewController {
 	@IBOutlet weak var tripView: TripView!
 
+	required init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+
+	}
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
 	}
 
 	override func didReceiveMemoryWarning() {
