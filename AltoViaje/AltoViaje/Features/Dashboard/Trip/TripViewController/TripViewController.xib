@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripViewController" customModule="AltoViaje" customModuleProvider="target">
+            <connections>
+                <outlet property="tripView" destination="GeR-We-QJq" id="Nse-Sh-wlO"/>
+                <outlet property="view" destination="vdS-BE-1V7" id="MWv-Ym-hjZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="vdS-BE-1V7">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" restorationIdentifier="TripView" translatesAutoresizingMaskIntoConstraints="NO" id="GeR-We-QJq" userLabel="TripView" customClass="TripView" customModule="AltoViaje" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="tV3-1M-vDM"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="32H-Nv-AB1" firstAttribute="top" secondItem="GeR-We-QJq" secondAttribute="top" constant="20" id="4gl-zK-Cqc"/>
+                <constraint firstItem="GeR-We-QJq" firstAttribute="height" secondItem="vdS-BE-1V7" secondAttribute="height" id="OkV-JW-oxk"/>
+                <constraint firstItem="GeR-We-QJq" firstAttribute="width" secondItem="vdS-BE-1V7" secondAttribute="width" id="WOo-FQ-DOz"/>
+                <constraint firstItem="GeR-We-QJq" firstAttribute="leading" secondItem="32H-Nv-AB1" secondAttribute="leading" id="iRY-2c-99d"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="32H-Nv-AB1"/>
+        </view>
+    </objects>
+</document>

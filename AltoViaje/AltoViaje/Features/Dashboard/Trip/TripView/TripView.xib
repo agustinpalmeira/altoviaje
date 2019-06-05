@@ -28,8 +28,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OGK-zC-DZJ" userLabel="destinyImageView">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bariloche" translatesAutoresizingMaskIntoConstraints="NO" id="OGK-zC-DZJ" userLabel="destinyImageView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="158.5" id="FHg-in-fOM"/>
+                    </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ax-KJ-dBO" userLabel="descriptionLabel">
                     <rect key="frame" x="16" y="166.5" width="343" height="120"/>
@@ -157,4 +160,7 @@
             <point key="canvasLocation" x="144.80000000000001" y="152.47376311844079"/>
         </view>
     </objects>
+    <resources>
+        <image name="Bariloche" width="200" height="100"/>
+    </resources>
 </document>

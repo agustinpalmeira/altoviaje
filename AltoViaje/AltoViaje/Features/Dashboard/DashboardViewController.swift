@@ -23,9 +23,14 @@ class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
         setupTable()
         setupMenu()
+    }
+
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 
     private func setupMenu() {
@@ -77,5 +82,8 @@ extension DashboardViewController: UICollectionViewDataSource {
 }
 
 extension DashboardViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tripVC = TripViewController(nibName:"TripViewController", bundle: nil)
+        navigationController?.pushViewController(tripVC, animated: true)
+    }
 }

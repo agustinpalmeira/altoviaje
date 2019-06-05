@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		721D41A422A8613C00B756AF /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41A322A8613C00B756AF /* TripViewController.swift */; };
 		721D41A822A8686200B756AF /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41A722A8686200B756AF /* TripView.swift */; };
-		721D41AA22A8841800B756AF /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721D41A922A8841800B756AF /* Trip.storyboard */; };
 		725FA3DD22A484F90062F17A /* TripView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 725FA3DC22A484F90062F17A /* TripView.xib */; };
 		AEAA0D81CE26F0C8B2192340 /* Pods_AltoViaje.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0E24A0EC312937220A535 /* Pods_AltoViaje.framework */; };
 		CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEA9122A472E8007E48D8 /* AppDelegate.swift */; };
@@ -26,6 +25,7 @@
 		CE9FEABC22A48A8F007E48D8 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEABA22A48A8F007E48D8 /* MenuCell.swift */; };
 		CE9FEABD22A48A8F007E48D8 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEABB22A48A8F007E48D8 /* MenuCell.xib */; };
 		CEB0AF1922A87E2E000014AB /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0AF1822A87E2E000014AB /* MenuItem.swift */; };
+		CEB0AF1B22A88A2F000014AB /* TripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB0AF1A22A88A2F000014AB /* TripViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,6 @@
 		4856AA243C91CE1FE2A8D757 /* Pods-AltoViaje.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.debug.xcconfig"; sourceTree = "<group>"; };
 		721D41A322A8613C00B756AF /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		721D41A722A8686200B756AF /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
-		721D41A922A8841800B756AF /* Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
 		725FA3DC22A484F90062F17A /* TripView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TripView.xib; path = AltoViaje/Features/Dashboard/Trip/TripView/TripView.xib; sourceTree = SOURCE_ROOT; };
 		CE9FEA8E22A472E8007E48D8 /* AltoViaje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AltoViaje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9FEA9122A472E8007E48D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		CE9FEABA22A48A8F007E48D8 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		CE9FEABB22A48A8F007E48D8 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		CEB0AF1822A87E2E000014AB /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		CEB0AF1A22A88A2F000014AB /* TripViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripViewController.xib; sourceTree = "<group>"; };
 		D3D215019061A7380F3130E1 /* Pods-AltoViaje.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.release.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				721D41A322A8613C00B756AF /* TripViewController.swift */,
-				721D41A922A8841800B756AF /* Trip.storyboard */,
+				CEB0AF1A22A88A2F000014AB /* TripViewController.xib */,
 			);
 			path = TripViewController;
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 				CE9FEAAC22A478FD007E48D8 /* DashboardViewController.swift */,
 				CE9FEAAE22A47A12007E48D8 /* DashboardCell.swift */,
 				CE9FEAAF22A47A12007E48D8 /* DashboardCell.xib */,
-				725FA3D522A47FC50062F17A /* Trip */
+				725FA3D522A47FC50062F17A /* Trip */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -259,11 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9FEAB122A47A12007E48D8 /* DashboardCell.xib in Resources */,
+				CEB0AF1B22A88A2F000014AB /* TripViewController.xib in Resources */,
 				CE9FEAB922A4899D007E48D8 /* MenuView.xib in Resources */,
 				CE9FEABD22A48A8F007E48D8 /* MenuCell.xib in Resources */,
 				CE9FEAA922A47364007E48D8 /* Main.storyboard in Resources */,
 				725FA3DD22A484F90062F17A /* TripView.xib in Resources */,
-				721D41AA22A8841800B756AF /* Trip.storyboard in Resources */,
 				CE9FEA9C22A472E9007E48D8 /* LaunchScreen.storyboard in Resources */,
 				CE9FEA9922A472E9007E48D8 /* Assets.xcassets in Resources */,
 				CE9FEAAB22A47645007E48D8 /* Dashboard.storyboard in Resources */,
@@ -298,18 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				CEB0AF1922A87E2E000014AB /* MenuItem.swift in Sources */,
 				CE9FEAB722A48968007E48D8 /* MenuView.swift in Sources */,
 				CE9FEA9422A472E8007E48D8 /* ViewController.swift in Sources */,
 				CE9FEABC22A48A8F007E48D8 /* MenuCell.swift in Sources */,
 				CE9FEAAD22A478FD007E48D8 /* DashboardViewController.swift in Sources */,
 				CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */,
-=======
 				721D41A422A8613C00B756AF /* TripViewController.swift in Sources */,
 				CE9FEA9422A472E8007E48D8 /* ViewController.swift in Sources */,
 				721D41A822A8686200B756AF /* TripView.swift in Sources */,
->>>>>>> TripView and TripViewController layout
 				CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
