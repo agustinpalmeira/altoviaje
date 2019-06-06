@@ -146,7 +146,9 @@
         <scene sceneID="cuq-LE-k5P">
             <objects>
                 <navigationController id="LBy-ke-hos" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="ahp-JS-YGj"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homeIcon" id="ahp-JS-YGj">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YKF-1R-EJq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -170,4 +172,7 @@
             <point key="canvasLocation" x="1240" y="-821"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homeIcon" width="170" height="170"/>
+    </resources>
 </document>
