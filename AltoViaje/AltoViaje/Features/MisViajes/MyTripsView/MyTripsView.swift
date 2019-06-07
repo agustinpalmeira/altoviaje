@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class MyTripsView: UIView {
+	@IBOutlet var contentView: UIView!
+	@IBOutlet weak var nextTripButton: UIButton!
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		commonInit()
