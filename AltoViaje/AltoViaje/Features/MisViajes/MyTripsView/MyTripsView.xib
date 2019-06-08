@@ -12,86 +12,57 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTripsView" customModule="AltoViaje" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="iN0-l3-epB" id="v2z-sm-X0l"/>
-                <outlet property="nextTripButton" destination="kUr-Tc-ZDA" id="a3z-bO-DQ0"/>
+                <outlet property="myTripContainerView" destination="iN0-l3-epB" id="Mn5-et-cYo"/>
+                <outlet property="tableView" destination="5XM-1Z-38R" id="oZd-0B-NIo"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="myTripContainerView">
             <rect key="frame" x="0.0" y="0.0" width="373" height="649"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Próximos viajes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-pN-t4b" userLabel="nextTripsLabel">
-                    <rect key="frame" x="36" y="29" width="147" height="25"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bariloche" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8SD-c8-70W" userLabel="firstDestinyImageView">
-                    <rect key="frame" x="66" y="111" width="241" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="128" id="uu5-hv-MMD"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bariloche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faU-At-GYV" userLabel="firstDestinyLabel">
-                    <rect key="frame" x="75" y="111" width="81" height="21"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/07/19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErC-j4-PqE" userLabel="firstDestinyFromLabel">
-                    <rect key="frame" x="75" y="128" width="72" height="21"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/08/19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jph-EY-aVo" userLabel="firstDestinyToLabel">
-                    <rect key="frame" x="173" y="128" width="75" height="21"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUr-Tc-ZDA" userLabel="newTripButton">
-                    <rect key="frame" x="95.5" y="552" width="182" height="77"/>
+                    <rect key="frame" x="96" y="552" width="181" height="77"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="182" id="LiS-yW-rlw"/>
-                        <constraint firstAttribute="height" constant="77" id="byo-og-0vz"/>
+                        <constraint firstAttribute="height" constant="77" id="d0r-4C-WEp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="PLANEAR NUEVO VIAJE">
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="newTripButtonAction:" destination="-1" eventType="touchUpInside" id="f5y-ce-2hD"/>
+                    </connections>
                 </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5XM-1Z-38R" userLabel="tableView">
+                    <rect key="frame" x="0.0" y="83" width="373" height="446"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Próximos viajes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-pN-t4b" userLabel="nextTripsLabel">
+                    <rect key="frame" x="16" y="20" width="147" height="25"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="6q4-pN-t4b" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="EEN-cp-duV"/>
-                <constraint firstItem="faU-At-GYV" firstAttribute="leading" secondItem="ErC-j4-PqE" secondAttribute="leading" id="GfX-Ej-BRl"/>
-                <constraint firstItem="faU-At-GYV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="75" id="MBj-cO-HFu"/>
-                <constraint firstItem="8SD-c8-70W" firstAttribute="centerX" secondItem="kUr-Tc-ZDA" secondAttribute="centerX" id="TAh-Rx-ijk"/>
-                <constraint firstItem="ErC-j4-PqE" firstAttribute="baseline" secondItem="jph-EY-aVo" secondAttribute="baseline" id="XZg-dX-QRd"/>
-                <constraint firstItem="8SD-c8-70W" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZLn-Gw-geg"/>
-                <constraint firstItem="8SD-c8-70W" firstAttribute="top" secondItem="6q4-pN-t4b" secondAttribute="bottom" constant="57" id="aRH-7H-3ib"/>
-                <constraint firstItem="8SD-c8-70W" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="66" id="dXg-Us-oK9"/>
-                <constraint firstItem="6q4-pN-t4b" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="9" id="nHQ-Fb-guE"/>
-                <constraint firstItem="jph-EY-aVo" firstAttribute="leading" secondItem="ErC-j4-PqE" secondAttribute="trailing" constant="26" id="trq-US-4ec"/>
-                <constraint firstItem="jph-EY-aVo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="108" id="u8u-PC-ds1"/>
-                <constraint firstAttribute="bottom" secondItem="kUr-Tc-ZDA" secondAttribute="bottom" constant="20" symbolic="YES" id="v6m-hN-EIz"/>
-                <constraint firstItem="8SD-c8-70W" firstAttribute="top" secondItem="faU-At-GYV" secondAttribute="top" id="yh1-Av-32L"/>
+                <constraint firstItem="6q4-pN-t4b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="4z4-R0-1zQ"/>
+                <constraint firstItem="kUr-Tc-ZDA" firstAttribute="top" secondItem="5XM-1Z-38R" secondAttribute="bottom" constant="23" id="Hyu-BV-OZl"/>
+                <constraint firstItem="5XM-1Z-38R" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JP7-kw-PYg"/>
+                <constraint firstItem="kUr-Tc-ZDA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="96" id="MaT-p2-gtF"/>
+                <constraint firstItem="5XM-1Z-38R" firstAttribute="top" secondItem="6q4-pN-t4b" secondAttribute="bottom" constant="38" id="O4V-pp-zL7"/>
+                <constraint firstItem="5XM-1Z-38R" firstAttribute="centerX" secondItem="kUr-Tc-ZDA" secondAttribute="centerX" id="ZfR-SN-u0o"/>
+                <constraint firstItem="6q4-pN-t4b" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="igi-kM-wz1"/>
+                <constraint firstAttribute="trailing" secondItem="5XM-1Z-38R" secondAttribute="trailing" id="izW-Bd-MaC"/>
+                <constraint firstAttribute="bottom" secondItem="kUr-Tc-ZDA" secondAttribute="bottom" constant="20" symbolic="YES" id="vRL-lp-9gb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="128.80000000000001" y="158.77061469265368"/>
         </view>
     </objects>
-    <resources>
-        <image name="Bariloche" width="200" height="100"/>
-    </resources>
 </document>
