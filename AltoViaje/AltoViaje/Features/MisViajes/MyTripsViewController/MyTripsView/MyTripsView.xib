@@ -37,11 +37,11 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5XM-1Z-38R" userLabel="tableView">
-                    <rect key="frame" x="0.0" y="83" width="373" height="446"/>
+                    <rect key="frame" x="0.0" y="103" width="373" height="426"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Próximos viajes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-pN-t4b" userLabel="nextTripsLabel">
-                    <rect key="frame" x="16" y="20" width="147" height="25"/>
+                    <rect key="frame" x="16" y="40" width="147" height="25"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                 <constraint firstItem="kUr-Tc-ZDA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="96" id="MaT-p2-gtF"/>
                 <constraint firstItem="5XM-1Z-38R" firstAttribute="top" secondItem="6q4-pN-t4b" secondAttribute="bottom" constant="38" id="O4V-pp-zL7"/>
                 <constraint firstItem="5XM-1Z-38R" firstAttribute="centerX" secondItem="kUr-Tc-ZDA" secondAttribute="centerX" id="ZfR-SN-u0o"/>
-                <constraint firstItem="6q4-pN-t4b" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="igi-kM-wz1"/>
+                <constraint firstItem="6q4-pN-t4b" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="igi-kM-wz1"/>
                 <constraint firstAttribute="trailing" secondItem="5XM-1Z-38R" secondAttribute="trailing" id="izW-Bd-MaC"/>
                 <constraint firstAttribute="bottom" secondItem="kUr-Tc-ZDA" secondAttribute="bottom" constant="20" symbolic="YES" id="vRL-lp-9gb"/>
             </constraints>
