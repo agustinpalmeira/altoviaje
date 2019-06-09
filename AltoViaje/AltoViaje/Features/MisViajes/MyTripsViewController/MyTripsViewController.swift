@@ -11,6 +11,8 @@ import UIKit
 
 class MyTripsViewController: UIViewController {
 
+	@IBOutlet weak var myTripsView: MyTripsView!
+	
 	//MARK: - View life cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -19,11 +21,6 @@ class MyTripsViewController: UIViewController {
 
 	//MARK: - Configure subviews
 	private func setSubviews() {
-		let myTripsView = MyTripsView()
-		myTripsView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-		myTripsView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-		myTripsView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-		myTripsView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 		myTripsView.delegate = self
 		myTripsView.setTableDataSource(self)
 		myTripsView.setTableViewDelegate(self)
@@ -34,7 +31,7 @@ class MyTripsViewController: UIViewController {
 
 extension MyTripsViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 8
+		return 1
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

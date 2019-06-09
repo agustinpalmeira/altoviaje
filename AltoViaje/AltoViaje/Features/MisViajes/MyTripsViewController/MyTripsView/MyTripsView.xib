@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTripsView" customModule="AltoViaje" customModuleProvider="target">
             <connections>
-                <outlet property="myTripContainerView" destination="iN0-l3-epB" id="Mn5-et-cYo"/>
+                <outlet property="myTripContainerView" destination="iN0-l3-epB" id="51d-Bw-8Ns"/>
                 <outlet property="tableView" destination="5XM-1Z-38R" id="oZd-0B-NIo"/>
             </connections>
         </placeholder>
