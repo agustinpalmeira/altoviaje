@@ -80,10 +80,7 @@ extension DashboardViewController: UICollectionViewDataSource {
 
 extension DashboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let tripVC = TripViewController(nibName:"TripViewController", bundle: nil)
-        //navigationController?.pushViewController(tripVC, animated: true)
-
-		let vc = MyTripsViewController()
-		navigationController?.pushViewController(vc, animated: true)
+        let tripVC = TripViewController(nibName:"TripViewController", bundle: nil)
+        navigationController?.pushViewController(tripVC, animated: true)
     }
 }
