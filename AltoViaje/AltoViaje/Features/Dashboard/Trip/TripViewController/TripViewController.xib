@@ -22,17 +22,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" restorationIdentifier="TripView" translatesAutoresizingMaskIntoConstraints="NO" id="GeR-We-QJq" userLabel="TripView" customClass="TripView" customModule="AltoViaje" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="safeArea" id="tV3-1M-vDM"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="32H-Nv-AB1" firstAttribute="top" secondItem="GeR-We-QJq" secondAttribute="top" constant="20" id="4gl-zK-Cqc"/>
-                <constraint firstItem="GeR-We-QJq" firstAttribute="height" secondItem="vdS-BE-1V7" secondAttribute="height" id="OkV-JW-oxk"/>
-                <constraint firstItem="GeR-We-QJq" firstAttribute="width" secondItem="vdS-BE-1V7" secondAttribute="width" id="WOo-FQ-DOz"/>
-                <constraint firstItem="GeR-We-QJq" firstAttribute="leading" secondItem="32H-Nv-AB1" secondAttribute="leading" id="iRY-2c-99d"/>
+                <constraint firstItem="GeR-We-QJq" firstAttribute="leading" secondItem="32H-Nv-AB1" secondAttribute="leading" id="iZt-Jd-WiX"/>
+                <constraint firstItem="GeR-We-QJq" firstAttribute="bottom" secondItem="32H-Nv-AB1" secondAttribute="bottom" id="lgE-gT-F74"/>
+                <constraint firstItem="GeR-We-QJq" firstAttribute="trailing" secondItem="32H-Nv-AB1" secondAttribute="trailing" id="ygP-2Y-psD"/>
+                <constraint firstItem="GeR-We-QJq" firstAttribute="top" secondItem="32H-Nv-AB1" secondAttribute="top" id="zX9-Sa-aE3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="32H-Nv-AB1"/>
         </view>
