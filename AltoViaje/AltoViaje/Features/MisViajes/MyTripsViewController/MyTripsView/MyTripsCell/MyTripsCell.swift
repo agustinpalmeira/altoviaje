@@ -18,6 +18,7 @@ class MyTripsCell: UITableViewCell {
 	@IBOutlet weak var placeImageView: UIImageView!
 	@IBOutlet weak var dateFromLabel: UILabel!
 	@IBOutlet weak var dateToLabel: UILabel!
+	@IBOutlet weak var destinyTitleLabel: UILabel!
 
 	//MARK: - Initialization
 	override func awakeFromNib() {

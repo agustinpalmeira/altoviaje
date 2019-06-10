@@ -12,6 +12,7 @@ import UIKit
 class MyTripsViewController: UIViewController {
 
 	@IBOutlet weak var myTripsView: MyTripsView!
+	var packagesArray: [Package]!
 	
 	//MARK: - View life cycle
 	override func viewDidLoad() {
@@ -25,17 +26,34 @@ class MyTripsViewController: UIViewController {
 		myTripsView.setTableDataSource(self)
 		myTripsView.setTableViewDelegate(self)
 	}
+
+	//MARK: - Initialization
+//	init(packages: [Package]) {
+//		super.init(nibName: nil, bundle: nil)
+//		self.packagesArray = packages
+//	}
+//
+//	required init?(coder aDecoder: NSCoder) {
+//		fatalError("init(coder:) has not been implemented")
+//	}
 }
 
 //MARK: - Extensions
 
 extension MyTripsViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		return packagesArray.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return tableView.dequeueReusableCell(withIdentifier: MyTripsCell.cellIdentifier, for: indexPath)
+		let cell: MyTripsCell = tableView.dequeueReusableCell(withIdentifier: MyTripsCell.cellIdentifier) as! MyTripsCell
+		let package = packagesArray![indexPath.row]
+		cell.dateFromLabel.text = package.dateFrom
+		cell.dateToLabel.text = package.dateTo
+		cell.destinyTitleLabel.text = package.destiny
+		cell.placeImageView.image = package.image
+		
+		return cell
 	}
 
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

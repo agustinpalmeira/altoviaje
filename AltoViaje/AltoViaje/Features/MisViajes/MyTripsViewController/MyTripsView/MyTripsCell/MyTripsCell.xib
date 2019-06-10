@@ -29,7 +29,7 @@
                                 <rect key="frame" x="20" y="10" width="87" height="18"/>
                                 <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" red="1" green="0.42534180360000001" blue="0.38816105610000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/07/2019" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fok-HQ-bTo" userLabel="dateFromLabel">
@@ -49,7 +49,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" red="1" green="0.42534180360000001" blue="0.38816105610000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30/07/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEO-lu-5zA" userLabel="dateToLabel">
@@ -59,7 +59,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" red="1" green="0.42534180360000001" blue="0.38816105610000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                         </subviews>
@@ -93,6 +93,7 @@
                 <outlet property="cellContainerView" destination="u78-fs-iE9" id="zko-de-Zt8"/>
                 <outlet property="dateFromLabel" destination="fok-HQ-bTo" id="Zz4-Id-1NY"/>
                 <outlet property="dateToLabel" destination="SEO-lu-5zA" id="aA0-SM-T0K"/>
+                <outlet property="destinyTitleLabel" destination="5VC-2i-P9T" id="bz5-tf-75V"/>
                 <outlet property="placeImageView" destination="OvE-cv-HUT" id="nPe-OX-1yr"/>
             </connections>
             <point key="canvasLocation" x="222.40000000000001" y="220.3898050974513"/>
