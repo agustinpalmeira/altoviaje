@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundApp" translatesAutoresizingMaskIntoConstraints="NO" id="wMn-Te-KjB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundApp" translatesAutoresizingMaskIntoConstraints="NO" id="wMn-Te-KjB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="8sB-QD-TjN">
                                 <rect key="frame" x="0.0" y="10" width="375" height="667"/>
@@ -31,7 +30,11 @@
                         <constraints>
                             <constraint firstItem="8sB-QD-TjN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="G6l-o7-wlI"/>
                             <constraint firstItem="8sB-QD-TjN" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Hzw-ho-lNl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wMn-Te-KjB" secondAttribute="bottom" id="KSC-8w-Bnf"/>
                             <constraint firstItem="8sB-QD-TjN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="lS6-JF-gWs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="wMn-Te-KjB" secondAttribute="top" constant="20" id="lev-Dl-PHG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wMn-Te-KjB" secondAttribute="trailing" id="oKW-9a-zWE"/>
+                            <constraint firstItem="wMn-Te-KjB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tMq-YK-Vnh"/>
                             <constraint firstItem="8sB-QD-TjN" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="yvG-KL-c9m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
