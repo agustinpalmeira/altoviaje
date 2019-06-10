@@ -50,6 +50,11 @@ class MyTripsViewController: UIViewController {
 		setSubviews()
 	}
 
+	override func viewWillAppear(_ animated: Bool) {
+		navigationController?.setNavigationBarHidden(false, animated: true)
+		navigationItem.title = "Mis Viajes"
+	}
+
 	//MARK: - Configure subviews
 	private func setSubviews() {
 		myTripsView.delegate = self
@@ -93,9 +98,8 @@ extension MyTripsViewController: UITableViewDataSource {
 
 extension MyTripsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		//TODO: Implement the view controller that should be pushed by the navigation
-		//let viewController = ...(nibName:"", bundle: nil)
-		//navigationController?.pushViewController(viewController, animated: true)
+		let viewController = ItineraryViewController(activities: packagesArray[indexPath.row].activities)
+		navigationController?.pushViewController(viewController, animated: true)
 	}
 }
 

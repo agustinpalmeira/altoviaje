@@ -12,12 +12,7 @@ import UIKit
 class ItineraryViewController: UIViewController {
 
 	//MARK: - Variables
-
-	private let itineraryView: ItineraryView = {
-		let view = ItineraryView()
-
-		return view
-	}()
+	var activities: [DateActivity]!
 
 	// MARK: - View life cycle
 
@@ -26,10 +21,16 @@ class ItineraryViewController: UIViewController {
 		setSubViews()
 	}
 
+	override func viewWillAppear(_ animated: Bool) {
+		navigationController?.setNavigationBarHidden(false, animated: true)
+		navigationItem.title = "Itinerario"
+	}
+
 	// MARK: - Initialization
 
-	init() {
+	init(activities: [DateActivity]) {
 		super.init(nibName: nil, bundle: nil)
+		self.activities = activities
 	}
 
 	required init?(coder aDecoder: NSCoder) {
@@ -38,11 +39,9 @@ class ItineraryViewController: UIViewController {
 
 	// MARK: - Configure Sub Views
 
-	fileprivate func setSubViews() {
+	private func setSubViews() {
+		let itineraryView = ItineraryView(activities: activities)
 		view.addSubview(itineraryView)
-		itineraryView.topAnchor.constraint(equalTo: view.topAnchor)
-		itineraryView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-		itineraryView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-		itineraryView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+		itineraryView.frame = view.bounds
 	}
 }
