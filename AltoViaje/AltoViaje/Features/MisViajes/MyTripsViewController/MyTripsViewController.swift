@@ -6,6 +6,36 @@
 //  Copyright © 2019 AltoViaje. All rights reserved.
 //
 
+/* Mock data for loading the view controller:
+
+var activitiesArray = ["Vuelo Bs. As. -> Bariloche", "Alojamiento solcito"]
+var dateActivity = DateActivity(date: "01/01/2020", activities: activitiesArray)
+var datesActivities = [dateActivity]
+
+activitiesArray = ["Excursión Tronador"]
+dateActivity = DateActivity(date: "05/01/2020", activities: activitiesArray)
+datesActivities.append(dateActivity)
+
+activitiesArray = ["Excursión Frey"]
+dateActivity = DateActivity(date: "09/01/2020", activities: activitiesArray)
+datesActivities.append(dateActivity)
+
+activitiesArray = ["Vuelo Bariloche -> Bs. As."]
+dateActivity = DateActivity(date: "15/01/2020", activities: activitiesArray)
+datesActivities.append(dateActivity)
+
+let package = Package(dateFrom: "01/01/2020", dateTo: "15/01/2020",
+destiny: "Bariloche",
+image: #imageLiteral(resourceName: "Bariloche"),
+activities: datesActivities)
+
+//View controller
+let tripVC = MyTripsViewController(nibName:"MyTripsViewController", bundle: nil)
+tripVC.packagesArray = [package, package]
+navigationController?.pushViewController(tripVC, animated: true)
+
+*/
+
 import Foundation
 import UIKit
 
