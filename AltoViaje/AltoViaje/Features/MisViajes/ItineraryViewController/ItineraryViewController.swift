@@ -12,7 +12,7 @@ import UIKit
 class ItineraryViewController: UIViewController {
 
 	//MARK: - Variables
-	var activities: [DateActivity]!
+	private var activities: [DateActivity]!
 
 	// MARK: - View life cycle
 
@@ -50,6 +50,7 @@ class ItineraryViewController: UIViewController {
 extension ItineraryViewController: ItineraryViewDelegate {
 	func openMap(title: String) {
 		//MARK: Do stuff here!!!
-		
+		let viewController = MapViewController(title: title)
+		navigationController?.pushViewController(viewController, animated: true)
 	}
 }
