@@ -13,13 +13,15 @@ import ActionSheetPicker_3_0
 class TripView: UIView {
     var fromDate = Date()
     var toDate = Date()
-	@IBOutlet var contentView: UIView!
+    @IBOutlet weak var activitiesContainer: UIStackView!
+    @IBOutlet var contentView: UIView!
 	@IBOutlet weak var destinyImageView: UIImageView!
 	@IBOutlet weak var descriptionLabel: UILabel!
 	@IBOutlet weak var fromDateLabel: UILabel!
 	@IBOutlet weak var toDateLabel: UILabel!
 	
-	@IBOutlet weak var trekkingSwitch: UISwitch!
+    @IBOutlet weak var activitiesHeight: NSLayoutConstraint!
+    @IBOutlet weak var trekkingSwitch: UISwitch!
 	@IBOutlet weak var campingSwitch: UISwitch!
 	@IBOutlet weak var beachSwitch: UISwitch!
 	@IBOutlet weak var mountainSwitch: UISwitch!
@@ -43,6 +45,10 @@ class TripView: UIView {
         toDateLabel.text = DateFormatter().string(from: toDate, with: "dd/MM/YY")
         fromDateLabel.text = DateFormatter().string(from: fromDate, with: "dd/MM/YY")
 	}
+
+    func setupActivities(_ activities: [Activity]) {
+        
+    }
 
     @IBAction func fromDate(_ sender: Any) {
         ActionSheetDatePicker.show(withTitle: "From", datePickerMode: .date, selectedDate: fromDate, minimumDate: Date(), maximumDate: Date(timeIntervalSinceNow: 3600 * 24 * 365), doneBlock: { [weak self] (picker, selectedDate, _) in
