@@ -14,13 +14,6 @@ class ItineraryView: UIView {
 	//MARK: - Variables
 	var activities: [DateActivity]!
 
-//	let userNameTextFieldFloating: MDCTextField = {
-//		let textField = MDCTextField()
-//		textField.placeholder = ContactUsTexts.username
-//
-//		return textField
-//	}()
-
 	//MARK: - Initializers
 
 	init(activities: [DateActivity]) {
@@ -36,8 +29,8 @@ class ItineraryView: UIView {
 
 	//MARK: - Configure views
 	private func setSubViews() {
-		//TODO: Implement the logic to load all the dates activities.
 		var previousView: UIView?
+		var previousActivityLabel: UILabel?
 		var dateLabel: UILabel
 		var activityLabel: UILabel
 		var containerView: UIView
@@ -45,30 +38,41 @@ class ItineraryView: UIView {
 		for dateActivity in activities {
 			containerView = UIView()
 			addSubview(containerView)
+			containerView.translatesAutoresizingMaskIntoConstraints = false
+
 			dateLabel = UILabel()
 			containerView.addSubview(dateLabel)
+			dateLabel.translatesAutoresizingMaskIntoConstraints = false
 			dateLabel.text = dateActivity.date
-
 			dateLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
 			dateLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
 			dateLabel.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
-			dateLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
-
 			containerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
 			containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
 
 			if let view = previousView {
 				containerView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 5).isActive = true
 			} else {
-				containerView.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
+				containerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
 			}
 			previousView = containerView
 
-//			for activity in dateActivity.activities {
-//				activityLabel = UILabel()
-//				addSubview(activityLabel)
-//				activityLabel.text = activity
-//			}
+			for activity in dateActivity.activities {
+				activityLabel = UILabel()
+				activityLabel.text = activity
+				containerView.addSubview(activityLabel)
+				activityLabel.translatesAutoresizingMaskIntoConstraints = false
+				activityLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10).isActive = true
+				activityLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
+				if let label = previousActivityLabel {
+					activityLabel.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 5).isActive = true
+				} else {
+					activityLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 5).isActive = true
+				}
+				previousActivityLabel = activityLabel
+			}
+			previousActivityLabel?.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
+			previousActivityLabel = nil
 		}
 	}
 
