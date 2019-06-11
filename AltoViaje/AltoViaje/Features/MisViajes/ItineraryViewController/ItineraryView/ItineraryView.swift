@@ -37,11 +37,28 @@ class ItineraryView: UIView {
 		var containerView: UIView
 		var activityButton: UIButton
 
+		let scrollView = UIScrollView()
+		addSubview(scrollView)
+		scrollView.translatesAutoresizingMaskIntoConstraints = false
+		scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+		scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+		scrollView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+		scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+
+		let contentView = UIView()
+		scrollView.addSubview(contentView)
+		contentView.translatesAutoresizingMaskIntoConstraints = false
+		contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+		contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+		contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+		contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+		contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+
 		let color = UIColor(red: 72/255, green: 135/255, blue: 223/255, alpha: 1)
 
 		for dateActivity in activities {
 			containerView = UIView()
-			addSubview(containerView)
+			contentView.addSubview(containerView)
 			containerView.backgroundColor = color
 			containerView.layer.borderColor = color.cgColor
 			containerView.layer.cornerRadius = 5.0
@@ -53,19 +70,19 @@ class ItineraryView: UIView {
 			dateLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 5).isActive = true
 			dateLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -5).isActive = true
 			dateLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 5).isActive = true
-			containerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-			containerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+			containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
+			containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
+			//containerView.widthAnchor.constraint(equalTo: widthAnchor, constant: -20).isActive = true
 
 			if let view = previousView {
 				containerView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 25).isActive = true
 			} else {
-				containerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+				containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
 			}
 			previousView = containerView
 
 			for activity in dateActivity.activities {
 				itemLabel = getActivityLabel(text: "»")
-
 				containerView.addSubview(itemLabel)
 				itemLabel.translatesAutoresizingMaskIntoConstraints = false
 				itemLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10).isActive = true
@@ -96,6 +113,7 @@ class ItineraryView: UIView {
 			previousActivityLabel?.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10).isActive = true
 			previousActivityLabel = nil
 		}
+		previousView?.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
 	}
 
 	private func getActivityLabel(text: String) -> UILabel {
