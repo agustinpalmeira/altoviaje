@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
+protocol ItineraryViewDelegate: class {
+	func openMap(title: String)
+}
+
 class ItineraryView: UIView {
 
 	//MARK: - Variables
 	var activities: [DateActivity]!
+	weak var delegate: ItineraryViewDelegate?
 
 	//MARK: - Initializers
 
@@ -72,7 +77,6 @@ class ItineraryView: UIView {
 			dateLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 5).isActive = true
 			containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
 			containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
-			//containerView.widthAnchor.constraint(equalTo: widthAnchor, constant: -20).isActive = true
 
 			if let view = previousView {
 				containerView.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 25).isActive = true
@@ -102,6 +106,8 @@ class ItineraryView: UIView {
 				previousActivityLabel = activityLabel
 
 				activityButton = UIButton()
+				activityButton.titleLabel?.text = activity
+				activityButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
 				containerView.addSubview(activityButton)
 				activityButton.translatesAutoresizingMaskIntoConstraints = false
 				activityButton.setBackgroundImage(#imageLiteral(resourceName: "white-arrow"), for: .normal)
@@ -151,5 +157,10 @@ class ItineraryView: UIView {
 	}
 
 	//MARK: - Actions
-
+	@objc
+	func didTapButton(sender: UIButton) {
+		if let text = sender.titleLabel?.text {
+			delegate?.openMap(title: text)
+		}
+	}
 }

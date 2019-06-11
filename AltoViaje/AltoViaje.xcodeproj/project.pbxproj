@@ -10,6 +10,8 @@
 		721D41A422A8613C00B756AF /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41A322A8613C00B756AF /* TripViewController.swift */; };
 		721D41A822A8686200B756AF /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41A722A8686200B756AF /* TripView.swift */; };
 		721D41AF22A8D97D00B756AF /* MyTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41AE22A8D97D00B756AF /* MyTripsView.swift */; };
+		723757EF22B04DFE000686F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723757EE22B04DFE000686F0 /* MapViewController.swift */; };
+		723757F222B04E1E000686F0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723757F122B04E1E000686F0 /* MapView.swift */; };
 		723AE39A22AA0BE500D3BFE8 /* MyTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AE39922AA0BE500D3BFE8 /* MyTripsViewController.swift */; };
 		723AE39E22AC34F000D3BFE8 /* MyTripsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AE39D22AC34F000D3BFE8 /* MyTripsCell.swift */; };
 		723AE3A022AC350100D3BFE8 /* MyTripsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 723AE39F22AC350100D3BFE8 /* MyTripsCell.xib */; };
@@ -44,6 +46,8 @@
 		721D41A322A8613C00B756AF /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		721D41A722A8686200B756AF /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		721D41AE22A8D97D00B756AF /* MyTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsView.swift; sourceTree = "<group>"; };
+		723757EE22B04DFE000686F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		723757F122B04E1E000686F0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		723AE39922AA0BE500D3BFE8 /* MyTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsViewController.swift; sourceTree = "<group>"; };
 		723AE39D22AC34F000D3BFE8 /* MyTripsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsCell.swift; sourceTree = "<group>"; };
 		723AE39F22AC350100D3BFE8 /* MyTripsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTripsCell.xib; sourceTree = "<group>"; };
@@ -117,10 +121,28 @@
 		721D41AD22A8D5F000B756AF /* MisViajes */ = {
 			isa = PBXGroup;
 			children = (
+				723757ED22B04DD6000686F0 /* MapViewController */,
 				7266EACE22AC832000062507 /* MyTripsViewController */,
 				7266EACF22AC833500062507 /* ItineraryViewController */,
 			);
 			path = MisViajes;
+			sourceTree = "<group>";
+		};
+		723757ED22B04DD6000686F0 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				723757EE22B04DFE000686F0 /* MapViewController.swift */,
+				723757F022B04E0F000686F0 /* MapView */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		723757F022B04E0F000686F0 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				723757F122B04E1E000686F0 /* MapView.swift */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 		723AE39B22AA244000D3BFE8 /* MyTripsView */ = {
@@ -392,7 +414,9 @@
 				7266EAD822ADAE7600062507 /* ItineraryView.swift in Sources */,
 				CE9FEA9422A472E8007E48D8 /* ViewController.swift in Sources */,
 				721D41A822A8686200B756AF /* TripView.swift in Sources */,
+				723757EF22B04DFE000686F0 /* MapViewController.swift in Sources */,
 				723AE39E22AC34F000D3BFE8 /* MyTripsCell.swift in Sources */,
+				723757F222B04E1E000686F0 /* MapView.swift in Sources */,
 				721D41AF22A8D97D00B756AF /* MyTripsView.swift in Sources */,
 				7266EAD122AC83B800062507 /* ItineraryViewController.swift in Sources */,
 				CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */,

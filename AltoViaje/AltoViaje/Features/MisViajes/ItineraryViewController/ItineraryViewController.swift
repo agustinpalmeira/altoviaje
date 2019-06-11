@@ -41,7 +41,15 @@ class ItineraryViewController: UIViewController {
 
 	private func setSubViews() {
 		let itineraryView = ItineraryView(activities: activities)
+		itineraryView.delegate = self
 		view.addSubview(itineraryView)
 		itineraryView.frame = view.bounds
+	}
+}
+
+extension ItineraryViewController: ItineraryViewDelegate {
+	func openMap(title: String) {
+		//MARK: Do stuff here!!!
+		
 	}
 }
