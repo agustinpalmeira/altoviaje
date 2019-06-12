@@ -12,6 +12,7 @@
 		721D41AF22A8D97D00B756AF /* MyTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41AE22A8D97D00B756AF /* MyTripsView.swift */; };
 		723757EF22B04DFE000686F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723757EE22B04DFE000686F0 /* MapViewController.swift */; };
 		723757F222B04E1E000686F0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723757F122B04E1E000686F0 /* MapView.swift */; };
+		723757FC22B1A55B000686F0 /* MyTripsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723757FB22B1A55B000686F0 /* MyTripsStoryboard.storyboard */; };
 		723AE39A22AA0BE500D3BFE8 /* MyTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AE39922AA0BE500D3BFE8 /* MyTripsViewController.swift */; };
 		723AE39E22AC34F000D3BFE8 /* MyTripsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AE39D22AC34F000D3BFE8 /* MyTripsCell.swift */; };
 		723AE3A022AC350100D3BFE8 /* MyTripsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 723AE39F22AC350100D3BFE8 /* MyTripsCell.xib */; };
@@ -48,6 +49,7 @@
 		721D41AE22A8D97D00B756AF /* MyTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsView.swift; sourceTree = "<group>"; };
 		723757EE22B04DFE000686F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		723757F122B04E1E000686F0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		723757FB22B1A55B000686F0 /* MyTripsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyTripsStoryboard.storyboard; sourceTree = "<group>"; };
 		723AE39922AA0BE500D3BFE8 /* MyTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsViewController.swift; sourceTree = "<group>"; };
 		723AE39D22AC34F000D3BFE8 /* MyTripsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsCell.swift; sourceTree = "<group>"; };
 		723AE39F22AC350100D3BFE8 /* MyTripsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTripsCell.xib; sourceTree = "<group>"; };
@@ -121,8 +123,9 @@
 		721D41AD22A8D5F000B756AF /* MisViajes */ = {
 			isa = PBXGroup;
 			children = (
-				723757ED22B04DD6000686F0 /* MapViewController */,
+				723757FB22B1A55B000686F0 /* MyTripsStoryboard.storyboard */,
 				7266EACE22AC832000062507 /* MyTripsViewController */,
+				723757ED22B04DD6000686F0 /* MapViewController */,
 				7266EACF22AC833500062507 /* ItineraryViewController */,
 			);
 			path = MisViajes;
@@ -369,6 +372,7 @@
 				7266EADA22ADB67300062507 /* TripView.xib in Resources */,
 				7266EAD622ACA02D00062507 /* MyTripsViewController.xib in Resources */,
 				CE9FEA9922A472E9007E48D8 /* Assets.xcassets in Resources */,
+				723757FC22B1A55B000686F0 /* MyTripsStoryboard.storyboard in Resources */,
 				CE9FEAAB22A47645007E48D8 /* Dashboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

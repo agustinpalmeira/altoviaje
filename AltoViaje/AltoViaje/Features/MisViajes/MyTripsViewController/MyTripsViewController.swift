@@ -42,7 +42,11 @@ import UIKit
 class MyTripsViewController: UIViewController {
 
 	@IBOutlet weak var myTripsView: MyTripsView!
-	var packagesArray: [Package]!
+	var packagesArray: [Package]! {
+		didSet {
+			myTripsView.tableView.reloadData()
+		}
+	}
 	
 	//MARK: - View life cycle
 	override func viewDidLoad() {
@@ -58,6 +62,7 @@ class MyTripsViewController: UIViewController {
 	//MARK: - Configure subviews
 	private func setSubviews() {
 		myTripsView.delegate = self
+		packagesArray = []
 		myTripsView.setTableDataSource(self)
 		myTripsView.setTableViewDelegate(self)
 	}
