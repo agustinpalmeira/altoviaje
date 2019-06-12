@@ -8,8 +8,27 @@
 
 import UIKit
 
+protocol ActivityViewDelegate {
+    func selectActivity(activity: Activity)
+}
+
 class ActivityView: UIView {
     @IBOutlet weak var activated: UISwitch!
 
+
+
     @IBOutlet weak var name: UILabel!
+    var viewDelegate: ActivityViewDelegate?
+    var activity: Activity!
+
+    func setupView(_ activity: Activity) {
+        self.activity = activity
+        activated.isOn = activity.active
+        name.text = activity.name
+    }
+
+    @IBAction func switchMoved(_ sender: Any) {
+        activity.active = activated.isOn
+        viewDelegate?.selectActivity(activity: activity)
+    }
 }

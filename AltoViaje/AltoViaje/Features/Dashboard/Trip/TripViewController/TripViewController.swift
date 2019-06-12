@@ -23,6 +23,11 @@ class TripViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        var dateComponent = DateComponents()
+        dateComponent.day = 1
+        dateComponent.month = 1
+        dateComponent.year = 2019
+
         var dateComponent1 = DateComponents()
         dateComponent1.day = 1
         dateComponent1.month = 9
@@ -33,13 +38,19 @@ class TripViewController: UIViewController {
         dateComponent2.month = 4
         dateComponent2.year = 2020
 
-        possibleActivities = [ Activity(name: "Trekking", availableFrom: Date(), availableTo: Date(timeIntervalSinceNow: 3600 * 24 * 365)),
-        Activity(name: "Playa", availableFrom: Calendar.current.date(from: dateComponent1) ?? Date(), availableTo: Calendar.current.date(from: dateComponent2) ?? Date()),
-        Activity(name: "Camping", availableFrom: Date(), availableTo: Date(timeIntervalSinceNow: 3600 * 24 * 365)),
-        Activity(name: "Montañismo", availableFrom:  Calendar.current.date(from: dateComponent1) ?? Date(), availableTo: Date(timeIntervalSinceNow: 3600 * 24 * 365))]
+        possibleActivities = [
+            Activity(name: "Trekking", availableFrom: Calendar.current.date(from: dateComponent) ?? Date(), availableTo: Date(timeIntervalSinceNow: 3600 * 24 * 365), active: false),
+                               Activity(name: "Playa", availableFrom: Calendar.current.date(from: dateComponent1) ?? Date(), availableTo: Calendar.current.date(from: dateComponent2) ?? Date(), active: false),
+        Activity(name: "Camping", availableFrom: Calendar.current.date(from: dateComponent) ?? Date(), availableTo: Date(timeIntervalSinceNow: 3600 * 24 * 365), active: false),
+        Activity(name: "Montañismo", availableFrom:  Calendar.current.date(from: dateComponent) ?? Date(), availableTo: Date(timeIntervalSinceNow: 3600 * 24 * 365), active: false)]
         navigationController?.setNavigationBarHidden(false, animated: true)
+        tripView.activities = possibleActivities
     }
-	override func didReceiveMemoryWarning() {
+    @IBAction func moveToCart(_ sender: Any) {
+        let cartVC = InventoryViewController(nibName: "InventoryViewController", bundle: nil)
+        navigationController?.pushViewController(cartVC, animated: true)
+    }
+    override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 	}
 }

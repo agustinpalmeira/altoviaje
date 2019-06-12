@@ -38,25 +38,12 @@
                                         <constraint firstAttribute="height" constant="200" id="FHg-in-fOM"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ax-KJ-dBO" userLabel="descriptionLabel">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ax-KJ-dBO" userLabel="descriptionLabel">
                                     <rect key="frame" x="10" y="210" width="355" height="134"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <attributedString key="attributedText">
-                                        <fragment>
-                                            <string key="content">Bariloche es una ciudad ubicada entre bosques milenarios, montañas cubiertas de nieve y lagos cristalinos, en la provincia de Río Negro, Argentina. Se trata de una postal de nuestra Patagonia. Una ciudad anfitriona por excelencia, enmarcada por algunas de las bellezas naturales más importantes del país.</string>
-                                            <attributes>
-                                                <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="NSColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
-                                                <real key="NSKern" value="0.0"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" minimumLineHeight="17" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                    <tabStops/>
-                                                </paragraphStyle>
-                                                <color key="NSStrokeColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <real key="NSStrokeWidth" value="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <string key="text">Bariloche es una ciudad ubicada entre bosques milenarios, montañas cubiertas de nieve y lagos cristalinos, en la provincia de Río Negro, Argentina. Se trata de una postal de nuestra Patagonia. Una ciudad anfitriona por excelencia, enmarcada por algunas de las bellezas naturales más importantes del país.</string>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                    <color key="textColor" red="0.090196078431372548" green="0.16862745098039217" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                 </label>
@@ -96,14 +83,14 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6QG-d6-JSB">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6QG-d6-JSB">
                                     <rect key="frame" x="20" y="459" width="345" height="179"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="179" id="38b-dX-B0F"/>
                                     </constraints>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="6QG-d6-JSB" secondAttribute="bottom" constant="8" id="0jl-0W-nK3"/>
                                 <constraint firstItem="6ax-KJ-dBO" firstAttribute="leading" secondItem="sTb-xR-Uzc" secondAttribute="leading" constant="10" id="2w3-dB-HfA"/>
@@ -142,7 +129,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="sTb-xR-Uzc" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="E9w-O7-RRY"/>
                 <constraint firstItem="53g-nd-SgI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="GvT-3C-9BU"/>

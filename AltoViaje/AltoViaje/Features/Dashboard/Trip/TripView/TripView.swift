@@ -11,8 +11,24 @@ import UIKit
 import ActionSheetPicker_3_0
 
 class TripView: UIView {
-    var fromDate = Date()
-    var toDate = Date()
+    var fromDate = Date() {
+        didSet {
+            setupActivities()
+        }
+    }
+    var toDate = Date() {
+        didSet {
+            setupActivities()
+        }
+    }
+    var activities: [Activity] = [] {
+        didSet {
+            self.setupActivities()
+        }
+    }
+
+    var selectedActivities: [Activity] = []
+
     @IBOutlet weak var activitiesContainer: UIStackView!
     @IBOutlet var contentView: UIView!
 	@IBOutlet weak var destinyImageView: UIImageView!
@@ -21,11 +37,7 @@ class TripView: UIView {
 	@IBOutlet weak var toDateLabel: UILabel!
 	
     @IBOutlet weak var activitiesHeight: NSLayoutConstraint!
-    @IBOutlet weak var trekkingSwitch: UISwitch!
-	@IBOutlet weak var campingSwitch: UISwitch!
-	@IBOutlet weak var beachSwitch: UISwitch!
-	@IBOutlet weak var mountainSwitch: UISwitch!
-
+    
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		commonInit()
@@ -46,8 +58,23 @@ class TripView: UIView {
         fromDateLabel.text = DateFormatter().string(from: fromDate, with: "dd/MM/YY")
 	}
 
-    func setupActivities(_ activities: [Activity]) {
-        
+    func setupActivities() {
+        activitiesContainer.removeAllArrangedSubviews()
+        var stackHeight = 0
+        for activity in self.activities {
+            if activity.availableFrom < fromDate && activity.availableTo > toDate {
+                let activityView = ActivityView.loadFromNib()
+                activityView.viewDelegate = self
+                activityView.setupView(activity)
+                stackHeight += 55
+                activitiesContainer.addArrangedSubview(activityView)
+            } else {
+                selectedActivities = selectedActivities.filter { (anActivity) -> Bool in
+                    return anActivity.name != activity.name
+                }
+            }
+        }
+        activitiesHeight.constant = CGFloat(stackHeight)
     }
 
     @IBAction func fromDate(_ sender: Any) {
@@ -94,5 +121,18 @@ class TripView: UIView {
             }, cancel: { (_) in
 
         }, origin: self)
+    }
+}
+
+extension TripView: ActivityViewDelegate {
+    func selectActivity(activity: Activity) {
+        if !activity.active {
+            selectedActivities = selectedActivities.filter { (anActivity) -> Bool in
+                return anActivity.name != activity.name
+            }
+        } else {
+            selectedActivities.append(activity)
+        }
+        print(selectedActivities.count)
     }
 }
