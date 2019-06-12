@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class TripView: UIView {
+
 	@IBOutlet var contentView: UIView!
 	@IBOutlet weak var destinyImageView: UIImageView!
 	@IBOutlet weak var descriptionLabel: UILabel!
