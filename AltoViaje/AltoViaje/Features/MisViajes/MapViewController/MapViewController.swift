@@ -7,17 +7,31 @@
 //
 
 import Foundation
+import MapKit
 import UIKit
 
 class MapViewController: UIViewController {
 
 	//Variables
 	var titleText: String!
+	var mapView: MapView!
+	private var locationManager: CLLocationManager!
+	private var currentLocation: CLLocation?
 
 	// MARK: - View life cycle
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+		locationManager = CLLocationManager()
+		locationManager.delegate = self
+		locationManager.desiredAccuracy = kCLLocationAccuracyBest
+
+		if CLLocationManager.locationServicesEnabled() {
+			locationManager.requestWhenInUseAuthorization()
+			locationManager.startUpdatingLocation()
+		}
+
 		setSubViews()
 	}
 
@@ -40,9 +54,28 @@ class MapViewController: UIViewController {
 	// MARK: - Configure Sub Views
 
 	private func setSubViews() {
-		let mapView = MapView(title: titleText)
+		mapView = MapView(title: titleText)
 		view.addSubview(mapView)
 		mapView.frame = view.bounds
+		mapView.setMapViewDelegate(self)
 	}
 }
 
+//MARK: - Extensions
+extension MapViewController: CLLocationManagerDelegate {
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		defer { currentLocation = locations.last }
+
+		if currentLocation == nil {
+			// Zoom to user location
+			if let userLocation = locations.last {
+				let viewRegion = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+				mapView.setRegion(viewRegion)
+			}
+		}
+	}
+}
+
+extension MapViewController: MKMapViewDelegate {
+
+}

@@ -72,5 +72,15 @@ class MapView: UIView {
 		return label
 	}
 
+	//MARK: - Configure Map
+
+	func setRegion(_ region: MKCoordinateRegion) {
+		mapView.setRegion(region, animated: true)
+	}
+
+	func setMapViewDelegate(_ delegate: MKMapViewDelegate) {
+		mapView.delegate = delegate
+	}
+
 	//MARK: - Actions
 }
