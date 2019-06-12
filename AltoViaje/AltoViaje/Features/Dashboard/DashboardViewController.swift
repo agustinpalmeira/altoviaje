@@ -33,7 +33,6 @@ class DashboardViewController: UIViewController {
         setupMenu()
     }
 
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -47,8 +46,6 @@ class DashboardViewController: UIViewController {
     private func setupTable() {
         tripsTable.register(UINib.init(nibName: "DashboardCell", bundle: nil), forCellReuseIdentifier: DashboardCell.cellIdentifier)
     }
-
-
 }
 
 extension DashboardViewController: UITableViewDataSource {

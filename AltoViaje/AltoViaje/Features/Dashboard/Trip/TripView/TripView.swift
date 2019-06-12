@@ -11,6 +11,7 @@ import UIKit
 import ActionSheetPicker_3_0
 
 class TripView: UIView {
+
     var fromDate = Date() {
         didSet {
             setupActivities()
