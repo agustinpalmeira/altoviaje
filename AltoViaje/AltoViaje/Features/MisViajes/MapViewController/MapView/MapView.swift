@@ -13,7 +13,7 @@ import UIKit
 class MapView: UIView {
 
 	//MARK: - Variables
-	private let mapView: MKMapView = {
+	let mapView: MKMapView = {
 		let view = MKMapView()
 		view.layer.cornerRadius = 2.0
 		view.layer.borderColor = UIColor.black.cgColor

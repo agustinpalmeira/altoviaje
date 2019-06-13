@@ -52,6 +52,29 @@ class MyTripsViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setSubviews()
+
+		var activitiesArray = ["Vuelo Bs. As. -> Bariloche", "Alojamiento solcito"]
+		var dateActivity = DateActivity(date: "01/01/2020", activities: activitiesArray)
+		var datesActivities = [dateActivity]
+
+		activitiesArray = ["Excursión Tronador"]
+		dateActivity = DateActivity(date: "05/01/2020", activities: activitiesArray)
+		datesActivities.append(dateActivity)
+
+		activitiesArray = ["Excursión Frey"]
+		dateActivity = DateActivity(date: "09/01/2020", activities: activitiesArray)
+		datesActivities.append(dateActivity)
+
+		activitiesArray = ["Vuelo Bariloche -> Bs. As."]
+		dateActivity = DateActivity(date: "15/01/2020", activities: activitiesArray)
+		datesActivities.append(dateActivity)
+
+		let package = Package(dateFrom: "01/01/2020", dateTo: "15/01/2020",
+							  destiny: "Bariloche",
+							  image: #imageLiteral(resourceName: "Bariloche"),
+							  activities: datesActivities)
+
+		packagesArray = [package]
 	}
 
 	override func viewWillAppear(_ animated: Bool) {

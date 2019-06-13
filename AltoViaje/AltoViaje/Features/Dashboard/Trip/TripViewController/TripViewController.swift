@@ -19,6 +19,7 @@ class TripViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		navigationItem.title = "Bariloche"
 	}
 
     override func viewWillAppear(_ animated: Bool) {
