@@ -57,6 +57,10 @@ class TripView: UIView {
 		contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         toDateLabel.text = DateFormatter().string(from: toDate, with: "dd/MM/YY")
         fromDateLabel.text = DateFormatter().string(from: fromDate, with: "dd/MM/YY")
+		destinyImageView.layer.cornerRadius = 4.0
+		destinyImageView.layer.borderWidth = 2.0
+		destinyImageView.layer.borderColor = UIColor.black.cgColor
+		destinyImageView.clipsToBounds = true
 	}
 
     func setupActivities() {
