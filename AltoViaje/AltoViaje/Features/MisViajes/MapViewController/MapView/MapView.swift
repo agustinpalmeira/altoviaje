@@ -10,10 +10,16 @@ import Foundation
 import MapKit
 import UIKit
 
+protocol MapViewDelegate: class {
+	func zoomToUserLocation()
+	func zoomToItineraryLocation()
+}
+
 class MapView: UIView {
+	weak var delegate: MapViewDelegate?
 
 	//MARK: - Variables
-	let mapView: MKMapView = {
+	let mkMapView: MKMapView = {
 		let view = MKMapView()
 		view.layer.cornerRadius = 2.0
 		view.layer.borderColor = UIColor.black.cgColor
@@ -47,12 +53,34 @@ class MapView: UIView {
 		titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
 		titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
 
-		addSubview(mapView)
-		mapView.translatesAutoresizingMaskIntoConstraints = false
-		mapView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
-		mapView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
-		mapView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
-		mapView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15).isActive = true
+		addSubview(mkMapView)
+		mkMapView.translatesAutoresizingMaskIntoConstraints = false
+		mkMapView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+		mkMapView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
+		mkMapView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
+		mkMapView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15).isActive = true
+
+		let currentLocationButton = UIButton()
+		currentLocationButton.addTarget(self, action: #selector(didTapCurrentLocationButton), for: .touchUpInside)
+		currentLocationButton.translatesAutoresizingMaskIntoConstraints = false
+		currentLocationButton.setImage(#imageLiteral(resourceName: "currentLocationNormal"), for: .normal)
+		currentLocationButton.setImage(#imageLiteral(resourceName: "currentLocationSelected"), for: .highlighted)
+		currentLocationButton.setImage(#imageLiteral(resourceName: "currentLocationSelected"), for: .selected)
+		addSubview(currentLocationButton)
+		currentLocationButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+		currentLocationButton.widthAnchor.constraint(equalTo: currentLocationButton.heightAnchor).isActive = true
+		currentLocationButton.trailingAnchor.constraint(equalTo: mkMapView.trailingAnchor, constant: -20).isActive = true
+		currentLocationButton.bottomAnchor.constraint(equalTo: mkMapView.bottomAnchor, constant: -20).isActive = true
+
+		let itineraryLocationButton = UIButton()
+		itineraryLocationButton.addTarget(self, action: #selector(didTapItineraryLocationButton), for: .touchUpInside)
+		itineraryLocationButton.translatesAutoresizingMaskIntoConstraints = false
+		itineraryLocationButton.setImage(#imageLiteral(resourceName: "location"), for: .normal)
+		addSubview(itineraryLocationButton)
+		itineraryLocationButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+		itineraryLocationButton.widthAnchor.constraint(equalTo: currentLocationButton.heightAnchor).isActive = true
+		itineraryLocationButton.leadingAnchor.constraint(equalTo: mkMapView.leadingAnchor, constant: 20).isActive = true
+		itineraryLocationButton.bottomAnchor.constraint(equalTo: mkMapView.bottomAnchor, constant: -20).isActive = true
 	}
 
 	private func getTitleLabel(text: String) -> UILabel {
@@ -75,12 +103,21 @@ class MapView: UIView {
 	//MARK: - Configure Map
 
 	func setRegion(_ region: MKCoordinateRegion) {
-		mapView.setRegion(region, animated: true)
+		mkMapView.setRegion(region, animated: true)
 	}
 
 	func setMapViewDelegate(_ delegate: MKMapViewDelegate) {
-		mapView.delegate = delegate
+		mkMapView.delegate = delegate
 	}
 
 	//MARK: - Actions
+	@objc
+	func didTapCurrentLocationButton(sender: UIButton) {
+		delegate?.zoomToUserLocation()
+	}
+
+	@objc
+	func didTapItineraryLocationButton(sender: UIButton) {
+		delegate?.zoomToItineraryLocation()
+	}
 }
