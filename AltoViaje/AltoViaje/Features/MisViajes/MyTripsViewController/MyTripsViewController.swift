@@ -133,6 +133,6 @@ extension MyTripsViewController: UITableViewDelegate {
 
 extension MyTripsViewController: MyTripsViewDelegate {
 	func createNewTrip() {
-		//TODO: Implement where should this button lead to.
+		tabBarController?.selectedIndex = 0
 	}
 }

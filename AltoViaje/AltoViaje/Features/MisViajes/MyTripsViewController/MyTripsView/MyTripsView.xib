@@ -9,10 +9,16 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyTripsView" customModule="AltoViaje" customModuleProvider="target">
             <connections>
                 <outlet property="myTripContainerView" destination="iN0-l3-epB" id="51d-Bw-8Ns"/>
+                <outlet property="nextTripsButton" destination="kUr-Tc-ZDA" id="nnW-ln-gS2"/>
                 <outlet property="tableView" destination="5XM-1Z-38R" id="oZd-0B-NIo"/>
             </connections>
         </placeholder>
@@ -22,14 +28,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUr-Tc-ZDA" userLabel="newTripButton">
-                    <rect key="frame" x="96" y="552" width="181" height="77"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="96" y="579" width="181" height="50"/>
+                    <color key="backgroundColor" red="0.19372904630000001" green="0.49526311169999998" blue="0.77012434549999997" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="77" id="d0r-4C-WEp"/>
+                        <constraint firstAttribute="height" constant="50" id="d0r-4C-WEp"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="PLANEAR NUEVO VIAJE">
+                    <state key="normal" title="Nuevo viaje">
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -37,7 +43,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5XM-1Z-38R" userLabel="tableView">
-                    <rect key="frame" x="0.0" y="103" width="373" height="426"/>
+                    <rect key="frame" x="0.0" y="103" width="373" height="453"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Próximos viajes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-pN-t4b" userLabel="nextTripsLabel">

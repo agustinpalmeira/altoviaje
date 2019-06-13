@@ -18,7 +18,7 @@ class MyTripsView: UIView {
 	//MARK: - Variables
 	@IBOutlet var myTripContainerView: UIView!
 	@IBOutlet weak var tableView: UITableView!
-
+	@IBOutlet weak var nextTripsButton: UIButton!
 	weak var delegate: MyTripsViewDelegate?
 
 	//MARK: - Initialization
@@ -36,6 +36,7 @@ class MyTripsView: UIView {
 		let nib = UINib(nibName: "MyTripsView", bundle: nil)
 		nib.instantiate(withOwner: self, options: nil)
 		addSubview(myTripContainerView)
+		nextTripsButton.layer.cornerRadius = 5.0
 		myTripContainerView.frame = self.bounds
 		myTripContainerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 		tableView.register(UINib.init(nibName: "MyTripsCell", bundle: nil), forCellReuseIdentifier: MyTripsCell.cellIdentifier)
