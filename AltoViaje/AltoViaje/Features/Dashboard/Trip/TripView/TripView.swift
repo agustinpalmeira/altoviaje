@@ -61,6 +61,14 @@ class TripView: UIView {
 		destinyImageView.layer.borderWidth = 2.0
 		destinyImageView.layer.borderColor = UIColor.black.cgColor
 		destinyImageView.clipsToBounds = true
+
+        var dateComponent = DateComponents()
+        dateComponent.day = Calendar.current.component(.day, from: Date())
+        dateComponent.month = Calendar.current.component(.month, from: Date())
+        dateComponent.year = Calendar.current.component(.year, from: Date())
+        let thisDay = Calendar.current.date(from: dateComponent)
+        fromDate = thisDay ?? Date()
+        toDate = thisDay ?? Date()
 	}
 
     func setupActivities() {

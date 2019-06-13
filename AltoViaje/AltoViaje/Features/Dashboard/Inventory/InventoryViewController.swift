@@ -13,6 +13,7 @@ class InventoryViewController: UIViewController {
                              Flight(name: "Aerolineas Argentinas, Económico", price: 6300, image: #imageLiteral(resourceName: "aerolineas"))]
 
     var equips: [Equipment] = [Equipment(name: "Bolsa de Dormir Térmica Broksol", price: 1380, image: #imageLiteral(resourceName: "bolsa")),
+                               Equipment(name: "Campera Columbia Hombre", price: 1880, image: #imageLiteral(resourceName: "Image")),
                                Equipment(name: "Zapatilla Montagne Hombre", price: 2000, image: #imageLiteral(resourceName: "zapatillas")),
                                Equipment(name: "Carpa Iglu Pavillo", price: 850, image: #imageLiteral(resourceName: "carpa")),
                                Equipment(name: "Mochila Camping 25l Gadnic", price: 2000, image: #imageLiteral(resourceName: "mochila")),
