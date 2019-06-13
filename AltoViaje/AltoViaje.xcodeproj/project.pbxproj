@@ -49,6 +49,10 @@
 		CEC10A3F22AF294B00EC307D /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3E22AF294B00EC307D /* Activity.swift */; };
 		CEDED62322B1F5B100EDEF83 /* InventoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDED62222B1F5B100EDEF83 /* InventoryHeaderView.swift */; };
 		CEDED62522B1F5D000EDEF83 /* InventoryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDED62422B1F5D000EDEF83 /* InventoryHeaderView.xib */; };
+		CEDED62922B20CFF00EDEF83 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDED62722B20CFF00EDEF83 /* PaymentViewController.swift */; };
+		CEDED62A22B20CFF00EDEF83 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDED62822B20CFF00EDEF83 /* PaymentViewController.xib */; };
+		CEDED62D22B21A3A00EDEF83 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDED62C22B21A3A00EDEF83 /* MainTabViewController.swift */; };
+		CEDED63222B21E1100EDEF83 /* AltoViajeNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDED63122B21E1100EDEF83 /* AltoViajeNotification.swift */; };
 		CEF32F0422B050D700B2831C /* UIView+xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF32F0322B050D700B2831C /* UIView+xib.swift */; };
 		CEF32F0622B0BF8000B2831C /* UIStackView+ViewManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF32F0522B0BF8000B2831C /* UIStackView+ViewManage.swift */; };
 		CEF32F0C22B0CE9300B2831C /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF32F0A22B0CE9300B2831C /* InventoryViewController.swift */; };
@@ -106,6 +110,10 @@
 		CEC10A3E22AF294B00EC307D /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		CEDED62222B1F5B100EDEF83 /* InventoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHeaderView.swift; sourceTree = "<group>"; };
 		CEDED62422B1F5D000EDEF83 /* InventoryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryHeaderView.xib; sourceTree = "<group>"; };
+		CEDED62722B20CFF00EDEF83 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		CEDED62822B20CFF00EDEF83 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
+		CEDED62C22B21A3A00EDEF83 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		CEDED63122B21E1100EDEF83 /* AltoViajeNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltoViajeNotification.swift; sourceTree = "<group>"; };
 		CEF32F0322B050D700B2831C /* UIView+xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+xib.swift"; sourceTree = "<group>"; };
 		CEF32F0522B0BF8000B2831C /* UIStackView+ViewManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+ViewManage.swift"; sourceTree = "<group>"; };
 		CEF32F0A22B0CE9300B2831C /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
@@ -262,6 +270,7 @@
 		CE9FEA9022A472E8007E48D8 /* AltoViaje */ = {
 			isa = PBXGroup;
 			children = (
+				CEDED62F22B21DF700EDEF83 /* Utils */,
 				CEC10A3422AF14EE00EC307D /* Extension */,
 				CEB0AF2F22A8DD65000014AB /* Models */,
 				CEB0AF2022A8D9C8000014AB /* SupportFiles */,
@@ -290,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9FEAA822A47364007E48D8 /* Main.storyboard */,
+				CEDED62C22B21A3A00EDEF83 /* MainTabViewController.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -297,6 +307,7 @@
 		CE9FEAA522A47321007E48D8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				CEDED62622B20CE800EDEF83 /* Payment */,
 				CEF32F0722B0CE6300B2831C /* Inventory */,
 				CE9FEAB522A48943007E48D8 /* Menu */,
 				CE9FEAAA22A47645007E48D8 /* Dashboard.storyboard */,
@@ -383,6 +394,31 @@
 				CEC10A3A22AF27C200EC307D /* ActivityView.xib */,
 			);
 			path = ActivityView;
+			sourceTree = "<group>";
+		};
+		CEDED62622B20CE800EDEF83 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				CEDED62722B20CFF00EDEF83 /* PaymentViewController.swift */,
+				CEDED62822B20CFF00EDEF83 /* PaymentViewController.xib */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		CEDED62F22B21DF700EDEF83 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CEDED63022B21DFD00EDEF83 /* Notification */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CEDED63022B21DFD00EDEF83 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				CEDED63122B21E1100EDEF83 /* AltoViajeNotification.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 		CEF32F0722B0CE6300B2831C /* Inventory */ = {
@@ -498,6 +534,7 @@
 				723757FC22B1A55B000686F0 /* MyTripsStoryboard.storyboard in Resources */,
 				CE9FEAAB22A47645007E48D8 /* Dashboard.storyboard in Resources */,
 				CEB0AF2B22A8DA2A000014AB /* Montserrat-Regular.otf in Resources */,
+				CEDED62A22B20CFF00EDEF83 /* PaymentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +591,7 @@
 				CEF32F1922B1B2BB00B2831C /* TripView.swift in Sources */,
 				723AE39A22AA0BE500D3BFE8 /* MyTripsViewController.swift in Sources */,
 				CE9FEAB722A48968007E48D8 /* MenuView.swift in Sources */,
+				CEDED62922B20CFF00EDEF83 /* PaymentViewController.swift in Sources */,
 				7266EADD22ADCBB800062507 /* Package.swift in Sources */,
 				CE9FEABC22A48A8F007E48D8 /* MenuCell.swift in Sources */,
 				CEF32F0F22B0D13F00B2831C /* Item.swift in Sources */,
@@ -565,6 +603,7 @@
 				CE9FEAAD22A478FD007E48D8 /* DashboardViewController.swift in Sources */,
 				CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */,
 				CEDED62322B1F5B100EDEF83 /* InventoryHeaderView.swift in Sources */,
+				CEDED62D22B21A3A00EDEF83 /* MainTabViewController.swift in Sources */,
 				CEF32F0422B050D700B2831C /* UIView+xib.swift in Sources */,
 				721D41A422A8613C00B756AF /* TripViewController.swift in Sources */,
 				7266EAD822ADAE7600062507 /* ItineraryView.swift in Sources */,
@@ -573,6 +612,7 @@
 				723757F222B04E1E000686F0 /* MapView.swift in Sources */,
 				721D41AF22A8D97D00B756AF /* MyTripsView.swift in Sources */,
 				7266EAD122AC83B800062507 /* ItineraryViewController.swift in Sources */,
+				CEDED63222B21E1100EDEF83 /* AltoViajeNotification.swift in Sources */,
 				CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

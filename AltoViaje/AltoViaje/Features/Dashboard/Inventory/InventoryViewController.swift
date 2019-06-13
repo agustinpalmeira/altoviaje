@@ -53,6 +53,8 @@ class InventoryViewController: UIViewController {
         billView.layer.borderWidth = 1
         billToPay = 0
         continueButton.layer.cornerRadius = 5
+        continueButton.layer.borderColor = UIColor.black.cgColor
+        continueButton.layer.borderWidth = 1
         itemsTable.register(UINib.init(nibName: "InventoryViewCell", bundle: nil), forCellReuseIdentifier: InventoryViewCell.identifier)
         itemsTable.register(UINib.init(nibName: "InventoryHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "InventoryHeader")
     }
@@ -80,7 +82,9 @@ class InventoryViewController: UIViewController {
     }
 
     @IBAction func proceedToBuy(_ sender: Any) {
-
+        let paymentVC = PaymentViewController(nibName: "PaymentViewController", bundle: nil)
+        paymentVC.toPay = billToPay
+        navigationController?.pushViewController(paymentVC, animated: true)
     }
 
 }

@@ -11,6 +11,8 @@ import UIKit
 class DashboardViewController: UIViewController {
     @IBOutlet weak var tripsTable: UITableView!
     @IBOutlet weak var menuView: MenuView!
+    @IBOutlet weak var newTripBoockedView: UIView!
+    @IBOutlet weak var newTripTileView: UIView!
 
     let menuItems: [MenuItemModel] = [
         MenuItemModel(image: #imageLiteral(resourceName: "planeIcon"), name: "Vuelos"),
@@ -29,13 +31,24 @@ class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
         setupTable()
         setupMenu()
+        setupWatcher()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    private func setupWatcher() {
+        NotificationCenter.default.addObserver(self, selector: #selector(newTripBoocked), name: AltoViajeNotification.newTripBoocked.name, object: nil)
+    }
+
+    private func setupViews() {
+        newTripTileView.layer.cornerRadius = 15
+        newTripBoockedView.alpha = 0
     }
 
     private func setupMenu() {
@@ -45,6 +58,34 @@ class DashboardViewController: UIViewController {
 
     private func setupTable() {
         tripsTable.register(UINib.init(nibName: "DashboardCell", bundle: nil), forCellReuseIdentifier: DashboardCell.cellIdentifier)
+    }
+
+    @objc func newTripBoocked() {
+        showNewTrip()
+    }
+
+    func showNewTrip() {
+        UIView.animate(withDuration: 0.5, animations: {  [weak self] in
+            self?.menuView.alpha = 0
+        }) { _ in
+            UIView.animate(withDuration: 0.5, animations: {  [weak self] in
+                self?.newTripBoockedView.alpha = 1
+                }, completion: { _ in
+                    Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { [weak self] _ in
+                        self?.hideNewTrip()
+                    })
+            })
+        }
+    }
+
+    func hideNewTrip() {
+        UIView.animate(withDuration: 0.5, animations: {  [weak self] in
+            self?.newTripBoockedView.alpha = 0
+        }) { _ in
+            UIView.animate(withDuration: 0.5, animations: {  [weak self] in
+                self?.menuView.alpha = 1
+                }, completion: nil)
+        }
     }
 }
 
