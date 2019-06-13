@@ -55,6 +55,7 @@ class TripView: UIView {
 		addSubview(contentView)
 		contentView.frame = self.bounds
 		contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        setupInitalDate()
         toDateLabel.text = DateFormatter().string(from: toDate, with: "dd/MM/YY")
         fromDateLabel.text = DateFormatter().string(from: fromDate, with: "dd/MM/YY")
 		destinyImageView.layer.cornerRadius = 4.0
@@ -62,14 +63,21 @@ class TripView: UIView {
 		destinyImageView.layer.borderColor = UIColor.black.cgColor
 		destinyImageView.clipsToBounds = true
 
-        var dateComponent = DateComponents()
-        dateComponent.day = Calendar.current.component(.day, from: Date())
-        dateComponent.month = Calendar.current.component(.month, from: Date())
-        dateComponent.year = Calendar.current.component(.year, from: Date())
-        let thisDay = Calendar.current.date(from: dateComponent)
-        fromDate = thisDay ?? Date()
-        toDate = thisDay ?? Date()
+
 	}
+
+    private func setupInitalDate() {
+        var dateComponent = DateComponents()
+        dateComponent.day = 1
+        dateComponent.month = 1
+        dateComponent.year = 2020
+        let fromDay = Calendar.current.date(from: dateComponent)
+
+        dateComponent.day = 15
+        let toDay = Calendar.current.date(from: dateComponent)
+        fromDate = fromDay!
+        toDate = toDay!
+    }
 
     func setupActivities() {
         activitiesContainer.removeAllArrangedSubviews()
@@ -91,7 +99,7 @@ class TripView: UIView {
     }
 
     @IBAction func fromDate(_ sender: Any) {
-        ActionSheetDatePicker.show(withTitle: "From", datePickerMode: .date, selectedDate: fromDate, minimumDate: Date(), maximumDate: Date(timeIntervalSinceNow: 3600 * 24 * 365), doneBlock: { [weak self] (picker, selectedDate, _) in
+        ActionSheetDatePicker.show(withTitle: "Desde", datePickerMode: .date, selectedDate: fromDate, minimumDate: Date(), maximumDate: Date(timeIntervalSinceNow: 3600 * 24 * 365), doneBlock: { [weak self] (picker, selectedDate, _) in
 
             guard let s = self else {
                 return
@@ -114,7 +122,7 @@ class TripView: UIView {
     }
 
     @IBAction func toDate(_ sender: Any) {
-        ActionSheetDatePicker.show(withTitle: "From", datePickerMode: .date, selectedDate: toDate, minimumDate: Date(), maximumDate: Date(timeIntervalSinceNow: 3600 * 24 * 365), doneBlock: { [weak self] (picker, selectedDate, _) in
+        ActionSheetDatePicker.show(withTitle: "Hasta", datePickerMode: .date, selectedDate: toDate, minimumDate: Date(), maximumDate: Date(timeIntervalSinceNow: 3600 * 24 * 365), doneBlock: { [weak self] (picker, selectedDate, _) in
 
             guard let s = self else {
                 return

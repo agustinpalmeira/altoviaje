@@ -43,11 +43,18 @@ class ItineraryView: UIView {
 		var activityButton: UIButton
 		var activityInvisibleButton: UIButton
 
+        let backgroundImage = UIImageView(image: #imageLiteral(resourceName: "backgroundApp"))
+        addSubview(backgroundImage)
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        backgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
 
 		let scrollView = UIScrollView()
 		addSubview(scrollView)
 		scrollView.translatesAutoresizingMaskIntoConstraints = false
-		scrollView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+		scrollView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
 		scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
 		scrollView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
 		scrollView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true

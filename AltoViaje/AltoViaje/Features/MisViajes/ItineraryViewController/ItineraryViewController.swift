@@ -41,9 +41,11 @@ class ItineraryViewController: UIViewController {
 
 	private func setSubViews() {
 		let itineraryView = ItineraryView(activities: activities)
+        itineraryView.backgroundColor = .clear
 		itineraryView.delegate = self
 		view.addSubview(itineraryView)
 		itineraryView.frame = view.bounds
+
 	}
 }
 

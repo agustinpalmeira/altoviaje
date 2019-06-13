@@ -26,6 +26,24 @@ class MyTripsCell: UITableViewCell {
 		cellContainerView.layer.borderColor = UIColor.black.cgColor
 		cellContainerView.layer.cornerRadius = 10
 		cellContainerView.layer.borderWidth = 1
+
+        dateFromLabel.layer.shadowColor = UIColor.black.cgColor
+        dateFromLabel.layer.shadowRadius = 3.0
+        dateFromLabel.layer.shadowOpacity = 1.0
+        dateFromLabel.layer.shadowOffset = CGSize(width: 4, height: 4)
+        dateFromLabel.layer.masksToBounds = false
+
+        dateToLabel.layer.shadowColor = UIColor.black.cgColor
+        dateToLabel.layer.shadowRadius = 3.0
+        dateToLabel.layer.shadowOpacity = 1.0
+        dateToLabel.layer.shadowOffset = CGSize(width: 4, height: 4)
+        dateToLabel.layer.masksToBounds = false
+
+        destinyTitleLabel.layer.shadowColor = UIColor.black.cgColor
+        destinyTitleLabel.layer.shadowRadius = 3.0
+        destinyTitleLabel.layer.shadowOpacity = 1.0
+        destinyTitleLabel.layer.shadowOffset = CGSize(width: 4, height: 4)
+        destinyTitleLabel.layer.masksToBounds = false
 	}
 
 	//MARK: - 

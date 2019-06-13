@@ -29,7 +29,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUr-Tc-ZDA" userLabel="newTripButton">
                     <rect key="frame" x="96" y="579" width="181" height="50"/>
-                    <color key="backgroundColor" red="0.19372904630000001" green="0.49526311169999998" blue="0.77012434549999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.42745098039215684" green="0.55686274509803924" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="d0r-4C-WEp"/>
                     </constraints>
@@ -42,19 +42,19 @@
                         <action selector="newTripButtonAction:" destination="-1" eventType="touchUpInside" id="f5y-ce-2hD"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5XM-1Z-38R" userLabel="tableView">
-                    <rect key="frame" x="0.0" y="103" width="373" height="453"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5XM-1Z-38R" userLabel="tableView">
+                    <rect key="frame" x="0.0" y="100" width="373" height="456"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Próximos viajes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6q4-pN-t4b" userLabel="nextTripsLabel">
-                    <rect key="frame" x="16" y="40" width="147" height="25"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="16" y="40" width="139.5" height="22"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                     <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="6q4-pN-t4b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="4z4-R0-1zQ"/>
                 <constraint firstItem="kUr-Tc-ZDA" firstAttribute="top" secondItem="5XM-1Z-38R" secondAttribute="bottom" constant="23" id="Hyu-BV-OZl"/>

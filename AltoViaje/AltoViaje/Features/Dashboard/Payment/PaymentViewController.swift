@@ -24,6 +24,8 @@ class PaymentViewController: UIViewController {
         payButton.layer.borderWidth = 1
         payButton.layer.cornerRadius = 5
 
+        cardView.layer.cornerRadius = 10
+
         payButton.isEnabled = false
         payButton.alpha = 0.50
 

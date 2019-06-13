@@ -53,7 +53,11 @@ class MapViewController: UIViewController {
 
 	private func setSubViews() {
 		mapView = MapView(title: titleText)
+        mapView.backgroundColor = .clear
+        let backgroundImage = UIImageView(image: #imageLiteral(resourceName: "backgroundApp"))
+        view.addSubview(backgroundImage)
 		view.addSubview(mapView)
+        backgroundImage.frame = view.bounds
 		mapView.frame = view.bounds
 		mapView.delegate = self
 		mapView.setMapViewDelegate(self)

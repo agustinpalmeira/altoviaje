@@ -52,6 +52,7 @@ class MapView: UIView {
 		titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15).isActive = true
 		titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
 		titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        titleLabel.textColor = .white
 
 		addSubview(mkMapView)
 		mkMapView.translatesAutoresizingMaskIntoConstraints = false
