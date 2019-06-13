@@ -58,21 +58,45 @@ class MapViewController: UIViewController {
 		view.addSubview(mapView)
 		mapView.frame = view.bounds
 		mapView.setMapViewDelegate(self)
+
+		mapView.mapView.mapType = MKMapType.satelliteFlyover
+		mapView.mapView.showsBuildings = true // displays buildings
+
+		let eiffelTowerCoordinates = CLLocationCoordinate2DMake(-41.1805557, -72.055416)
+		mapView.mapView.region = MKCoordinateRegion(center: eiffelTowerCoordinates, latitudinalMeters: 10000, longitudinalMeters: 10000) // sets the visible region of the map
+
+		// create a 3D Camera
+		let mapCamera = MKMapCamera()
+		mapCamera.centerCoordinate = eiffelTowerCoordinates
+		mapCamera.pitch = 45
+		mapCamera.altitude = 10000 // example altitude
+		mapCamera.heading = 45
+
+		// set the camera property
+		mapView.mapView.camera = mapCamera
+
+//		let location: CLLocationCoordinate2D =  CLLocationCoordinate2DMake(-41.1805557, -72.055416)
+//		//let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(-34.6317146, -58.3737228) //Mi casita :)
+//		//var span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+//		let region = MKCoordinateRegion(center: location, latitudinalMeters: 10000, longitudinalMeters: 10000)
+//		if CLLocationCoordinate2DIsValid (location) {
+//			mapView.setRegion(region)
+//		}
 	}
 }
 
 //MARK: - Extensions
 extension MapViewController: CLLocationManagerDelegate {
 	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-		defer { currentLocation = locations.last }
-
-		if currentLocation == nil {
-			// Zoom to user location
-			if let userLocation = locations.last {
-				let viewRegion = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-				mapView.setRegion(viewRegion)
-			}
-		}
+//		defer { currentLocation = locations.last }
+//
+//		if currentLocation == nil {
+//			// Zoom to user location
+//			if let userLocation = locations.last {
+//				let viewRegion = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+//				mapView.setRegion(viewRegion)
+//			}
+//		}
 	}
 }
 
