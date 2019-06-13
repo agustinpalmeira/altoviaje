@@ -41,6 +41,8 @@ class ItineraryView: UIView {
 		var itemLabel: UILabel
 		var containerView: UIView
 		var activityButton: UIButton
+		var activityInvisibleButton: UIButton
+
 
 		let scrollView = UIScrollView()
 		addSubview(scrollView)
@@ -103,6 +105,7 @@ class ItineraryView: UIView {
 					activityLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 20).isActive = true
 				}
 				itemLabel.topAnchor.constraint(equalTo: activityLabel.topAnchor).isActive = true
+				itemLabel.bottomAnchor.constraint(equalTo: activityLabel.bottomAnchor).isActive = true
 				previousActivityLabel = activityLabel
 
 				activityButton = UIButton()
@@ -115,6 +118,17 @@ class ItineraryView: UIView {
 				activityButton.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.04).isActive = true
 				activityButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -5).isActive = true
 				activityButton.centerYAnchor.constraint(equalTo: activityLabel.centerYAnchor).isActive = true
+
+				activityInvisibleButton = UIButton()
+				activityInvisibleButton.titleLabel?.text = activity
+				activityInvisibleButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+				containerView.addSubview(activityInvisibleButton)
+				activityInvisibleButton.translatesAutoresizingMaskIntoConstraints = false
+//				activityInvisibleButton.setBackgroundImage(#imageLiteral(resourceName: "white-arrow"), for: .normal)
+				activityInvisibleButton.trailingAnchor.constraint(equalTo: activityLabel.trailingAnchor).isActive = true
+				activityInvisibleButton.leadingAnchor.constraint(equalTo: itemLabel.leadingAnchor).isActive = true
+				activityInvisibleButton.topAnchor.constraint(equalTo: activityLabel.topAnchor).isActive = true
+				activityInvisibleButton.bottomAnchor.constraint(equalTo: activityLabel.bottomAnchor).isActive = true
 			}
 			previousActivityLabel?.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10).isActive = true
 			previousActivityLabel = nil
