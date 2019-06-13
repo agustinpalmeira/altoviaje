@@ -24,6 +24,9 @@ class PaymentViewController: UIViewController {
         payButton.layer.borderWidth = 1
         payButton.layer.cornerRadius = 5
 
+        payButton.isEnabled = false
+        payButton.alpha = 0.50
+
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
     }
 
@@ -42,8 +45,12 @@ class PaymentViewController: UIViewController {
 extension PaymentViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if string == "" {
+            payButton.isEnabled = false
+            payButton.alpha = 0.5
             return true
         }
+        payButton.isEnabled = textField.text!.count >= 2
+        payButton.alpha = textField.text!.count >= 2 ? 1 : 0.5
         return textField.text!.count < 3
     }
 }

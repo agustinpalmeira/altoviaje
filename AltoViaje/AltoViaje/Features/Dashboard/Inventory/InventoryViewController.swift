@@ -55,6 +55,8 @@ class InventoryViewController: UIViewController {
         continueButton.layer.cornerRadius = 5
         continueButton.layer.borderColor = UIColor.black.cgColor
         continueButton.layer.borderWidth = 1
+        continueButton.isEnabled = false
+        continueButton.alpha = 0.5
         itemsTable.register(UINib.init(nibName: "InventoryViewCell", bundle: nil), forCellReuseIdentifier: InventoryViewCell.identifier)
         itemsTable.register(UINib.init(nibName: "InventoryHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "InventoryHeader")
     }
@@ -69,6 +71,10 @@ class InventoryViewController: UIViewController {
         }
 
         billToPay -= multiplier * item.price
+        if billToPay <= 0 {
+            continueButton.isEnabled = false
+            continueButton.alpha = 0.5
+        }
     }
 
     private func addSelectedItem(_ item: Buyable) {
@@ -79,6 +85,8 @@ class InventoryViewController: UIViewController {
         }
 
         billToPay += multiplier * item.price
+        continueButton.isEnabled = true
+        continueButton.alpha = 1
     }
 
     @IBAction func proceedToBuy(_ sender: Any) {
