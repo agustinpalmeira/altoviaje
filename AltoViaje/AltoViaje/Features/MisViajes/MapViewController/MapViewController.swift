@@ -59,21 +59,13 @@ class MapViewController: UIViewController {
 		mapView.frame = view.bounds
 		mapView.setMapViewDelegate(self)
 
-		mapView.mapView.mapType = MKMapType.satelliteFlyover
-		mapView.mapView.showsBuildings = true // displays buildings
+		let tronadorCoordinates = CLLocationCoordinate2DMake(-41.1805557, -72.055416)
+		setMapInLocation(coordinates: tronadorCoordinates)
 
-		let eiffelTowerCoordinates = CLLocationCoordinate2DMake(-41.1805557, -72.055416)
-		mapView.mapView.region = MKCoordinateRegion(center: eiffelTowerCoordinates, latitudinalMeters: 10000, longitudinalMeters: 10000) // sets the visible region of the map
 
-		// create a 3D Camera
-		let mapCamera = MKMapCamera()
-		mapCamera.centerCoordinate = eiffelTowerCoordinates
-		mapCamera.pitch = 45
-		mapCamera.altitude = 10000 // example altitude
-		mapCamera.heading = 45
-
-		// set the camera property
-		mapView.mapView.camera = mapCamera
+		setAnnonationInMapLocation(coordinates: tronadorCoordinates,
+								   title: "Cerro Tronador",
+								   subtitle: "Puerto Varas. Región de los Lagos.")
 
 //		let location: CLLocationCoordinate2D =  CLLocationCoordinate2DMake(-41.1805557, -72.055416)
 //		//let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(-34.6317146, -58.3737228) //Mi casita :)
@@ -82,6 +74,32 @@ class MapViewController: UIViewController {
 //		if CLLocationCoordinate2DIsValid (location) {
 //			mapView.setRegion(region)
 //		}
+	}
+
+	func setMapInLocation(coordinates: CLLocationCoordinate2D) {
+		mapView.mapView.mapType = MKMapType.satelliteFlyover
+		mapView.mapView.showsBuildings = true // displays buildings
+
+		let coordinates = coordinates
+		mapView.mapView.region = MKCoordinateRegion(center: coordinates, latitudinalMeters: 10000, longitudinalMeters: 10000) // sets the visible region of the map
+
+		// create a 3D Camera
+		let mapCamera = MKMapCamera()
+		mapCamera.centerCoordinate = coordinates
+		mapCamera.pitch = 45
+		mapCamera.altitude = 10000 //Altitude
+		mapCamera.heading = 45
+
+		// set the camera property
+		mapView.mapView.camera = mapCamera
+	}
+
+	func setAnnonationInMapLocation(coordinates: CLLocationCoordinate2D, title: String, subtitle: String) {
+		let annotation = MKPointAnnotation()
+		annotation.coordinate = coordinates
+		annotation.title = title
+		annotation.subtitle = subtitle
+		mapView.mapView.addAnnotation(annotation)
 	}
 }
 
