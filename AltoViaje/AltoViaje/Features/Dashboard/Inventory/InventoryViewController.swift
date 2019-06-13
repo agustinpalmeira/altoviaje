@@ -9,18 +9,23 @@
 import UIKit
 
 class InventoryViewController: UIViewController {
-    var flights: [Flight] = [Flight(name: "Latam, Económico", price: 5000, image: #imageLiteral(resourceName: "latam")),
-                             Flight(name: "Aerolineas Argentinas, Económico", price: 4800, image: #imageLiteral(resourceName: "aerolineas"))]
+    var flights: [Flight] = [Flight(name: "Latam, Económico", price: 6000, image: #imageLiteral(resourceName: "latam")),
+                             Flight(name: "Aerolineas Argentinas, Económico", price: 6300, image: #imageLiteral(resourceName: "aerolineas"))]
+
     var equips: [Equipment] = [Equipment(name: "Bolsa de Dormir Térmica Broksol", price: 1380, image: #imageLiteral(resourceName: "bolsa")),
+                               Equipment(name: "Zapatilla Montagne Hombre", price: 2000, image: #imageLiteral(resourceName: "zapatillas")),
                                Equipment(name: "Carpa Iglu Pavillo", price: 850, image: #imageLiteral(resourceName: "carpa")),
                                Equipment(name: "Mochila Camping 25l Gadnic", price: 2000, image: #imageLiteral(resourceName: "mochila")),
                                Equipment(name: "Cantimplora 0.80l Gibson's", price: 390, image: #imageLiteral(resourceName: "cantimplora")),
                                Equipment(name: "Brújula Waterdog", price: 270, image: #imageLiteral(resourceName: "brujula"))]
+
     var transports: [Transport] = [Transport(name: "Combi 'Jumping' a Tronador", price: 350, image: #imageLiteral(resourceName: "Bariloche")),
                                    Transport(name: "Combi 'Rodriguez' a Frey", price: 320, image: #imageLiteral(resourceName: "frey"))]
+
     var housing: [Housing] = [Housing(name: "Hostel 'Aventura'", price: 800, image: #imageLiteral(resourceName: "hostel1")),
                               Housing(name: "Hostel 'Casa Blanca'", price: 750, image: #imageLiteral(resourceName: "hostel2")),
                               Housing(name: "Camping 'Los Rápidos'", price: 500, image: #imageLiteral(resourceName: "camping"))]
+
     var data: [[Buyable]] {
         get {
             return [flights, housing, transports, equips]
@@ -28,18 +33,24 @@ class InventoryViewController: UIViewController {
     }
 
     var selectedItems: [Buyable] = []
-    var days: Int = 1
+    var days: Int = 3
 
     @IBOutlet weak var billView: UIView!
     @IBOutlet weak var itemsTable: UITableView!
     @IBOutlet weak var toPayLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
+    var billToPay = 0 {
+        didSet {
+            toPayLabel.text = "$\(billToPay)"
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Carrito"
         billView.layer.borderColor = UIColor.lightGray.cgColor
         billView.layer.borderWidth = 1
+        billToPay = 0
         continueButton.layer.cornerRadius = 5
         itemsTable.register(UINib.init(nibName: "InventoryViewCell", bundle: nil), forCellReuseIdentifier: InventoryViewCell.identifier)
         itemsTable.register(UINib.init(nibName: "InventoryHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "InventoryHeader")
@@ -49,6 +60,22 @@ class InventoryViewController: UIViewController {
         selectedItems = selectedItems.filter({ (aItem) -> Bool in
             return aItem.name != item.name
         })
+        var multiplier = 1
+        if item is Housing {
+            multiplier = days
+        }
+
+        billToPay -= multiplier * item.price
+    }
+
+    private func addSelectedItem(_ item: Buyable) {
+        selectedItems.append(item)
+        var multiplier = 1
+        if item is Housing {
+            multiplier = days
+        }
+
+        billToPay += multiplier * item.price
     }
 
     @IBAction func proceedToBuy(_ sender: Any) {
@@ -60,7 +87,7 @@ class InventoryViewController: UIViewController {
 extension InventoryViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedItems.append(data[indexPath.section][indexPath.row])
+        addSelectedItem(data[indexPath.section][indexPath.row])
         if indexPath.section == 0 || indexPath.section == 1 {
             let indexesSelected = tableView.indexPathsForSelectedRows?.filter({ path -> Bool in
                 return indexPath.section == path.section && indexPath.row != path.row
@@ -105,20 +132,7 @@ extension InventoryViewController: UITableViewDataSource {
         return headerView
 
     }
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0:
-//            return "Vuelos"
-//        case 1:
-//            return "Alojamientos"
-//        case 2:
-//            return "Transportes"
-//        case 3:
-//            return "Equipo"
-//        default:
-//            return ""
-//        }
-//    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data[section].count
         
