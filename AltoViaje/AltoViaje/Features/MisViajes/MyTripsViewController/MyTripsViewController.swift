@@ -53,7 +53,7 @@ class MyTripsViewController: UIViewController {
 		super.viewDidLoad()
 		setSubviews()
 
-		var activitiesArray = ["Vuelo Bs. As. -> Bariloche", "Alojamiento solcito"]
+		var activitiesArray = ["Vuelo desde Buenos Aires As hacia Bariloche", "Alojamiento solcito"]
 		var dateActivity = DateActivity(date: "01/01/2020", activities: activitiesArray)
 		var datesActivities = [dateActivity]
 
@@ -65,7 +65,7 @@ class MyTripsViewController: UIViewController {
 		dateActivity = DateActivity(date: "09/01/2020", activities: activitiesArray)
 		datesActivities.append(dateActivity)
 
-		activitiesArray = ["Vuelo Bariloche -> Bs. As."]
+		activitiesArray = ["Vuelo desde Bariloche hacia Buenos Aires"]
 		dateActivity = DateActivity(date: "15/01/2020", activities: activitiesArray)
 		datesActivities.append(dateActivity)
 
