@@ -47,6 +47,8 @@
 		CEC10A3922AF27B500EC307D /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3822AF27B500EC307D /* ActivityView.swift */; };
 		CEC10A3B22AF27C200EC307D /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC10A3A22AF27C200EC307D /* ActivityView.xib */; };
 		CEC10A3F22AF294B00EC307D /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3E22AF294B00EC307D /* Activity.swift */; };
+		CEDED62322B1F5B100EDEF83 /* InventoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDED62222B1F5B100EDEF83 /* InventoryHeaderView.swift */; };
+		CEDED62522B1F5D000EDEF83 /* InventoryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDED62422B1F5D000EDEF83 /* InventoryHeaderView.xib */; };
 		CEF32F0422B050D700B2831C /* UIView+xib.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF32F0322B050D700B2831C /* UIView+xib.swift */; };
 		CEF32F0622B0BF8000B2831C /* UIStackView+ViewManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF32F0522B0BF8000B2831C /* UIStackView+ViewManage.swift */; };
 		CEF32F0C22B0CE9300B2831C /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF32F0A22B0CE9300B2831C /* InventoryViewController.swift */; };
@@ -54,6 +56,8 @@
 		CEF32F0F22B0D13F00B2831C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF32F0E22B0D13F00B2831C /* Item.swift */; };
 		CEF32F1822B1B2BB00B2831C /* TripView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF32F1622B1B2BB00B2831C /* TripView.xib */; };
 		CEF32F1922B1B2BB00B2831C /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF32F1722B1B2BB00B2831C /* TripView.swift */; };
+		CEF32F1C22B1BD3B00B2831C /* InventoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF32F1A22B1BD3B00B2831C /* InventoryViewCell.swift */; };
+		CEF32F1D22B1BD3B00B2831C /* InventoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF32F1B22B1BD3B00B2831C /* InventoryViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +104,8 @@
 		CEC10A3822AF27B500EC307D /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		CEC10A3A22AF27C200EC307D /* ActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
 		CEC10A3E22AF294B00EC307D /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		CEDED62222B1F5B100EDEF83 /* InventoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHeaderView.swift; sourceTree = "<group>"; };
+		CEDED62422B1F5D000EDEF83 /* InventoryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryHeaderView.xib; sourceTree = "<group>"; };
 		CEF32F0322B050D700B2831C /* UIView+xib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+xib.swift"; sourceTree = "<group>"; };
 		CEF32F0522B0BF8000B2831C /* UIStackView+ViewManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+ViewManage.swift"; sourceTree = "<group>"; };
 		CEF32F0A22B0CE9300B2831C /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 		CEF32F0E22B0D13F00B2831C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CEF32F1622B1B2BB00B2831C /* TripView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripView.xib; sourceTree = "<group>"; };
 		CEF32F1722B1B2BB00B2831C /* TripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		CEF32F1A22B1BD3B00B2831C /* InventoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewCell.swift; sourceTree = "<group>"; };
+		CEF32F1B22B1BD3B00B2831C /* InventoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryViewCell.xib; sourceTree = "<group>"; };
 		D3D215019061A7380F3130E1 /* Pods-AltoViaje.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.release.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -382,6 +390,10 @@
 			children = (
 				CEF32F0A22B0CE9300B2831C /* InventoryViewController.swift */,
 				CEF32F0B22B0CE9300B2831C /* InventoryViewController.xib */,
+				CEF32F1A22B1BD3B00B2831C /* InventoryViewCell.swift */,
+				CEF32F1B22B1BD3B00B2831C /* InventoryViewCell.xib */,
+				CEDED62222B1F5B100EDEF83 /* InventoryHeaderView.swift */,
+				CEDED62422B1F5D000EDEF83 /* InventoryHeaderView.xib */,
 			);
 			path = Inventory;
 			sourceTree = "<group>";
@@ -466,10 +478,12 @@
 				CE9FEAB122A47A12007E48D8 /* DashboardCell.xib in Resources */,
 				CEB0AF1B22A88A2F000014AB /* TripViewController.xib in Resources */,
 				723AE3A022AC350100D3BFE8 /* MyTripsCell.xib in Resources */,
+				CEDED62522B1F5D000EDEF83 /* InventoryHeaderView.xib in Resources */,
 				CE9FEAB922A4899D007E48D8 /* MenuView.xib in Resources */,
 				CEF32F0D22B0CE9300B2831C /* InventoryViewController.xib in Resources */,
 				CE9FEABD22A48A8F007E48D8 /* MenuCell.xib in Resources */,
 				CE9FEAA922A47364007E48D8 /* Main.storyboard in Resources */,
+				CEF32F1D22B1BD3B00B2831C /* InventoryViewCell.xib in Resources */,
 				CEB0AF2922A8DA2A000014AB /* Montserrat-Bold.otf in Resources */,
 				CEB0AF2D22A8DA2A000014AB /* Montserrat-Black.otf in Resources */,
 				CEB0AF2A22A8DA2A000014AB /* Montserrat Medium.otf in Resources */,
@@ -536,6 +550,7 @@
 				CEC10A3922AF27B500EC307D /* ActivityView.swift in Sources */,
 				7266EADF22ADCC5E00062507 /* DateActivity.swift in Sources */,
 				CEB0AF1922A87E2E000014AB /* MenuItem.swift in Sources */,
+				CEF32F1C22B1BD3B00B2831C /* InventoryViewCell.swift in Sources */,
 				CEF32F1922B1B2BB00B2831C /* TripView.swift in Sources */,
 				723AE39A22AA0BE500D3BFE8 /* MyTripsViewController.swift in Sources */,
 				CE9FEAB722A48968007E48D8 /* MenuView.swift in Sources */,
@@ -549,6 +564,7 @@
 				CEF32F0622B0BF8000B2831C /* UIStackView+ViewManage.swift in Sources */,
 				CE9FEAAD22A478FD007E48D8 /* DashboardViewController.swift in Sources */,
 				CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */,
+				CEDED62322B1F5B100EDEF83 /* InventoryHeaderView.swift in Sources */,
 				CEF32F0422B050D700B2831C /* UIView+xib.swift in Sources */,
 				721D41A422A8613C00B756AF /* TripViewController.swift in Sources */,
 				7266EAD822ADAE7600062507 /* ItineraryView.swift in Sources */,

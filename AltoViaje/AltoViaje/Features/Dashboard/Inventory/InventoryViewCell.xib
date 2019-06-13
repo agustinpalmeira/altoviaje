@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat Medium.otf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="InventoryViewCell" customModule="AltoViaje" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="382" height="120.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLx-uY-F82">
+                        <rect key="frame" x="0.0" y="5" width="382" height="110.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="latam" translatesAutoresizingMaskIntoConstraints="NO" id="9hF-Yw-74R">
+                                <rect key="frame" x="5" y="10.5" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="e6D-fi-OpX"/>
+                                    <constraint firstAttribute="height" constant="90" id="vKT-AP-EbB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aerolineas Argentinas, Económico" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arZ-du-rjw">
+                                <rect key="frame" x="103" y="10.5" width="271" height="41.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$250" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uab-bV-BQ4">
+                                <rect key="frame" x="103" y="74.5" width="135.5" height="26"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3L-jC-Jjd">
+                                <rect key="frame" x="334" y="60" width="40" height="40"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="7t2-fa-Hlj">
+                                        <rect key="frame" x="2" y="2" width="36" height="36"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7t2-fa-Hlj" firstAttribute="leading" secondItem="o3L-jC-Jjd" secondAttribute="leading" constant="2" id="NI6-U8-wee"/>
+                                    <constraint firstAttribute="trailing" secondItem="7t2-fa-Hlj" secondAttribute="trailing" constant="2" id="QB9-lu-w1V"/>
+                                    <constraint firstAttribute="height" constant="40" id="XVT-zG-qhg"/>
+                                    <constraint firstItem="7t2-fa-Hlj" firstAttribute="top" secondItem="o3L-jC-Jjd" secondAttribute="top" constant="2" id="qZH-Bz-b7K"/>
+                                    <constraint firstAttribute="width" constant="40" id="vFf-aK-7M7"/>
+                                    <constraint firstAttribute="bottom" secondItem="7t2-fa-Hlj" secondAttribute="bottom" constant="2" id="zpx-lJ-P8Y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9hF-Yw-74R" firstAttribute="centerY" secondItem="s7z-V7-LHs" secondAttribute="centerY" id="2Hm-vM-vcd"/>
+                            <constraint firstItem="s7z-V7-LHs" firstAttribute="trailing" secondItem="o3L-jC-Jjd" secondAttribute="trailing" constant="8" id="5UE-oq-pDe"/>
+                            <constraint firstAttribute="height" constant="110.5" id="D0R-VY-FqX"/>
+                            <constraint firstItem="arZ-du-rjw" firstAttribute="top" secondItem="9hF-Yw-74R" secondAttribute="top" id="L8t-g4-2Ap"/>
+                            <constraint firstItem="s7z-V7-LHs" firstAttribute="trailing" secondItem="arZ-du-rjw" secondAttribute="trailing" constant="8" id="QOi-Ta-nSz"/>
+                            <constraint firstItem="arZ-du-rjw" firstAttribute="leading" secondItem="9hF-Yw-74R" secondAttribute="trailing" constant="8" id="Qmw-uI-2jJ"/>
+                            <constraint firstItem="s7z-V7-LHs" firstAttribute="bottom" secondItem="o3L-jC-Jjd" secondAttribute="bottom" constant="10.5" id="RuN-pb-257"/>
+                            <constraint firstItem="9hF-Yw-74R" firstAttribute="leading" secondItem="s7z-V7-LHs" secondAttribute="leading" constant="5" id="U9X-L8-kGS"/>
+                            <constraint firstItem="Uab-bV-BQ4" firstAttribute="leading" secondItem="s7z-V7-LHs" secondAttribute="leading" constant="103" id="cQf-G6-TqC"/>
+                            <constraint firstItem="Uab-bV-BQ4" firstAttribute="bottom" secondItem="9hF-Yw-74R" secondAttribute="bottom" id="n8H-HZ-mg1"/>
+                            <constraint firstItem="Uab-bV-BQ4" firstAttribute="width" secondItem="arZ-du-rjw" secondAttribute="width" multiplier="0.5" id="wdt-Kn-WIE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="s7z-V7-LHs"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.92702907986111116" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="JLx-uY-F82" secondAttribute="trailing" id="41Z-Jy-23w"/>
+                    <constraint firstItem="JLx-uY-F82" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="FZa-f7-gHW"/>
+                    <constraint firstAttribute="bottom" secondItem="JLx-uY-F82" secondAttribute="bottom" constant="5" id="rWJ-fg-veh"/>
+                    <constraint firstItem="JLx-uY-F82" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ug8-8Y-Exh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkContainer" destination="o3L-jC-Jjd" id="9id-PE-roZ"/>
+                <outlet property="checkIcon" destination="7t2-fa-Hlj" id="EFP-cA-qa7"/>
+                <outlet property="descriptionLabel" destination="arZ-du-rjw" id="484-eC-1ji"/>
+                <outlet property="itemImage" destination="9hF-Yw-74R" id="53u-P5-JBv"/>
+                <outlet property="priceLabel" destination="Uab-bV-BQ4" id="Iv2-Xj-fwf"/>
+            </connections>
+            <point key="canvasLocation" x="182.40000000000001" y="189.3553223388306"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check" width="170" height="170"/>
+        <image name="latam" width="166" height="166"/>
+    </resources>
+</document>
