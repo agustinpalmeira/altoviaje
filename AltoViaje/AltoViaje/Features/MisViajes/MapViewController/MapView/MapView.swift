@@ -13,7 +13,7 @@ import UIKit
 class MapView: UIView {
 
 	//MARK: - Variables
-	let mapView: MKMapView = {
+	let mkMapView: MKMapView = {
 		let view = MKMapView()
 		view.layer.cornerRadius = 2.0
 		view.layer.borderColor = UIColor.black.cgColor
@@ -47,12 +47,12 @@ class MapView: UIView {
 		titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
 		titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
 
-		addSubview(mapView)
-		mapView.translatesAutoresizingMaskIntoConstraints = false
-		mapView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
-		mapView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
-		mapView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
-		mapView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15).isActive = true
+		addSubview(mkMapView)
+		mkMapView.translatesAutoresizingMaskIntoConstraints = false
+		mkMapView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
+		mkMapView.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor).isActive = true
+		mkMapView.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
+		mkMapView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -15).isActive = true
 	}
 
 	private func getTitleLabel(text: String) -> UILabel {
@@ -75,11 +75,11 @@ class MapView: UIView {
 	//MARK: - Configure Map
 
 	func setRegion(_ region: MKCoordinateRegion) {
-		mapView.setRegion(region, animated: true)
+		mkMapView.setRegion(region, animated: true)
 	}
 
 	func setMapViewDelegate(_ delegate: MKMapViewDelegate) {
-		mapView.delegate = delegate
+		mkMapView.delegate = delegate
 	}
 
 	//MARK: - Actions

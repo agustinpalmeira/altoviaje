@@ -77,11 +77,11 @@ class MapViewController: UIViewController {
 	}
 
 	func setMapInLocation(coordinates: CLLocationCoordinate2D) {
-		mapView.mapView.mapType = MKMapType.satelliteFlyover
-		mapView.mapView.showsBuildings = true // displays buildings
+		mapView.mkMapView.mapType = MKMapType.satelliteFlyover
+		mapView.mkMapView.showsBuildings = true // displays buildings
 
 		let coordinates = coordinates
-		mapView.mapView.region = MKCoordinateRegion(center: coordinates, latitudinalMeters: 10000, longitudinalMeters: 10000) // sets the visible region of the map
+		mapView.mkMapView.region = MKCoordinateRegion(center: coordinates, latitudinalMeters: 10000, longitudinalMeters: 10000) // sets the visible region of the map
 
 		// create a 3D Camera
 		let mapCamera = MKMapCamera()
@@ -91,7 +91,7 @@ class MapViewController: UIViewController {
 		mapCamera.heading = 45
 
 		// set the camera property
-		mapView.mapView.camera = mapCamera
+		mapView.mkMapView.camera = mapCamera
 	}
 
 	func setAnnonationInMapLocation(coordinates: CLLocationCoordinate2D, title: String, subtitle: String) {
@@ -99,7 +99,18 @@ class MapViewController: UIViewController {
 		annotation.coordinate = coordinates
 		annotation.title = title
 		annotation.subtitle = subtitle
-		mapView.mapView.addAnnotation(annotation)
+		mapView.mkMapView.addAnnotation(annotation)
+	}
+
+	//MARK: - Actions
+	@objc
+	func zoomToUserLocation() {
+		var mapRegion = MKCoordinateRegion()
+		mapRegion.center = mapView.mkMapView.userLocation.coordinate
+		mapRegion.span.latitudeDelta = CLLocationDegrees(0.2)
+		mapRegion.span.longitudeDelta = CLLocationDegrees(0.2)
+
+		mapView.mkMapView.setRegion(mapRegion, animated: true)
 	}
 }
 
