@@ -25,6 +25,7 @@
 		72E62BA822C426B600C4E3F5 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA722C426B600C4E3F5 /* ActivityDetailView.swift */; };
 		72E62BAA22C42F6600C4E3F5 /* TourActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA922C42F6600C4E3F5 /* TourActivity.swift */; };
 		72E62BAD22C475A100C4E3F5 /* ActivityBarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BAC22C475A100C4E3F5 /* ActivityBarMenuView.swift */; };
+		72E62BB022C4835500C4E3F5 /* ItineraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BAF22C4835500C4E3F5 /* ItineraryCell.swift */; };
 		AEAA0D81CE26F0C8B2192340 /* Pods_AltoViaje.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0E24A0EC312937220A535 /* Pods_AltoViaje.framework */; };
 		CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9FEA9122A472E8007E48D8 /* AppDelegate.swift */; };
 		CE9FEA9922A472E9007E48D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9FEA9822A472E9007E48D8 /* Assets.xcassets */; };
@@ -89,6 +90,7 @@
 		72E62BA722C426B600C4E3F5 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
 		72E62BA922C42F6600C4E3F5 /* TourActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourActivity.swift; sourceTree = "<group>"; };
 		72E62BAC22C475A100C4E3F5 /* ActivityBarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityBarMenuView.swift; sourceTree = "<group>"; };
+		72E62BAF22C4835500C4E3F5 /* ItineraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCell.swift; sourceTree = "<group>"; };
 		CE9FEA8E22A472E8007E48D8 /* AltoViaje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AltoViaje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9FEA9122A472E8007E48D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9FEA9822A472E9007E48D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				7266EAD722ADAE7600062507 /* ItineraryView.swift */,
+				72E62BAE22C4833100C4E3F5 /* ItineraryCell */,
 			);
 			path = ItineraryView;
 			sourceTree = "<group>";
@@ -282,6 +285,14 @@
 				72E62BAC22C475A100C4E3F5 /* ActivityBarMenuView.swift */,
 			);
 			path = ActivityBarMenuView;
+			sourceTree = "<group>";
+		};
+		72E62BAE22C4833100C4E3F5 /* ItineraryCell */ = {
+			isa = PBXGroup;
+			children = (
+				72E62BAF22C4835500C4E3F5 /* ItineraryCell.swift */,
+			);
+			path = ItineraryCell;
 			sourceTree = "<group>";
 		};
 		CE9FEA8522A472E8007E48D8 = {
@@ -650,6 +661,7 @@
 				723AE39E22AC34F000D3BFE8 /* MyTripsCell.swift in Sources */,
 				723757F222B04E1E000686F0 /* MapView.swift in Sources */,
 				721D41AF22A8D97D00B756AF /* MyTripsView.swift in Sources */,
+				72E62BB022C4835500C4E3F5 /* ItineraryCell.swift in Sources */,
 				7266EAD122AC83B800062507 /* ItineraryViewController.swift in Sources */,
 				CEDED63222B21E1100EDEF83 /* AltoViajeNotification.swift in Sources */,
 				CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */,
