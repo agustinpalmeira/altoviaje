@@ -45,7 +45,6 @@ class ItineraryViewController: UIViewController {
 		itineraryView.delegate = self
 		view.addSubview(itineraryView)
 		itineraryView.frame = view.bounds
-
 	}
 }
 

@@ -131,7 +131,6 @@ class ItineraryView: UIView {
 				activityInvisibleButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
 				containerView.addSubview(activityInvisibleButton)
 				activityInvisibleButton.translatesAutoresizingMaskIntoConstraints = false
-//				activityInvisibleButton.setBackgroundImage(#imageLiteral(resourceName: "white-arrow"), for: .normal)
 				activityInvisibleButton.trailingAnchor.constraint(equalTo: activityLabel.trailingAnchor).isActive = true
 				activityInvisibleButton.leadingAnchor.constraint(equalTo: itemLabel.leadingAnchor).isActive = true
 				activityInvisibleButton.topAnchor.constraint(equalTo: activityLabel.topAnchor).isActive = true
