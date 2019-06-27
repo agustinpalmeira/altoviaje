@@ -10,41 +10,23 @@ import Foundation
 import UIKit
 
 class TripViewController: UIViewController {
+    var destiny: Destiny!
+
 	@IBOutlet weak var tripView: TripView!
 
-    var possibleActivities: [Activity] = [
-    ]
+    var possibleActivities: [ActivityType] = [.beach, .camping, .climbing, .trekking]
 
-    var selectedActivities: [Activity] = []
+    var selectedActivities: [ActivityType] = []
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		navigationItem.title = "Bariloche"
+		navigationItem.title = destiny.place
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        tripView.setupViews(with: destiny)
 	}
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        var dateComponent = DateComponents()
-        dateComponent.day = 1
-        dateComponent.month = 1
-        dateComponent.year = 2019
-
-        var dateComponent1 = DateComponents()
-        dateComponent1.day = 1
-        dateComponent1.month = 9
-        dateComponent1.year = 2019
-
-        var dateComponent2 = DateComponents()
-        dateComponent2.day = 1
-        dateComponent2.month = 4
-        dateComponent2.year = 2020
-
-        possibleActivities = [
-            Activity(name: "Trekking", availableFrom: Calendar.current.date(from: dateComponent) ?? Date(), availableTo: Date(timeIntervalSinceNow: 3600 * 24 * 365), active: false),
-                               Activity(name: "Playa", availableFrom: Calendar.current.date(from: dateComponent1) ?? Date(), availableTo: Calendar.current.date(from: dateComponent2) ?? Date(), active: false),
-        Activity(name: "Camping", availableFrom: Calendar.current.date(from: dateComponent) ?? Date(), availableTo: Date(timeIntervalSinceNow: 3600 * 24 * 365), active: false),
-        Activity(name: "Montañismo", availableFrom:  Calendar.current.date(from: dateComponent) ?? Date(), availableTo: Date(timeIntervalSinceNow: 3600 * 24 * 365), active: false)]
-        navigationController?.setNavigationBarHidden(false, animated: true)
         tripView.activities = possibleActivities
     }
     @IBAction func moveToCart(_ sender: Any) {

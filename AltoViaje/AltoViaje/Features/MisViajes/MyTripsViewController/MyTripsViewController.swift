@@ -53,7 +53,7 @@ class MyTripsViewController: UIViewController {
 		super.viewDidLoad()
 		setSubviews()
 
-		var activitiesArray = ["Vuelo desde Buenos Aires As hacia Bariloche", "Alojamiento solcito"]
+		var activitiesArray = ["Vuelo desde Buenos Aires hacia Bariloche", "Camping 'Los Rápidos'"]
 		var dateActivity = DateActivity(date: "01/01/2020", activities: activitiesArray)
 		var datesActivities = [dateActivity]
 

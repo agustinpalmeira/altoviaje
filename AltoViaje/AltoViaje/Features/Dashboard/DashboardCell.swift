@@ -33,9 +33,9 @@ class DashboardCell: UITableViewCell {
 
     }
 
-    func configCell(_ trip: Trip) {
+    func configCell(_ trip: Destiny) {
         placeTitle.text = "Descubrí \(trip.place)"
-        placeImage.image = trip.placeholder
+        placeImage.image = trip.image
         prizeLabel.text = "Paquetes desde $\(trip.estimatedPrize)"
     }
 

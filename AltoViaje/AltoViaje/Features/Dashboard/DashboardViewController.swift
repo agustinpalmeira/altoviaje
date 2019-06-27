@@ -14,6 +14,10 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var newTripBoockedView: UIView!
     @IBOutlet weak var newTripTileView: UIView!
 
+    let destinies: [Destiny] = [Destiny(place: "Bariloche", description: "Bariloche es una ciudad ubicada entre bosques milenarios, montañas cubiertas de nieve y lagos cristalinos, en la provincia de Río Negro, Argentina. Se trata de una postal de nuestra Patagonia. Una ciudad anfitriona por excelencia, enmarcada por algunas de las bellezas naturales más importantes del país.", image: #imageLiteral(resourceName: "Bariloche"), estimatedPrize: 6500, activities: []),
+                                Destiny(place: "Iguazu", description: "Bariloche es una ciudad ubicada entre bosques milenarios, montañas cubiertas de nieve y lagos cristalinos, en la provincia de Río Negro, Argentina. Se trata de una postal de nuestra Patagonia. Una ciudad anfitriona por excelencia, enmarcada por algunas de las bellezas naturales más importantes del país.", image: #imageLiteral(resourceName: "Iguazu"), estimatedPrize: 6200, activities: []),
+                                Destiny(place: "Salta", description: "Bariloche es una ciudad ubicada entre bosques milenarios, montañas cubiertas de nieve y lagos cristalinos, en la provincia de Río Negro, Argentina. Se trata de una postal de nuestra Patagonia. Una ciudad anfitriona por excelencia, enmarcada por algunas de las bellezas naturales más importantes del país.", image: #imageLiteral(resourceName: "Salta"), estimatedPrize: 7200, activities: [])]
+
     let menuItems: [MenuItemModel] = [
         MenuItemModel(image: #imageLiteral(resourceName: "planeIcon"), name: "Vuelos"),
         MenuItemModel(image: #imageLiteral(resourceName: "lodging"), name: "Alojamiento"),
@@ -98,7 +102,7 @@ extension DashboardViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DashboardCell.cellIdentifier, for: indexPath) as? DashboardCell else {
             return DashboardCell()
         }
-        cell.configCell(trips[indexPath.row])
+        cell.configCell(destinies[indexPath.row])
         return cell
     }
 
@@ -132,6 +136,7 @@ extension DashboardViewController: UICollectionViewDataSource {
 extension DashboardViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let tripVC = TripViewController(nibName:"TripViewController", bundle: nil)
+        tripVC.destiny = destinies[indexPath.row]
         navigationController?.pushViewController(tripVC, animated: true)
     }
 }

@@ -22,13 +22,13 @@ class TripView: UIView {
             setupActivities()
         }
     }
-    var activities: [Activity] = [] {
+    var activities: [ActivityType] = [] {
         didSet {
             self.setupActivities()
         }
     }
 
-    var selectedActivities: [Activity] = []
+    var selectedActivities: [ActivityType] = []
 
     @IBOutlet weak var activitiesContainer: UIStackView!
     @IBOutlet var contentView: UIView!
@@ -66,6 +66,11 @@ class TripView: UIView {
 
 	}
 
+    func setupViews(with destiny: Destiny) {
+        descriptionLabel.text = destiny.description
+        destinyImageView.image = destiny.image
+    }
+
     private func setupInitalDate() {
         var dateComponent = DateComponents()
         dateComponent.day = 1
@@ -83,19 +88,23 @@ class TripView: UIView {
         activitiesContainer.removeAllArrangedSubviews()
         var stackHeight = 0
         for activity in self.activities {
-            if activity.availableFrom < fromDate && activity.availableTo > toDate {
                 let activityView = ActivityView.loadFromNib()
                 activityView.viewDelegate = self
-                activityView.setupView(activity)
+            activityView.setupView(activity, active: isSelectedActivityType(activity))
                 stackHeight += 55
                 activitiesContainer.addArrangedSubview(activityView)
-            } else {
-                selectedActivities = selectedActivities.filter { (anActivity) -> Bool in
-                    return anActivity.name != activity.name
-                }
-            }
+
         }
         activitiesHeight.constant = CGFloat(stackHeight)
+    }
+
+    private func isSelectedActivityType(_ type: ActivityType) -> Bool {
+        for aType in selectedActivities {
+            if aType.rawValue == type.rawValue {
+                return true
+            }
+        }
+        return false
     }
 
     @IBAction func fromDate(_ sender: Any) {
@@ -146,10 +155,10 @@ class TripView: UIView {
 }
 
 extension TripView: ActivityViewDelegate {
-    func selectActivity(activity: Activity) {
-        if !activity.active {
+    func selectActivity(activity: ActivityType, active: Bool) {
+        if active {
             selectedActivities = selectedActivities.filter { (anActivity) -> Bool in
-                return anActivity.name != activity.name
+                return anActivity.rawValue != activity.rawValue
             }
         } else {
             selectedActivities.append(activity)

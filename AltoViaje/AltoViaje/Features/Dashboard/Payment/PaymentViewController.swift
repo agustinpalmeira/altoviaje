@@ -17,6 +17,8 @@ class PaymentViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: true)
+
         navigationItem.title = "Forma de Pago"
         cvvTextField.delegate = self
         totalToPayLabel.text = "$\(toPay)"

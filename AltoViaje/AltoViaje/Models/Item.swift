@@ -37,4 +37,5 @@ struct Equipment: Buyable {
     var name: String
     var price: Int
     var image: UIImage?
+    var forActivities: [ActivityType]?
 }

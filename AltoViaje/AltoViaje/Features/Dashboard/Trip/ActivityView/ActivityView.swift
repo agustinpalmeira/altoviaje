@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ActivityViewDelegate {
-    func selectActivity(activity: Activity)
+    func selectActivity(activity: ActivityType, active: Bool)
 }
 
 class ActivityView: UIView {
@@ -19,16 +19,15 @@ class ActivityView: UIView {
 
     @IBOutlet weak var name: UILabel!
     var viewDelegate: ActivityViewDelegate?
-    var activity: Activity!
+    var activity: ActivityType!
 
-    func setupView(_ activity: Activity) {
+    func setupView(_ activity: ActivityType, active: Bool = false) {
         self.activity = activity
-        activated.isOn = activity.active
+        activated.isOn = active
         name.text = activity.name
     }
 
     @IBAction func switchMoved(_ sender: Any) {
-        activity.active = activated.isOn
-        viewDelegate?.selectActivity(activity: activity)
+        viewDelegate?.selectActivity(activity: activity, active: activated.isOn)
     }
 }

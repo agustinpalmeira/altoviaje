@@ -68,15 +68,15 @@ class ItineraryView: UIView {
 		contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
 		contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
 
-		let color = UIColor(red: 72/255, green: 135/255, blue: 223/255, alpha: 1)
+		let color = UIColor(red: 109/255, green: 142/255, blue: 255/255, alpha: 1)
 
 		for dateActivity in activities {
 			containerView = UIView()
 			contentView.addSubview(containerView)
 			containerView.backgroundColor = color
-			containerView.layer.borderColor = color.cgColor
+			containerView.layer.borderColor = UIColor.black.cgColor
 			containerView.layer.cornerRadius = 5.0
-			containerView.layer.borderWidth = 2.0
+			containerView.layer.borderWidth = 1.0
 			containerView.translatesAutoresizingMaskIntoConstraints = false
 
 			dateLabel = getDateLabel(text: dateActivity.date)
