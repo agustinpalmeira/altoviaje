@@ -9,9 +9,15 @@
 import Foundation
 import UIKit
 
+protocol ActivityBarMenuViewDelegate: class {
+	func openMap()
+	func deleteActivity()
+}
+
 class ActivityBarMenuView: UIView {
 
 	//MARK: - Variables
+	weak var delegate: ActivityBarMenuViewDelegate?
 
 	//MARK: - Initializers
 
@@ -28,23 +34,35 @@ class ActivityBarMenuView: UIView {
 	//MARK: - Configure views
 	private func setSubViews() {
 		let trashButton = UIButton()
-		//trashButton.addTarget(self, action: #selector(didTapCurrentLocationButton), for: .touchUpInside)
+		trashButton.addTarget(self, action: #selector(didTapMapButton), for: .touchUpInside)
 		trashButton.translatesAutoresizingMaskIntoConstraints = false
-		trashButton.setImage(#imageLiteral(resourceName: "map"), for: .normal)
+		trashButton.setImage(#imageLiteral(resourceName: "trash"), for: .normal)
 		addSubview(trashButton)
-		trashButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+		trashButton.heightAnchor.constraint(equalToConstant: 80).isActive = true
 		trashButton.widthAnchor.constraint(equalTo: trashButton.heightAnchor).isActive = true
-		trashButton.leadingAnchor.constraint(equalTo: trailingAnchor, constant: 20).isActive = true
-		trashButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+		trashButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50).isActive = true
+		trashButton.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+		trashButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
 
 		let mapButton = UIButton()
-		//mapButton.addTarget(self, action: #selector(didTapCurrentLocationButton), for: .touchUpInside)
+		mapButton.addTarget(self, action: #selector(didTapTrashButton), for: .touchUpInside)
 		mapButton.translatesAutoresizingMaskIntoConstraints = false
-		mapButton.setImage(#imageLiteral(resourceName: "trash"), for: .normal)
+		mapButton.setImage(#imageLiteral(resourceName: "map"), for: .normal)
 		addSubview(mapButton)
-		mapButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+		mapButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
 		mapButton.widthAnchor.constraint(equalTo: mapButton.heightAnchor).isActive = true
-		mapButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-		mapButton.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+		mapButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50).isActive = true
+		mapButton.centerYAnchor.constraint(equalTo: trashButton.centerYAnchor).isActive = true
+	}
+
+	//MARK: - Actions
+	@objc
+	func didTapMapButton() {
+		self.delegate?.openMap()
+	}
+
+	@objc
+	func didTapTrashButton() {
+		self.delegate?.deleteActivity()
 	}
 }

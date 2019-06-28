@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 import UIKit
 
 class ItineraryViewController: UIViewController {
@@ -67,10 +68,12 @@ class ItineraryViewController: UIViewController {
 extension ItineraryViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		//let tour = TourActivity(date: NSDate().
+		let coordinate = CLLocationCoordinate2DMake(-41.1805557, -72.055416)
+		let dateActivity = activities![indexPath.section]
+		let tour = TourActivity(date: dateActivity.date, title: dateActivity.activities[indexPath.row], description: "Sarasa", coordinate: coordinate)
 
-		//let viewController = ActivityDetailViewController(withActivity: activities![indexPath.section].activities[indexPath.row])
-		//navigationController?.pushViewController(viewController, animated: true)
+		let viewController = ActivityDetailViewController(withActivity: tour)
+		navigationController?.pushViewController(viewController, animated: true)
 	}
 
 	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

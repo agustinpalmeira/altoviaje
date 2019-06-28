@@ -24,6 +24,7 @@ class ActivityDetailViewController: UIViewController {
 	override func viewWillAppear(_ animated: Bool) {
 		navigationController?.setNavigationBarHidden(false, animated: true)
 		navigationItem.title = "Actividad"
+		//tabBarController?.tabBar.isHidden = true
 	}
 
 	// MARK: - Initialization
@@ -43,13 +44,14 @@ class ActivityDetailViewController: UIViewController {
 	private func setSubViews() {
 		let activityView = ActivityDetailView(withActivity: activity)
 		view.addSubview(activityView)
-		view.translatesAutoresizingMaskIntoConstraints = false
+		activityView.translatesAutoresizingMaskIntoConstraints = false
 		activityView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
 		activityView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
 		activityView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
 		let activityBarMenuView = ActivityBarMenuView()
 		view.addSubview(activityBarMenuView)
+		activityBarMenuView.translatesAutoresizingMaskIntoConstraints = false
 		activityBarMenuView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
 		activityBarMenuView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 		activityBarMenuView.topAnchor.constraint(equalTo: activityView.bottomAnchor).isActive = true
