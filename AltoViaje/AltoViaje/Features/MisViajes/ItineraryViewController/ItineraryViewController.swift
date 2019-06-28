@@ -13,8 +13,6 @@ class ItineraryViewController: UIViewController {
 
 	//MARK: - Variables
 	private var activities: [DateActivity]!
-//	private var section: [String]!
-//	private var items: [String]!
 	var tableView: UITableView!
 
 	// MARK: - View life cycle
@@ -49,13 +47,10 @@ class ItineraryViewController: UIViewController {
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.frame = view.bounds
-
-		//tableView.backgroundColor = .none
+		tableView.separatorStyle = .none
 		tableView.register(ItineraryCell.self, forCellReuseIdentifier: ItineraryCell.identifier)
-		tableView.register(UINib.init(nibName: "InventoryHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "InventoryHeader")
-
-		//tableView.sectionFooterHeight = 0
-		//tableView.estimatedSectionHeaderHeight = 10
+		tableView.register(UINib.init(nibName: "InventoryHeaderView", bundle: nil),
+						   forHeaderFooterViewReuseIdentifier: "InventoryHeader")
 	}
 }
 
@@ -70,7 +65,7 @@ class ItineraryViewController: UIViewController {
 extension ItineraryViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-		return 1
+		return 0
 	}
 
 	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -106,6 +101,7 @@ extension ItineraryViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = ItineraryCell(style: .default, reuseIdentifier: ItineraryCell.identifier)
 		cell.setup(withActivity: activities![indexPath.section].activities[indexPath.row])
+		cell.selectionStyle = .none
 
 		return cell
 	}
