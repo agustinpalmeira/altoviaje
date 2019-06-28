@@ -9,6 +9,6 @@
 import Foundation
 
 struct DateActivity {
-	let date: String
+	let date: Date
 	let activities: [String]
 }

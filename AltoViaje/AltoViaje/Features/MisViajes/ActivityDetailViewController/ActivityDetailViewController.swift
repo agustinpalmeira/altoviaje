@@ -43,6 +43,16 @@ class ActivityDetailViewController: UIViewController {
 	private func setSubViews() {
 		let activityView = ActivityDetailView(withActivity: activity)
 		view.addSubview(activityView)
-		activityView.frame = view.bounds
+		view.translatesAutoresizingMaskIntoConstraints = false
+		activityView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+		activityView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+		activityView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+
+		let activityBarMenuView = ActivityBarMenuView()
+		view.addSubview(activityBarMenuView)
+		activityBarMenuView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+		activityBarMenuView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+		activityBarMenuView.topAnchor.constraint(equalTo: activityView.bottomAnchor).isActive = true
+		activityBarMenuView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 	}
 }

@@ -38,7 +38,7 @@ class ActivityDetailView: UIView {
 		titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
 
 		let dateLabel = UILabel()
-		dateLabel.text = activity.date.description
+		dateLabel.text = DateFormatter().string(from: activity.date, with: "dd/MM/YY")
 		addSubview(dateLabel)
 		dateLabel.translatesAutoresizingMaskIntoConstraints = true
 		dateLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5).isActive = true

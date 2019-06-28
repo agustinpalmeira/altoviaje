@@ -62,7 +62,16 @@ class ItineraryViewController: UIViewController {
 //	}
 //}
 
+//MARK: - UITableViewDelegate
+
 extension ItineraryViewController: UITableViewDelegate {
+
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		//let tour = TourActivity(date: NSDate().
+
+		//let viewController = ActivityDetailViewController(withActivity: activities![indexPath.section].activities[indexPath.row])
+		//navigationController?.pushViewController(viewController, animated: true)
+	}
 
 	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
 		return 0
@@ -72,8 +81,8 @@ extension ItineraryViewController: UITableViewDelegate {
 		guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "InventoryHeader") as? InventoryHeaderView else {
 			return nil
 		}
-		headerView.headerTitle.text = activities![section].date
-
+		headerView.headerTitle.text = DateFormatter().string(from: activities![section].date, with: "dd/MM/YYYY")
+		
 		return headerView
 	}
 
@@ -92,6 +101,8 @@ extension ItineraryViewController: UITableViewDelegate {
 		return UIScreen.main.bounds.size.height * 0.1
 	}
 }
+
+//MARK: - UITableViewDataSource
 
 extension ItineraryViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

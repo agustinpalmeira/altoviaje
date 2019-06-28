@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 struct Package {
-	let dateFrom: String
-	let dateTo: String
+	let dateFrom: Date
+	let dateTo: Date
 	let destiny: String
 	let image: UIImage
 	let activities: [DateActivity]

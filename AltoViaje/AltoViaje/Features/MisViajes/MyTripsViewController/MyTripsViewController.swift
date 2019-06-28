@@ -53,23 +53,54 @@ class MyTripsViewController: UIViewController {
 		super.viewDidLoad()
 		setSubviews()
 
+		var dateComponent = DateComponents()
+		dateComponent.day = 1
+		dateComponent.month = 1
+		dateComponent.year = 2020
+		var date = Calendar.current.date(from: dateComponent)
+
 		var activitiesArray = ["Vuelo desde Buenos Aires As hacia Bariloche", "Alojamiento solcito"]
-		var dateActivity = DateActivity(date: "01/01/2020", activities: activitiesArray)
+		var dateActivity = DateActivity(date: date!, activities: activitiesArray)
 		var datesActivities = [dateActivity]
 
+		dateComponent.day = 5
+		dateComponent.month = 1
+		dateComponent.year = 2020
+		date = Calendar.current.date(from: dateComponent)
+
 		activitiesArray = ["Excursión Tronador"]
-		dateActivity = DateActivity(date: "05/01/2020", activities: activitiesArray)
+		dateActivity = DateActivity(date: date!, activities: activitiesArray)
 		datesActivities.append(dateActivity)
 
+		dateComponent.day = 9
+		dateComponent.month = 1
+		dateComponent.year = 2020
+		date = Calendar.current.date(from: dateComponent)
 		activitiesArray = ["Excursión Frey"]
-		dateActivity = DateActivity(date: "09/01/2020", activities: activitiesArray)
+		dateActivity = DateActivity(date: date!, activities: activitiesArray)
 		datesActivities.append(dateActivity)
+
+		dateComponent.day = 15
+		dateComponent.month = 1
+		dateComponent.year = 2020
+		date = Calendar.current.date(from: dateComponent)
 
 		activitiesArray = ["Vuelo desde Bariloche hacia Buenos Aires"]
-		dateActivity = DateActivity(date: "15/01/2020", activities: activitiesArray)
+		dateActivity = DateActivity(date: date!, activities: activitiesArray)
 		datesActivities.append(dateActivity)
 
-		let package = Package(dateFrom: "01/01/2020", dateTo: "15/01/2020",
+		dateComponent.day = 1
+		dateComponent.month = 1
+		dateComponent.year = 2020
+		date = Calendar.current.date(from: dateComponent)
+
+
+		dateComponent.day = 15
+		dateComponent.month = 1
+		dateComponent.year = 2020
+		let toDate = Calendar.current.date(from: dateComponent)
+
+		let package = Package(dateFrom: date!, dateTo: toDate!,
 							  destiny: "Bariloche",
 							  image: #imageLiteral(resourceName: "Bariloche"),
 							  activities: datesActivities)
@@ -111,8 +142,8 @@ extension MyTripsViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell: MyTripsCell = tableView.dequeueReusableCell(withIdentifier: MyTripsCell.cellIdentifier) as! MyTripsCell
 		let package = packagesArray![indexPath.row]
-		cell.dateFromLabel.text = package.dateFrom
-		cell.dateToLabel.text = package.dateTo
+		cell.dateFromLabel.text = DateFormatter().string(from: package.dateFrom, with: "dd/MM/YYYY")
+		cell.dateToLabel.text = DateFormatter().string(from: package.dateTo, with: "dd/MM/YYYY")
 		cell.destinyTitleLabel.text = package.destiny
 		cell.placeImageView.image = package.image
 		

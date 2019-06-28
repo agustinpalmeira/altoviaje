@@ -51,7 +51,7 @@
 		CEC10A3622AF14FF00EC307D /* DateFormatter+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3522AF14FF00EC307D /* DateFormatter+String.swift */; };
 		CEC10A3922AF27B500EC307D /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3822AF27B500EC307D /* ActivityView.swift */; };
 		CEC10A3B22AF27C200EC307D /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC10A3A22AF27C200EC307D /* ActivityView.xib */; };
-		CEC10A3F22AF294B00EC307D /* Activity2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3E22AF294B00EC307D /* Activity2.swift */; };
+		CEC10A3F22AF294B00EC307D /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3E22AF294B00EC307D /* Activity.swift */; };
 		CEDED62322B1F5B100EDEF83 /* InventoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDED62222B1F5B100EDEF83 /* InventoryHeaderView.swift */; };
 		CEDED62522B1F5D000EDEF83 /* InventoryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDED62422B1F5D000EDEF83 /* InventoryHeaderView.xib */; };
 		CEDED62922B20CFF00EDEF83 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDED62722B20CFF00EDEF83 /* PaymentViewController.swift */; };
@@ -117,7 +117,7 @@
 		CEC10A3522AF14FF00EC307D /* DateFormatter+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+String.swift"; sourceTree = "<group>"; };
 		CEC10A3822AF27B500EC307D /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		CEC10A3A22AF27C200EC307D /* ActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
-		CEC10A3E22AF294B00EC307D /* Activity2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity2.swift; sourceTree = "<group>"; };
+		CEC10A3E22AF294B00EC307D /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		CEDED62222B1F5B100EDEF83 /* InventoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHeaderView.swift; sourceTree = "<group>"; };
 		CEDED62422B1F5D000EDEF83 /* InventoryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryHeaderView.xib; sourceTree = "<group>"; };
 		CEDED62722B20CFF00EDEF83 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -264,8 +264,8 @@
 		72E62BA122C4264200C4E3F5 /* ActivityDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				72E62BAB22C43BE100C4E3F5 /* ActivityBarMenuView */,
 				72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */,
+				72E62BAB22C43BE100C4E3F5 /* ActivityBarMenuView */,
 				72E62BA422C4269200C4E3F5 /* ActivityDetailView */,
 			);
 			path = ActivityDetailViewController;
@@ -417,7 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB0AF3022A8DD7F000014AB /* Trip.swift */,
-				CEC10A3E22AF294B00EC307D /* Activity2.swift */,
+				CEC10A3E22AF294B00EC307D /* Activity.swift */,
 				CEF32F0E22B0D13F00B2831C /* Item.swift */,
 				72E62BA922C42F6600C4E3F5 /* TourActivity.swift */,
 			);
@@ -644,7 +644,7 @@
 				CEF32F0F22B0D13F00B2831C /* Item.swift in Sources */,
 				CEB0AF3122A8DD7F000014AB /* Trip.swift in Sources */,
 				CEC10A3622AF14FF00EC307D /* DateFormatter+String.swift in Sources */,
-				CEC10A3F22AF294B00EC307D /* Activity2.swift in Sources */,
+				CEC10A3F22AF294B00EC307D /* Activity.swift in Sources */,
 				CEF32F0C22B0CE9300B2831C /* InventoryViewController.swift in Sources */,
 				CEF32F0622B0BF8000B2831C /* UIStackView+ViewManage.swift in Sources */,
 				72E62BA322C4268E00C4E3F5 /* ActivityDetailViewController.swift in Sources */,
