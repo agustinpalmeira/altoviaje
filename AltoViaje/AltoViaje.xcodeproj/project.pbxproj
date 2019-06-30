@@ -265,8 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */,
-				72E62BAB22C43BE100C4E3F5 /* ActivityBarMenuView */,
 				72E62BA422C4269200C4E3F5 /* ActivityDetailView */,
+				72E62BAB22C43BE100C4E3F5 /* ActivityBarMenuView */,
 			);
 			path = ActivityDetailViewController;
 			sourceTree = "<group>";
