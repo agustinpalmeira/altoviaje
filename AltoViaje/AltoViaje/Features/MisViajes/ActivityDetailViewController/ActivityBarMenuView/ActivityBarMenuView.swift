@@ -34,7 +34,7 @@ class ActivityBarMenuView: UIView {
 	//MARK: - Configure views
 	private func setSubViews() {
 		let trashButton = UIButton()
-		trashButton.addTarget(self, action: #selector(didTapMapButton), for: .touchUpInside)
+		trashButton.addTarget(self, action: #selector(didTapTrashButton), for: .touchUpInside)
 		trashButton.translatesAutoresizingMaskIntoConstraints = false
 		trashButton.setImage(#imageLiteral(resourceName: "trash"), for: .normal)
 		addSubview(trashButton)
@@ -45,7 +45,7 @@ class ActivityBarMenuView: UIView {
 		trashButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10).isActive = true
 
 		let mapButton = UIButton()
-		mapButton.addTarget(self, action: #selector(didTapTrashButton), for: .touchUpInside)
+		mapButton.addTarget(self, action: #selector(didTapMapButton), for: .touchUpInside)
 		mapButton.translatesAutoresizingMaskIntoConstraints = false
 		mapButton.setImage(#imageLiteral(resourceName: "map"), for: .normal)
 		addSubview(mapButton)

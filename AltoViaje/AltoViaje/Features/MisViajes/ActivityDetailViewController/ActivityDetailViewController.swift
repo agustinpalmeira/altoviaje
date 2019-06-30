@@ -58,11 +58,24 @@ class ActivityDetailViewController: UIViewController {
 		activityView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
 		let activityBarMenuView = ActivityBarMenuView()
+		activityBarMenuView.delegate = self
 		view.addSubview(activityBarMenuView)
 		activityBarMenuView.translatesAutoresizingMaskIntoConstraints = false
 		activityBarMenuView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
 		activityBarMenuView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 		activityBarMenuView.topAnchor.constraint(equalTo: activityView.bottomAnchor).isActive = true
 		activityBarMenuView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+	}
+}
+
+extension ActivityDetailViewController: ActivityBarMenuViewDelegate {
+	func deleteActivity() {
+
+	}
+
+	func openMap() {
+		//MARK: Do stuff here!!!
+		let viewController = MapViewController(title: activity.title, coordinate: activity.coordinate)
+		navigationController?.pushViewController(viewController, animated: true)
 	}
 }
