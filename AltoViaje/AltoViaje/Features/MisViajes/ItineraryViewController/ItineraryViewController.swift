@@ -69,8 +69,8 @@ extension ItineraryViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		//TODO: DON'T MOCK LOCATION!
-		let coordinate = CLLocationCoordinate2DMake(-41.1805557, -72.055416)
 		let dateActivity = activities![indexPath.section]
+		let coordinate = CoordinateManager.instance.getCoordinate(fromString: dateActivity.activities[indexPath.row])
 		let tour = TourActivity(date: dateActivity.date, title: dateActivity.activities[indexPath.row], description: "", coordinate: coordinate)
 
 		let viewController = ActivityDetailViewController(withActivity: tour)
