@@ -79,9 +79,9 @@ class MapViewController: UIViewController {
 		//let tronadorCoordinates = CLLocationCoordinate2DMake(-41.1805557, -72.055416)
 		setMapInLocation(coordinates: tourCoordinate)
 
-//		setAnnonationInMapLocation(coordinates: tronadorCoordinates,
-//								   title: "Cerro Tronador",
-//								   subtitle: "Puerto Varas. Región de los Lagos.")
+		setAnnonationInMapLocation(coordinates: tourCoordinate,
+								   title: "Destino",
+								   subtitle: "")
 	}
 
 	private func setMapInLocation(coordinates: CLLocationCoordinate2D) {

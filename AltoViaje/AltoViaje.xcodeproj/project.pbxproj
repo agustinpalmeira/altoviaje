@@ -171,9 +171,9 @@
 			children = (
 				723757FB22B1A55B000686F0 /* MyTripsStoryboard.storyboard */,
 				7266EACE22AC832000062507 /* MyTripsViewController */,
-				723757ED22B04DD6000686F0 /* MapViewController */,
 				7266EACF22AC833500062507 /* ItineraryViewController */,
 				72E62BA122C4264200C4E3F5 /* ActivityDetailViewController */,
+				723757ED22B04DD6000686F0 /* MapViewController */,
 			);
 			path = MisViajes;
 			sourceTree = "<group>";
