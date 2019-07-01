@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
+protocol ActivityDetailViewControllerDelegate: class {
+	func deleteActivity()
+}
+
 class ActivityDetailViewController: UIViewController {
 
 	//MARK: - Variables
 	var activity: TourActivity!
+	weak var delegate: ActivityDetailViewControllerDelegate?
 
 	// MARK: - View life cycle
 
@@ -70,7 +75,9 @@ class ActivityDetailViewController: UIViewController {
 
 extension ActivityDetailViewController: ActivityBarMenuViewDelegate {
 	func deleteActivity() {
-
+		delegate?.deleteActivity()
+		navigationController?.popViewController(animated: true)
+		dismiss(animated: true, completion: nil)
 	}
 
 	func openMap() {

@@ -74,6 +74,7 @@ extension ItineraryViewController: UITableViewDelegate {
 		let tour = TourActivity(date: dateActivity.date, title: dateActivity.activities[indexPath.row], description: "", coordinate: coordinate)
 
 		let viewController = ActivityDetailViewController(withActivity: tour)
+		viewController.delegate = self
 		navigationController?.pushViewController(viewController, animated: true)
 	}
 
@@ -123,5 +124,11 @@ extension ItineraryViewController: UITableViewDataSource {
 
 	func numberOfSections(in tableView: UITableView) -> Int {
 		return activities.count
+	}
+}
+
+extension ItineraryViewController: ActivityDetailViewControllerDelegate {
+	func deleteActivity() {
+		//TODO: Implement.
 	}
 }
