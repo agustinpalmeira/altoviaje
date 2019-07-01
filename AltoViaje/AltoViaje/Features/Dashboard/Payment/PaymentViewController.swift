@@ -10,6 +10,8 @@ import UIKit
 
 class PaymentViewController: UIViewController {
     var toPay: Int = 0
+    var items: [Buyable] = []
+    var activities: [ActivityType] = []
     @IBOutlet weak var cvvTextField: UITextField!
     @IBOutlet weak var totalToPayLabel: UILabel!
     @IBOutlet weak var payButton: UIButton!

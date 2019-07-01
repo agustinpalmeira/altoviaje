@@ -156,7 +156,7 @@ class TripView: UIView {
 
 extension TripView: ActivityViewDelegate {
     func selectActivity(activity: ActivityType, active: Bool) {
-        if active {
+        if !active {
             selectedActivities = selectedActivities.filter { (anActivity) -> Bool in
                 return anActivity.rawValue != activity.rawValue
             }

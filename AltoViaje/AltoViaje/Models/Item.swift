@@ -38,4 +38,13 @@ struct Equipment: Buyable {
     var price: Int
     var image: UIImage?
     var forActivities: [ActivityType]?
+
+    func isUsefullFor(_ activitiesTypes: [ActivityType]) -> Bool {
+        for acvitity in forActivities ?? [] {
+            if activitiesTypes.contains(acvitity) {
+                return true
+            }
+        }
+        return false
+    }
 }

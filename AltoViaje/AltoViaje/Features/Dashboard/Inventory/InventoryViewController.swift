@@ -9,6 +9,15 @@
 import UIKit
 
 class InventoryViewController: UIViewController {
+
+    var selectedActivities: [ActivityType] = [] {
+        didSet{
+            equips = equips.filter { equip -> Bool in
+                return equip.isUsefullFor(selectedActivities)
+            }
+        }
+    }
+    
     var flights: [Flight] = [Flight(name: "Latam, Económico", price: 6000, image: #imageLiteral(resourceName: "latam")),
                              Flight(name: "Aerolineas Argentinas, Económico", price: 6300, image: #imageLiteral(resourceName: "aerolineas"))]
 
@@ -93,6 +102,8 @@ class InventoryViewController: UIViewController {
     @IBAction func proceedToBuy(_ sender: Any) {
         let paymentVC = PaymentViewController(nibName: "PaymentViewController", bundle: nil)
         paymentVC.toPay = billToPay
+        paymentVC.items = selectedItems
+        paymentVC.activities = selectedActivities
         navigationController?.pushViewController(paymentVC, animated: true)
     }
 
