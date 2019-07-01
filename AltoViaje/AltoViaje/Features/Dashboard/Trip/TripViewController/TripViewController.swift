@@ -31,7 +31,7 @@ class TripViewController: UIViewController {
     }
     @IBAction func moveToCart(_ sender: Any) {
         let cartVC = InventoryViewController(nibName: "InventoryViewController", bundle: nil)
-        cartVC.selectedActivities = tripView.selectedActivities
+        let package = TripPackage(destiny: destiny, activityType: selectedActivities, from: tripView.fromDate, to: tripView.toDate, selectedActivities: [])
         let days = Calendar.current.dateComponents([.day], from: tripView.fromDate, to: tripView.toDate)
         let daysForTrip = days.day ?? 0
         cartVC.days = daysForTrip + 1

@@ -10,10 +10,10 @@ import UIKit
 
 class InventoryViewController: UIViewController {
 
-    var selectedActivities: [ActivityType] = [] {
+    var package: TripPackage! {
         didSet{
             equips = equips.filter { equip -> Bool in
-                return equip.isUsefullFor(selectedActivities)
+                return equip.isUsefullFor(package.activityType)
             }
         }
     }
@@ -103,7 +103,7 @@ class InventoryViewController: UIViewController {
         let paymentVC = PaymentViewController(nibName: "PaymentViewController", bundle: nil)
         paymentVC.toPay = billToPay
         paymentVC.items = selectedItems
-        paymentVC.activities = selectedActivities
+        paymentVC.activities = package.activityType
         navigationController?.pushViewController(paymentVC, animated: true)
     }
 

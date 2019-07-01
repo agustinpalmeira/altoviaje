@@ -17,12 +17,14 @@ class User {
     var name: String
     var lastName: String
     var trips: [TripPackage]
-    var items: [Buyable]
+    var buyedItems: [Buyable]
+    var toBuyItems: [Buyable]
 
     private init() {
         name = ""
         lastName = ""
         trips = []
-        items = []
+        buyedItems = []
+        toBuyItems = []
     }
 }
