@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
 	var mapView: MapView!
 	private var locationManager: CLLocationManager!
 	private var currentLocation: CLLocation?
+	private var tourCoordinate: CLLocationCoordinate2D!
 
 	// MARK: - View life cycle
 
@@ -40,9 +41,10 @@ class MapViewController: UIViewController {
 
 	// MARK: - Initialization
 
-	init(title: String) {
+	init(title: String, coordinate: CLLocationCoordinate2D) {
 		super.init(nibName: nil, bundle: nil)
 		titleText = title
+		tourCoordinate = coordinate
 	}
 
 	required init?(coder aDecoder: NSCoder) {
@@ -62,7 +64,7 @@ class MapViewController: UIViewController {
 		mapView.delegate = self
 		mapView.setMapViewDelegate(self)
 
-		mockLocation()
+		setLocation(title: titleText, coordinate: tourCoordinate)
 
 		//		let location: CLLocationCoordinate2D =  CLLocationCoordinate2DMake(-41.1805557, -72.055416)
 		//		//let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(-34.6317146, -58.3737228) //Mi casita :)
@@ -73,17 +75,16 @@ class MapViewController: UIViewController {
 		//		}
 	}
 
-	func mockLocation() {
-		let tronadorCoordinates = CLLocationCoordinate2DMake(-41.1805557, -72.055416)
-		setMapInLocation(coordinates: tronadorCoordinates)
+	private func setLocation(title: String, coordinate: CLLocationCoordinate2D) {
+		//let tronadorCoordinates = CLLocationCoordinate2DMake(-41.1805557, -72.055416)
+		setMapInLocation(coordinates: tourCoordinate)
 
-
-		setAnnonationInMapLocation(coordinates: tronadorCoordinates,
-								   title: "Cerro Tronador",
-								   subtitle: "Puerto Varas. Región de los Lagos.")
+		setAnnonationInMapLocation(coordinates: tourCoordinate,
+								   title: "Destino",
+								   subtitle: "")
 	}
 
-	func setMapInLocation(coordinates: CLLocationCoordinate2D) {
+	private func setMapInLocation(coordinates: CLLocationCoordinate2D) {
 		mapView.mkMapView.mapType = MKMapType.satelliteFlyover
 		mapView.mkMapView.showsBuildings = true // displays buildings
 
@@ -103,7 +104,7 @@ class MapViewController: UIViewController {
 		mapView.mkMapView.camera = mapCamera
 	}
 
-	func setAnnonationInMapLocation(coordinates: CLLocationCoordinate2D, title: String, subtitle: String) {
+	private func setAnnonationInMapLocation(coordinates: CLLocationCoordinate2D, title: String, subtitle: String) {
 		let annotation = MKPointAnnotation()
 		annotation.coordinate = coordinates
 		annotation.title = title
@@ -145,6 +146,6 @@ extension MapViewController: MapViewDelegate {
 	}
 
 	func zoomToItineraryLocation() {
-		mockLocation()
+		setLocation(title: titleText, coordinate: tourCoordinate)
 	}
 }

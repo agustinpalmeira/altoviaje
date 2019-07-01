@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,13 @@
 		7266EAD822ADAE7600062507 /* ItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EAD722ADAE7600062507 /* ItineraryView.swift */; };
 		7266EADD22ADCBB800062507 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EADC22ADCBB800062507 /* Package.swift */; };
 		7266EADF22ADCC5E00062507 /* DateActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EADE22ADCC5E00062507 /* DateActivity.swift */; };
+		72E62BA322C4268E00C4E3F5 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */; };
+		72E62BA822C426B600C4E3F5 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA722C426B600C4E3F5 /* ActivityDetailView.swift */; };
+		72E62BAA22C42F6600C4E3F5 /* TourActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA922C42F6600C4E3F5 /* TourActivity.swift */; };
+		72E62BAD22C475A100C4E3F5 /* ActivityBarMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BAC22C475A100C4E3F5 /* ActivityBarMenuView.swift */; };
+		72E62BB022C4835500C4E3F5 /* ItineraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BAF22C4835500C4E3F5 /* ItineraryCell.swift */; };
+		72E62BD822C8771B00C4E3F5 /* Itineraries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BD722C8771A00C4E3F5 /* Itineraries.swift */; };
+		72E62BDA22C87A3100C4E3F5 /* CoordinateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BD922C87A3100C4E3F5 /* CoordinateManager.swift */; };
 		AEAA0D81CE26F0C8B2192340 /* Pods_AltoViaje.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0E24A0EC312937220A535 /* Pods_AltoViaje.framework */; };
 		CE53B85E22C424B2007A8791 /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53B85D22C424B2007A8791 /* ActivityType.swift */; };
 		CE53B86022C43478007A8791 /* Destiny.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53B85F22C43478007A8791 /* Destiny.swift */; };
@@ -85,6 +92,13 @@
 		7266EADE22ADCC5E00062507 /* DateActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateActivity.swift; sourceTree = "<group>"; };
 		CE53B85D22C424B2007A8791 /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
 		CE53B85F22C43478007A8791 /* Destiny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destiny.swift; sourceTree = "<group>"; };
+		72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
+		72E62BA722C426B600C4E3F5 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
+		72E62BA922C42F6600C4E3F5 /* TourActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourActivity.swift; sourceTree = "<group>"; };
+		72E62BAC22C475A100C4E3F5 /* ActivityBarMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityBarMenuView.swift; sourceTree = "<group>"; };
+		72E62BAF22C4835500C4E3F5 /* ItineraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryCell.swift; sourceTree = "<group>"; };
+		72E62BD722C8771A00C4E3F5 /* Itineraries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itineraries.swift; sourceTree = "<group>"; };
+		72E62BD922C87A3100C4E3F5 /* CoordinateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateManager.swift; sourceTree = "<group>"; };
 		CE9FEA8E22A472E8007E48D8 /* AltoViaje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AltoViaje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9FEA9122A472E8007E48D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE9FEA9822A472E9007E48D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -165,8 +179,9 @@
 			children = (
 				723757FB22B1A55B000686F0 /* MyTripsStoryboard.storyboard */,
 				7266EACE22AC832000062507 /* MyTripsViewController */,
-				723757ED22B04DD6000686F0 /* MapViewController */,
 				7266EACF22AC833500062507 /* ItineraryViewController */,
+				72E62BA122C4264200C4E3F5 /* ActivityDetailViewController */,
+				723757ED22B04DD6000686F0 /* MapViewController */,
 			);
 			path = MisViajes;
 			sourceTree = "<group>";
@@ -240,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				7266EAD722ADAE7600062507 /* ItineraryView.swift */,
+				72E62BAE22C4833100C4E3F5 /* ItineraryCell */,
 			);
 			path = ItineraryView;
 			sourceTree = "<group>";
@@ -251,6 +267,49 @@
 				7266EADE22ADCC5E00062507 /* DateActivity.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		72E62BA122C4264200C4E3F5 /* ActivityDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */,
+				72E62BA422C4269200C4E3F5 /* ActivityDetailView */,
+				72E62BAB22C43BE100C4E3F5 /* ActivityBarMenuView */,
+			);
+			path = ActivityDetailViewController;
+			sourceTree = "<group>";
+		};
+		72E62BA422C4269200C4E3F5 /* ActivityDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				72E62BA722C426B600C4E3F5 /* ActivityDetailView.swift */,
+			);
+			path = ActivityDetailView;
+			sourceTree = "<group>";
+		};
+		72E62BAB22C43BE100C4E3F5 /* ActivityBarMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				72E62BAC22C475A100C4E3F5 /* ActivityBarMenuView.swift */,
+			);
+			path = ActivityBarMenuView;
+			sourceTree = "<group>";
+		};
+		72E62BAE22C4833100C4E3F5 /* ItineraryCell */ = {
+			isa = PBXGroup;
+			children = (
+				72E62BAF22C4835500C4E3F5 /* ItineraryCell.swift */,
+			);
+			path = ItineraryCell;
+			sourceTree = "<group>";
+		};
+		72E62BD622C876F800C4E3F5 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				72E62BD722C8771A00C4E3F5 /* Itineraries.swift */,
+				72E62BD922C87A3100C4E3F5 /* CoordinateManager.swift */,
+			);
+			path = Locations;
 			sourceTree = "<group>";
 		};
 		CE9FEA8522A472E8007E48D8 = {
@@ -274,6 +333,7 @@
 		CE9FEA9022A472E8007E48D8 /* AltoViaje */ = {
 			isa = PBXGroup;
 			children = (
+				72E62BD622C876F800C4E3F5 /* Locations */,
 				CEDED62F22B21DF700EDEF83 /* Utils */,
 				CEC10A3422AF14EE00EC307D /* Extension */,
 				CEB0AF2F22A8DD65000014AB /* Models */,
@@ -379,6 +439,7 @@
 				CEF32F0E22B0D13F00B2831C /* Item.swift */,
 				CE53B85D22C424B2007A8791 /* ActivityType.swift */,
 				CE53B85F22C43478007A8791 /* Destiny.swift */,
+				72E62BA922C42F6600C4E3F5 /* TourActivity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -552,17 +613,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		829B26C2A413D0FEB1BE3922 /* [CP] Check Pods Manifest.lock */ = {
@@ -600,6 +660,7 @@
 				CEDED62922B20CFF00EDEF83 /* PaymentViewController.swift in Sources */,
 				CE53B86022C43478007A8791 /* Destiny.swift in Sources */,
 				7266EADD22ADCBB800062507 /* Package.swift in Sources */,
+				72E62BAA22C42F6600C4E3F5 /* TourActivity.swift in Sources */,
 				CE9FEABC22A48A8F007E48D8 /* MenuCell.swift in Sources */,
 				CEF32F0F22B0D13F00B2831C /* Item.swift in Sources */,
 				CEB0AF3122A8DD7F000014AB /* Trip.swift in Sources */,
@@ -607,10 +668,15 @@
 				CEC10A3F22AF294B00EC307D /* Activity.swift in Sources */,
 				CEF32F0C22B0CE9300B2831C /* InventoryViewController.swift in Sources */,
 				CEF32F0622B0BF8000B2831C /* UIStackView+ViewManage.swift in Sources */,
+				72E62BDA22C87A3100C4E3F5 /* CoordinateManager.swift in Sources */,
+				72E62BA322C4268E00C4E3F5 /* ActivityDetailViewController.swift in Sources */,
+				72E62BD822C8771B00C4E3F5 /* Itineraries.swift in Sources */,
 				CE9FEAAD22A478FD007E48D8 /* DashboardViewController.swift in Sources */,
 				CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */,
 				CEDED62322B1F5B100EDEF83 /* InventoryHeaderView.swift in Sources */,
 				CEDED62D22B21A3A00EDEF83 /* MainTabViewController.swift in Sources */,
+				72E62BAD22C475A100C4E3F5 /* ActivityBarMenuView.swift in Sources */,
+				72E62BA822C426B600C4E3F5 /* ActivityDetailView.swift in Sources */,
 				CEF32F0422B050D700B2831C /* UIView+xib.swift in Sources */,
 				721D41A422A8613C00B756AF /* TripViewController.swift in Sources */,
 				CE53B85E22C424B2007A8791 /* ActivityType.swift in Sources */,
@@ -619,6 +685,7 @@
 				723AE39E22AC34F000D3BFE8 /* MyTripsCell.swift in Sources */,
 				723757F222B04E1E000686F0 /* MapView.swift in Sources */,
 				721D41AF22A8D97D00B756AF /* MyTripsView.swift in Sources */,
+				72E62BB022C4835500C4E3F5 /* ItineraryCell.swift in Sources */,
 				7266EAD122AC83B800062507 /* ItineraryViewController.swift in Sources */,
 				CEDED63222B21E1100EDEF83 /* AltoViajeNotification.swift in Sources */,
 				CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */,
