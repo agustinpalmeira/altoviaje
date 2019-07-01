@@ -27,12 +27,6 @@ class DashboardViewController: UIViewController {
         MenuItemModel(image: #imageLiteral(resourceName: "transport"), name: "Transporte")
     ]
 
-    let trips: [Trip] = [
-        Trip(place: "Bariloche", placeholder: #imageLiteral(resourceName: "Bariloche"), estimatedPrize: 6500),
-        Trip(place: "Iguazu", placeholder: #imageLiteral(resourceName: "Iguazu"), estimatedPrize: 6200),
-        Trip(place: "Salta", placeholder: #imageLiteral(resourceName: "Salta"), estimatedPrize: 7200)
-    ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -95,7 +89,7 @@ class DashboardViewController: UIViewController {
 
 extension DashboardViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trips.count
+        return destinies.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
