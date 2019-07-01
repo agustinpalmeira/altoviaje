@@ -103,7 +103,7 @@ class InventoryViewController: UIViewController {
         let paymentVC = PaymentViewController(nibName: "PaymentViewController", bundle: nil)
         paymentVC.toPay = billToPay
         paymentVC.items = selectedItems
-        paymentVC.activities = package.activityType
+        paymentVC.package = package
         navigationController?.pushViewController(paymentVC, animated: true)
     }
 
