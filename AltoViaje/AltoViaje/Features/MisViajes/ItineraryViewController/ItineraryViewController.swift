@@ -13,7 +13,11 @@ import UIKit
 class ItineraryViewController: UIViewController {
 
 	//MARK: - Variables
-	private var itineraries: [DateItinerary]!
+	private var itineraries: [DateItinerary]! {
+		didSet {
+			tableView.reloadData()
+		}
+	}
 	var tableView: UITableView!
 
 	// MARK: - View life cycle
@@ -74,6 +78,7 @@ extension ItineraryViewController: UITableViewDelegate {
 		let tour = TourActivity(date: dateItinerary.date, title: dateItinerary.activities[indexPath.row], description: "", coordinate: coordinate)
 
 		let viewController = ActivityDetailViewController(withActivity: tour)
+		viewController.indexPath = indexPath
 		viewController.delegate = self
 		navigationController?.pushViewController(viewController, animated: true)
 	}
@@ -128,7 +133,7 @@ extension ItineraryViewController: UITableViewDataSource {
 }
 
 extension ItineraryViewController: ActivityDetailViewControllerDelegate {
-	func deleteActivity() {
-		//TODO: Implement.
+	func deleteActivity(indexPath: IndexPath) {
+		itineraries[indexPath.section].activities.remove(at: indexPath.row)
 	}
 }

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol ActivityDetailViewControllerDelegate: class {
-	func deleteActivity()
+	func deleteActivity(indexPath: IndexPath)
 }
 
 class ActivityDetailViewController: UIViewController {
@@ -18,6 +18,7 @@ class ActivityDetailViewController: UIViewController {
 	//MARK: - Variables
 	var activity: TourActivity!
 	weak var delegate: ActivityDetailViewControllerDelegate?
+	var indexPath: IndexPath?
 
 	// MARK: - View life cycle
 
@@ -75,7 +76,7 @@ class ActivityDetailViewController: UIViewController {
 
 extension ActivityDetailViewController: ActivityBarMenuViewDelegate {
 	func deleteActivity() {
-		delegate?.deleteActivity()
+		delegate?.deleteActivity(indexPath: indexPath!)
 		navigationController?.popViewController(animated: true)
 		dismiss(animated: true, completion: nil)
 	}

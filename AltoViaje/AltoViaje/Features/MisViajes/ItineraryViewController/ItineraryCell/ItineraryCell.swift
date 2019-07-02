@@ -12,7 +12,6 @@ import UIKit
 class ItineraryCell: UITableViewCell {
 	//MARK: - Variables
 	static var identifier: String = "itineraryCellIdentifier"
-
 	var activityLabel: UILabel!
 
 

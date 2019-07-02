@@ -18,7 +18,6 @@
 		7266EAD122AC83B800062507 /* ItineraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EAD022AC83B800062507 /* ItineraryViewController.swift */; };
 		7266EAD422AC842C00062507 /* MyTripsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7266EAD322AC842B00062507 /* MyTripsView.xib */; };
 		7266EAD622ACA02D00062507 /* MyTripsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7266EAD522ACA02D00062507 /* MyTripsViewController.xib */; };
-		7266EAD822ADAE7600062507 /* ItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EAD722ADAE7600062507 /* ItineraryView.swift */; };
 		7266EADD22ADCBB800062507 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EADC22ADCBB800062507 /* Package.swift */; };
 		7266EADF22ADCC5E00062507 /* DateItinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EADE22ADCC5E00062507 /* DateItinerary.swift */; };
 		72E62BA322C4268E00C4E3F5 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */; };
@@ -87,7 +86,6 @@
 		7266EAD022AC83B800062507 /* ItineraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryViewController.swift; sourceTree = "<group>"; };
 		7266EAD322AC842B00062507 /* MyTripsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTripsView.xib; sourceTree = "<group>"; };
 		7266EAD522ACA02D00062507 /* MyTripsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTripsViewController.xib; sourceTree = "<group>"; };
-		7266EAD722ADAE7600062507 /* ItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryView.swift; sourceTree = "<group>"; };
 		7266EADC22ADCBB800062507 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		7266EADE22ADCC5E00062507 /* DateItinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItinerary.swift; sourceTree = "<group>"; };
 		72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
@@ -251,18 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				7266EAD022AC83B800062507 /* ItineraryViewController.swift */,
-				7266EAD222AC83BD00062507 /* ItineraryView */,
-			);
-			path = ItineraryViewController;
-			sourceTree = "<group>";
-		};
-		7266EAD222AC83BD00062507 /* ItineraryView */ = {
-			isa = PBXGroup;
-			children = (
-				7266EAD722ADAE7600062507 /* ItineraryView.swift */,
 				72E62BAE22C4833100C4E3F5 /* ItineraryCell */,
 			);
-			path = ItineraryView;
+			path = ItineraryViewController;
 			sourceTree = "<group>";
 		};
 		7266EADB22ADCBAB00062507 /* Model */ = {
@@ -695,7 +684,6 @@
 				CEF32F0422B050D700B2831C /* UIView+xib.swift in Sources */,
 				721D41A422A8613C00B756AF /* TripViewController.swift in Sources */,
 				CE53B85E22C424B2007A8791 /* ActivityType.swift in Sources */,
-				7266EAD822ADAE7600062507 /* ItineraryView.swift in Sources */,
 				723757EF22B04DFE000686F0 /* MapViewController.swift in Sources */,
 				723AE39E22AC34F000D3BFE8 /* MyTripsCell.swift in Sources */,
 				723757F222B04E1E000686F0 /* MapView.swift in Sources */,

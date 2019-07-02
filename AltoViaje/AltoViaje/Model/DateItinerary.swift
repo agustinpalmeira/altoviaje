@@ -9,6 +9,6 @@
 import Foundation
 
 struct DateItinerary {
-	let date: Date
-	let activities: [String]
+	var date: Date
+	var activities: [String]
 }
