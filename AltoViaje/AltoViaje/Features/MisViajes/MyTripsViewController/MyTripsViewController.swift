@@ -85,7 +85,7 @@ class MyTripsViewController: UIViewController {
 		dateComponent.year = 2020
 		date = Calendar.current.date(from: dateComponent)
 
-		activitiesArray = [BarilocheItinerary.barilocheBuenosAires]
+		activitiesArray = [BarilocheItinerary.secondExcursion, BarilocheItinerary.barilocheBuenosAires]
 		dateItinerary = DateItinerary(date: date!, activities: activitiesArray)
 		datesItineraries.append(dateItinerary)
 
@@ -93,7 +93,6 @@ class MyTripsViewController: UIViewController {
 		dateComponent.month = 1
 		dateComponent.year = 2020
 		date = Calendar.current.date(from: dateComponent)
-
 
 		dateComponent.day = 15
 		dateComponent.month = 1
@@ -171,7 +170,7 @@ extension MyTripsViewController: MyTripsViewDelegate {
 }
 
 extension MyTripsViewController: ItineraryViewControllerDelegate {
-	func updatePackage(indexPath: IndexPath) {
-		packagesArray[indexPath.section].itineraries.remove(at: indexPath.row)
+	func updatePackage(packageIndexPath: IndexPath, activityIndexPath: IndexPath) {
+		packagesArray[packageIndexPath.row].itineraries[activityIndexPath.section].activities.remove(at: activityIndexPath.row)
 	}
 }

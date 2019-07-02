@@ -76,9 +76,18 @@ class ActivityDetailViewController: UIViewController {
 
 extension ActivityDetailViewController: ActivityBarMenuViewDelegate {
 	func deleteActivity() {
-		delegate?.deleteActivity(indexPath: indexPath!)
-		navigationController?.popViewController(animated: true)
-		dismiss(animated: true, completion: nil)
+		if let index = indexPath {
+			if index.section == 0 && index.row == 0 {
+				print("No se puede eliminar el vuelo de ida.")
+				let alert = UIAlertController(title: "No se puede eliminar el vuelo de ida.", message: "", preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Entendido.", style: .default, handler: nil))
+				self.present(alert, animated: true)
+			} else {
+				delegate?.deleteActivity(indexPath: index)
+				navigationController?.popViewController(animated: true)
+				dismiss(animated: true, completion: nil)
+			}
+		}
 	}
 
 	func openMap() {

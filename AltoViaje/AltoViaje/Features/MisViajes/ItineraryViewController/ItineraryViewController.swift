@@ -141,20 +141,16 @@ extension ItineraryViewController: UITableViewDataSource {
 extension ItineraryViewController: ActivityDetailViewControllerDelegate {
 	func deleteActivity(indexPath: IndexPath) {
 		//NOTE: The indexPaths aren't the same!
-
 		if indexPath.section == 0 && indexPath.row == 0 {
 			print("No se puede eliminar el vuelo de ida.")
+			let alert = UIAlertController(title: "No se puede eliminar el vuelo de ida.", message: "", preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "Entendido.", style: .default, handler: nil))
+			self.present(alert, animated: true)
 		}
-		//else if indexPath.section == itineraries.count - 1 && indexPath.row == itineraries.last!.activities.count - 1 {
 		else {
 			delegate?.updatePackage(packageIndexPath: self.indexPath!,
 									activityIndexPath: indexPath)
-//			delegate?.updatePackage(indexPath: self.indexPath!,
-//									activity: itineraries[indexPath.section].activities[indexPath.row])
 			itineraries[indexPath.section].activities.remove(at: indexPath.row) //Current Itinerary
-
-
-			//) //Package
 		}
 	}
 }
