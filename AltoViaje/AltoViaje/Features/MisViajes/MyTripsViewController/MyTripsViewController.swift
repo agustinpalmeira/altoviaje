@@ -158,6 +158,8 @@ extension MyTripsViewController: UITableViewDataSource {
 extension MyTripsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let viewController = ItineraryViewController(itineraries: packagesArray[indexPath.row].itineraries)
+		viewController.indexPath = indexPath
+		viewController.delegate = self
 		navigationController?.pushViewController(viewController, animated: true)
 	}
 }
@@ -165,5 +167,11 @@ extension MyTripsViewController: UITableViewDelegate {
 extension MyTripsViewController: MyTripsViewDelegate {
 	func createNewTrip() {
 		tabBarController?.selectedIndex = 0
+	}
+}
+
+extension MyTripsViewController: ItineraryViewControllerDelegate {
+	func updatePackage(indexPath: IndexPath) {
+		packagesArray[indexPath.section].itineraries.remove(at: indexPath.row)
 	}
 }

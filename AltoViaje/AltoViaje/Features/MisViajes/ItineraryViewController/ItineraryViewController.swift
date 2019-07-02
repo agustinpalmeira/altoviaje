@@ -10,6 +10,10 @@ import Foundation
 import MapKit
 import UIKit
 
+protocol ItineraryViewControllerDelegate: class {
+	func updatePackage(indexPath: IndexPath)
+}
+
 class ItineraryViewController: UIViewController {
 
 	//MARK: - Variables
@@ -19,6 +23,8 @@ class ItineraryViewController: UIViewController {
 		}
 	}
 	var tableView: UITableView!
+	var indexPath: IndexPath?
+	weak var delegate: ItineraryViewControllerDelegate?
 
 	// MARK: - View life cycle
 
@@ -134,6 +140,8 @@ extension ItineraryViewController: UITableViewDataSource {
 
 extension ItineraryViewController: ActivityDetailViewControllerDelegate {
 	func deleteActivity(indexPath: IndexPath) {
-		itineraries[indexPath.section].activities.remove(at: indexPath.row)
+		//NOTE: The indexPaths aren't the same!
+		itineraries[indexPath.section].activities.remove(at: indexPath.row) //Current Itinerary
+		delegate?.updatePackage(indexPath: self.indexPath!) //Package
 	}
 }
