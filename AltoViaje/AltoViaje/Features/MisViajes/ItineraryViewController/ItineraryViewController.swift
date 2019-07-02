@@ -11,7 +11,7 @@ import MapKit
 import UIKit
 
 protocol ItineraryViewControllerDelegate: class {
-	func updatePackage(indexPath: IndexPath)
+	func updatePackage(packageIndexPath: IndexPath, activityIndexPath: IndexPath)
 }
 
 class ItineraryViewController: UIViewController {
@@ -23,7 +23,7 @@ class ItineraryViewController: UIViewController {
 		}
 	}
 	var tableView: UITableView!
-	var indexPath: IndexPath?
+	var indexPath: IndexPath? //Related to the Packages table (not the table in this viewcontroller).
 	weak var delegate: ItineraryViewControllerDelegate?
 
 	// MARK: - View life cycle
@@ -141,7 +141,20 @@ extension ItineraryViewController: UITableViewDataSource {
 extension ItineraryViewController: ActivityDetailViewControllerDelegate {
 	func deleteActivity(indexPath: IndexPath) {
 		//NOTE: The indexPaths aren't the same!
-		itineraries[indexPath.section].activities.remove(at: indexPath.row) //Current Itinerary
-		delegate?.updatePackage(indexPath: self.indexPath!) //Package
+
+		if indexPath.section == 0 && indexPath.row == 0 {
+			print("No se puede eliminar el vuelo de ida.")
+		}
+		//else if indexPath.section == itineraries.count - 1 && indexPath.row == itineraries.last!.activities.count - 1 {
+		else {
+			delegate?.updatePackage(packageIndexPath: self.indexPath!,
+									activityIndexPath: indexPath)
+//			delegate?.updatePackage(indexPath: self.indexPath!,
+//									activity: itineraries[indexPath.section].activities[indexPath.row])
+			itineraries[indexPath.section].activities.remove(at: indexPath.row) //Current Itinerary
+
+
+			//) //Package
+		}
 	}
 }
