@@ -10,7 +10,5 @@ import Foundation
 
 struct Activity {
     let name: String
-    let availableFrom: Date
-    let availableTo: Date
-    var active: Bool = false
+    let date: Date
 }
