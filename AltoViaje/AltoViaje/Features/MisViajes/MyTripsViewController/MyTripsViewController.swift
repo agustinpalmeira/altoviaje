@@ -9,25 +9,25 @@
 /* Mock data for loading the view controller:
 
 var activitiesArray = ["Vuelo desde Buenos Aires As hacia Bariloche", "Alojamiento Puerto Blest"]
-var dateActivity = DateActivity(date: "01/01/2020", activities: activitiesArray)
-var datesActivities = [dateActivity]
+var dateItinerary = DateItinerary(date: "01/01/2020", activities: activitiesArray)
+var datesItineraries = [dateItinerary]
 
 activitiesArray = ["Excursión Tronador"]
-dateActivity = DateActivity(date: "05/01/2020", activities: activitiesArray)
-datesActivities.append(dateActivity)
+dateItinerary = DateItinerary(date: "05/01/2020", activities: activitiesArray)
+datesItineraries.append(dateItinerary)
 
 activitiesArray = ["Excursión Frey"]
-dateActivity = DateActivity(date: "09/01/2020", activities: activitiesArray)
-datesActivities.append(dateActivity)
+dateItinerary = DateItinerary(date: "09/01/2020", activities: activitiesArray)
+datesItineraries.append(dateItinerary)
 
 activitiesArray = ["Vuelo desde Bariloche hacia Buenos Aires"]
-dateActivity = DateActivity(date: "15/01/2020", activities: activitiesArray)
-datesActivities.append(dateActivity)
+dateItinerary = DateItinerary(date: "15/01/2020", activities: activitiesArray)
+datesItineraries.append(dateItinerary)
 
 let package = Package(dateFrom: "01/01/2020", dateTo: "15/01/2020",
 destiny: "Bariloche",
 image: #imageLiteral(resourceName: "Bariloche"),
-activities: datesActivities)
+activities: datesItineraries)
 
 //View controller
 let tripVC = MyTripsViewController(nibName:"MyTripsViewController", bundle: nil)
@@ -60,8 +60,8 @@ class MyTripsViewController: UIViewController {
 		var date = Calendar.current.date(from: dateComponent)
 
 		var activitiesArray = [BarilocheItinerary.buenosAiresBariloche, BarilocheItinerary.accommodation]
-		var dateActivity = DateActivity(date: date!, activities: activitiesArray)
-		var datesActivities = [dateActivity]
+		var dateItinerary = DateItinerary(date: date!, activities: activitiesArray)
+		var datesItineraries = [dateItinerary]
 
 		dateComponent.day = 5
 		dateComponent.month = 1
@@ -69,16 +69,16 @@ class MyTripsViewController: UIViewController {
 		date = Calendar.current.date(from: dateComponent)
 
 		activitiesArray = [BarilocheItinerary.firstExcursion]
-		dateActivity = DateActivity(date: date!, activities: activitiesArray)
-		datesActivities.append(dateActivity)
+		dateItinerary = DateItinerary(date: date!, activities: activitiesArray)
+		datesItineraries.append(dateItinerary)
 
 		dateComponent.day = 9
 		dateComponent.month = 1
 		dateComponent.year = 2020
 		date = Calendar.current.date(from: dateComponent)
 		activitiesArray = [BarilocheItinerary.secondExcursion]
-		dateActivity = DateActivity(date: date!, activities: activitiesArray)
-		datesActivities.append(dateActivity)
+		dateItinerary = DateItinerary(date: date!, activities: activitiesArray)
+		datesItineraries.append(dateItinerary)
 
 		dateComponent.day = 15
 		dateComponent.month = 1
@@ -86,8 +86,8 @@ class MyTripsViewController: UIViewController {
 		date = Calendar.current.date(from: dateComponent)
 
 		activitiesArray = [BarilocheItinerary.barilocheBuenosAires]
-		dateActivity = DateActivity(date: date!, activities: activitiesArray)
-		datesActivities.append(dateActivity)
+		dateItinerary = DateItinerary(date: date!, activities: activitiesArray)
+		datesItineraries.append(dateItinerary)
 
 		dateComponent.day = 1
 		dateComponent.month = 1
@@ -103,7 +103,7 @@ class MyTripsViewController: UIViewController {
 		let package = Package(dateFrom: date!, dateTo: toDate!,
 							  destiny: "Bariloche",
 							  image: #imageLiteral(resourceName: "Bariloche"),
-							  activities: datesActivities)
+							  itineraries: datesItineraries)
 
 		packagesArray = [package]
 	}
@@ -157,7 +157,7 @@ extension MyTripsViewController: UITableViewDataSource {
 
 extension MyTripsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let viewController = ItineraryViewController(activities: packagesArray[indexPath.row].activities)
+		let viewController = ItineraryViewController(itineraries: packagesArray[indexPath.row].itineraries)
 		navigationController?.pushViewController(viewController, animated: true)
 	}
 }

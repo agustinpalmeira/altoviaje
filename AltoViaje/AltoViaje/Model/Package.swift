@@ -14,5 +14,5 @@ struct Package {
 	let dateTo: Date
 	let destiny: String
 	let image: UIImage
-	let activities: [DateActivity]
+	let itineraries: [DateItinerary]
 }

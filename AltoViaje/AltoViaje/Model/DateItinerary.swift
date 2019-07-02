@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DateActivity {
+struct DateItinerary {
 	let date: Date
 	let activities: [String]
 }

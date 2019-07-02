@@ -20,7 +20,7 @@
 		7266EAD622ACA02D00062507 /* MyTripsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7266EAD522ACA02D00062507 /* MyTripsViewController.xib */; };
 		7266EAD822ADAE7600062507 /* ItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EAD722ADAE7600062507 /* ItineraryView.swift */; };
 		7266EADD22ADCBB800062507 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EADC22ADCBB800062507 /* Package.swift */; };
-		7266EADF22ADCC5E00062507 /* DateActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EADE22ADCC5E00062507 /* DateActivity.swift */; };
+		7266EADF22ADCC5E00062507 /* DateItinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EADE22ADCC5E00062507 /* DateItinerary.swift */; };
 		72E62BA322C4268E00C4E3F5 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */; };
 		72E62BA822C426B600C4E3F5 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA722C426B600C4E3F5 /* ActivityDetailView.swift */; };
 		72E62BAA22C42F6600C4E3F5 /* TourActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA922C42F6600C4E3F5 /* TourActivity.swift */; };
@@ -89,7 +89,7 @@
 		7266EAD522ACA02D00062507 /* MyTripsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTripsViewController.xib; sourceTree = "<group>"; };
 		7266EAD722ADAE7600062507 /* ItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItineraryView.swift; sourceTree = "<group>"; };
 		7266EADC22ADCBB800062507 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		7266EADE22ADCC5E00062507 /* DateActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateActivity.swift; sourceTree = "<group>"; };
+		7266EADE22ADCC5E00062507 /* DateItinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItinerary.swift; sourceTree = "<group>"; };
 		72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		72E62BA722C426B600C4E3F5 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
 		72E62BA922C42F6600C4E3F5 /* TourActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourActivity.swift; sourceTree = "<group>"; };
@@ -181,6 +181,7 @@
 		721D41AD22A8D5F000B756AF /* MisViajes */ = {
 			isa = PBXGroup;
 			children = (
+				72E62BE822CAC97500C4E3F5 /* New Group */,
 				723757FB22B1A55B000686F0 /* MyTripsStoryboard.storyboard */,
 				7266EACE22AC832000062507 /* MyTripsViewController */,
 				7266EACF22AC833500062507 /* ItineraryViewController */,
@@ -268,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				7266EADC22ADCBB800062507 /* Package.swift */,
-				7266EADE22ADCC5E00062507 /* DateActivity.swift */,
+				7266EADE22ADCC5E00062507 /* DateItinerary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +315,13 @@
 				72E62BD922C87A3100C4E3F5 /* CoordinateManager.swift */,
 			);
 			path = Locations;
+			sourceTree = "<group>";
+		};
+		72E62BE822CAC97500C4E3F5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CE9FEA8522A472E8007E48D8 = {
@@ -658,7 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEC10A3922AF27B500EC307D /* ActivityView.swift in Sources */,
-				7266EADF22ADCC5E00062507 /* DateActivity.swift in Sources */,
+				7266EADF22ADCC5E00062507 /* DateItinerary.swift in Sources */,
 				CEB0AF1922A87E2E000014AB /* MenuItem.swift in Sources */,
 				CEF32F1C22B1BD3B00B2831C /* InventoryViewCell.swift in Sources */,
 				CEF32F1922B1B2BB00B2831C /* TripView.swift in Sources */,

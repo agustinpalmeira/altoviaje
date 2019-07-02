@@ -13,7 +13,7 @@ import UIKit
 class ItineraryViewController: UIViewController {
 
 	//MARK: - Variables
-	private var activities: [DateActivity]!
+	private var itineraries: [DateItinerary]!
 	var tableView: UITableView!
 
 	// MARK: - View life cycle
@@ -30,9 +30,9 @@ class ItineraryViewController: UIViewController {
 
 	// MARK: - Initialization
 
-	init(activities: [DateActivity]) {
+	init(itineraries: [DateItinerary]) {
 		super.init(nibName: nil, bundle: nil)
-		self.activities = activities
+		self.itineraries = itineraries
 	}
 
 	required init?(coder aDecoder: NSCoder) {
@@ -69,9 +69,9 @@ extension ItineraryViewController: UITableViewDelegate {
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		//TODO: DON'T MOCK LOCATION!
-		let dateActivity = activities![indexPath.section]
-		let coordinate = CoordinateManager.instance.getCoordinate(fromString: dateActivity.activities[indexPath.row])
-		let tour = TourActivity(date: dateActivity.date, title: dateActivity.activities[indexPath.row], description: "", coordinate: coordinate)
+		let dateItinerary = itineraries![indexPath.section]
+		let coordinate = CoordinateManager.instance.getCoordinate(fromString: dateItinerary.activities[indexPath.row])
+		let tour = TourActivity(date: dateItinerary.date, title: dateItinerary.activities[indexPath.row], description: "", coordinate: coordinate)
 
 		let viewController = ActivityDetailViewController(withActivity: tour)
 		viewController.delegate = self
@@ -86,7 +86,7 @@ extension ItineraryViewController: UITableViewDelegate {
 		guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "InventoryHeader") as? InventoryHeaderView else {
 			return nil
 		}
-		headerView.headerTitle.text = DateFormatter().string(from: activities![section].date, with: "dd/MM/YYYY")
+		headerView.headerTitle.text = DateFormatter().string(from: itineraries![section].date, with: "dd/MM/YYYY")
 		
 		return headerView
 	}
@@ -111,19 +111,19 @@ extension ItineraryViewController: UITableViewDelegate {
 
 extension ItineraryViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return activities[section].activities.count
+		return itineraries[section].activities.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = ItineraryCell(style: .default, reuseIdentifier: ItineraryCell.identifier)
-		cell.setup(withActivity: activities![indexPath.section].activities[indexPath.row])
+		cell.setup(withActivity: itineraries![indexPath.section].activities[indexPath.row])
 		cell.selectionStyle = .none
 
 		return cell
 	}
 
 	func numberOfSections(in tableView: UITableView) -> Int {
-		return activities.count
+		return itineraries.count
 	}
 }
 
