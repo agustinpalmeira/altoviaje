@@ -72,15 +72,28 @@ class LoginViewController: UIViewController {
 		var areValid = true
 		var errorMessagesArray = [String]()
 
-		if username != "Romualdo" || password != "elcapitan" {
+		if username == "Romualdo" {
+			if password != "elcapitan" {
 				areValid = false
 				errorMessagesArray.append("Credenciales invalidas.")
 				loginView.usernameTextFieldControllerFloating.setErrorText("Credenciales invalidas.",
 																		   errorAccessibilityValue: "Credenciales invalidas.")
+				loginView.passwordTextFieldControllerFloating.setErrorText("Credenciales invalidas.",
+																		   errorAccessibilityValue: "Credenciales invalidas.")
+
 			} else {
 				loginView.usernameTextFieldControllerFloating.setErrorText(nil,
 																		   errorAccessibilityValue: nil)
+				loginView.passwordTextFieldControllerFloating.setErrorText(nil,
+																		   errorAccessibilityValue: nil)
 			}
+		} else {
+			areValid = false
+			errorMessagesArray.append("Usuario no encontrado.")
+			loginView.usernameTextFieldControllerFloating.setErrorText("Usuario no encontrado",
+																	   errorAccessibilityValue: "Usuario no encontrado.")
+		}
+
 		return (areValid, errorMessagesArray)
 	}
 
@@ -91,10 +104,16 @@ class LoginViewController: UIViewController {
 			if username.isEmpty {
 				loginView.usernameTextFieldControllerFloating.setErrorText("Usuario vacio.",
 																		   errorAccessibilityValue: "Usuario vacio.")
+			} else {
+				loginView.usernameTextFieldControllerFloating.setErrorText(nil,
+																		   errorAccessibilityValue: nil)
 			}
 			if password.isEmpty {
 				loginView.passwordTextFieldControllerFloating.setErrorText("Password vacio.",
 																		   errorAccessibilityValue: "Password vacio.")
+			} else {
+				loginView.passwordTextFieldControllerFloating.setErrorText(nil,
+																		   errorAccessibilityValue: nil)
 			}
 		}
 

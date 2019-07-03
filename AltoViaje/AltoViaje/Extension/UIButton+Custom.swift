@@ -29,7 +29,7 @@ extension UIButton {
 			button.heightAnchor.constraint(equalToConstant: ConfirmationButtonConstants.height),
 			button.widthAnchor.constraint(equalToConstant: ConfirmationButtonConstants.width)
 			])
-		button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+		button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
 		button.layer.cornerRadius = ConfirmationButtonConstants.cornerRadius
 		button.layer.borderWidth = ConfirmationButtonConstants.borderWidth
 		button.setAttributes(normalBorderColor: UIColor(red: 110/255, green: 218/255, blue: 193/255, alpha: 1),

@@ -231,7 +231,6 @@
 		721D41AD22A8D5F000B756AF /* MisViajes */ = {
 			isa = PBXGroup;
 			children = (
-				72E62BE822CAC97500C4E3F5 /* New Group */,
 				723757FB22B1A55B000686F0 /* MyTripsStoryboard.storyboard */,
 				7266EACE22AC832000062507 /* MyTripsViewController */,
 				7266EACF22AC833500062507 /* ItineraryViewController */,
@@ -356,13 +355,6 @@
 				72E62BD922C87A3100C4E3F5 /* CoordinateManager.swift */,
 			);
 			path = Locations;
-			sourceTree = "<group>";
-		};
-		72E62BE822CAC97500C4E3F5 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		CE9FEA8522A472E8007E48D8 = {

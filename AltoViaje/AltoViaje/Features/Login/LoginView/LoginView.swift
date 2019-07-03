@@ -23,7 +23,7 @@ class LoginView: BaseFillFieldsView {
 	//MARK: - Variables
 
 	private var logoImageViewHeightConstraint: NSLayoutConstraint!
-	private var logoImageViewHeight = UIScreen.main.bounds.size.width * 0.3
+	private var logoImageViewHeight = UIScreen.main.bounds.size.width * 0.5
 	var usernameTextFieldControllerFloating : MDCTextInputControllerUnderline!
 	var passwordTextFieldControllerFloating : MDCTextInputControllerUnderline!
 	weak var delegate : LoginViewDelegate!
@@ -81,6 +81,7 @@ class LoginView: BaseFillFieldsView {
 		forgotPasswordButton.isHidden = true
 
 		let createAccountButton = UIButton.attributedButton()
+		createAccountButton.isHidden = true
 		addSubview(createAccountButton)
 		createAccountButton.setTitle("Crear cuenta", for: .normal)
 		createAccountButton.addTarget(self, action: #selector(createAccountButtonAction), for: .touchUpInside)
@@ -100,10 +101,15 @@ class LoginView: BaseFillFieldsView {
 		loginButton.setTitle("Login", for: .normal)
 		loginButton.addTarget(self, action: #selector(loginButtonAction), for: .touchUpInside)
 
+//		NSLayoutConstraint.useAndActivateConstraints(constraints: [
+//			loginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+//			loginButton.bottomAnchor.constraint(equalTo: createAccountButton.topAnchor, constant: -15)
+//			])
+
 		NSLayoutConstraint.useAndActivateConstraints(constraints: [
 			loginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-			loginButton.bottomAnchor.constraint(equalTo: createAccountButton.topAnchor, constant: -15)
-			])
+			loginButton.bottomAnchor.constraint(equalTo: forgotPasswordButton.topAnchor, constant: -15)
+		])
 
 		let logoImageView = UIImageView(image: #imageLiteral(resourceName: "Splash"))
 		logoImageView.contentMode = .scaleAspectFit
