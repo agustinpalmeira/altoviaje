@@ -28,6 +28,12 @@
 		7266EAD622ACA02D00062507 /* MyTripsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7266EAD522ACA02D00062507 /* MyTripsViewController.xib */; };
 		7266EADD22ADCBB800062507 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EADC22ADCBB800062507 /* Package.swift */; };
 		7266EADF22ADCC5E00062507 /* DateItinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7266EADE22ADCC5E00062507 /* DateItinerary.swift */; };
+		7280ED1F22CD575C00D8E0EC /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280ED1A22CD575C00D8E0EC /* UserInfoViewController.swift */; };
+		7280ED2022CD575C00D8E0EC /* UserInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280ED1D22CD575C00D8E0EC /* UserInfoHeaderView.swift */; };
+		7280ED2122CD575C00D8E0EC /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280ED1E22CD575C00D8E0EC /* UserInfoView.swift */; };
+		7280ED2322CD593100D8E0EC /* UIView+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7280ED2222CD593100D8E0EC /* UIView+Shadows.swift */; };
+		7280ED2722CD5B0100D8E0EC /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7280ED2622CD5B0100D8E0EC /* UserInfo.storyboard */; };
+		7280ED2B22CD5E6D00D8E0EC /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7280ED2A22CD5E6D00D8E0EC /* UserInfoViewController.xib */; };
 		72E62BA322C4268E00C4E3F5 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */; };
 		72E62BA822C426B600C4E3F5 /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA722C426B600C4E3F5 /* ActivityDetailView.swift */; };
 		72E62BAA22C42F6600C4E3F5 /* TourActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E62BA922C42F6600C4E3F5 /* TourActivity.swift */; };
@@ -104,6 +110,12 @@
 		7266EAD522ACA02D00062507 /* MyTripsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTripsViewController.xib; sourceTree = "<group>"; };
 		7266EADC22ADCBB800062507 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		7266EADE22ADCC5E00062507 /* DateItinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItinerary.swift; sourceTree = "<group>"; };
+		7280ED1A22CD575C00D8E0EC /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		7280ED1D22CD575C00D8E0EC /* UserInfoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoHeaderView.swift; sourceTree = "<group>"; };
+		7280ED1E22CD575C00D8E0EC /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		7280ED2222CD593100D8E0EC /* UIView+Shadows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shadows.swift"; sourceTree = "<group>"; };
+		7280ED2622CD5B0100D8E0EC /* UserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
+		7280ED2A22CD5E6D00D8E0EC /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		72E62BA222C4268E00C4E3F5 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		72E62BA722C426B600C4E3F5 /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
 		72E62BA922C42F6600C4E3F5 /* TourActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourActivity.swift; sourceTree = "<group>"; };
@@ -314,6 +326,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7280ED1B22CD575C00D8E0EC /* UserInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				7280ED1C22CD575C00D8E0EC /* UserInfoHeaderView */,
+				7280ED1E22CD575C00D8E0EC /* UserInfoView.swift */,
+			);
+			path = UserInfoView;
+			sourceTree = "<group>";
+		};
+		7280ED1C22CD575C00D8E0EC /* UserInfoHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				7280ED1D22CD575C00D8E0EC /* UserInfoHeaderView.swift */,
+			);
+			path = UserInfoHeaderView;
+			sourceTree = "<group>";
+		};
 		72E62BA122C4264200C4E3F5 /* ActivityDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +462,10 @@
 		CE9FEAA622A47327007E48D8 /* Perfil */ = {
 			isa = PBXGroup;
 			children = (
+				7280ED2A22CD5E6D00D8E0EC /* UserInfoViewController.xib */,
+				7280ED1B22CD575C00D8E0EC /* UserInfoView */,
+				7280ED1A22CD575C00D8E0EC /* UserInfoViewController.swift */,
+				7280ED2622CD5B0100D8E0EC /* UserInfo.storyboard */,
 			);
 			path = Perfil;
 			sourceTree = "<group>";
@@ -496,6 +529,7 @@
 		CEC10A3422AF14EE00EC307D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7280ED2222CD593100D8E0EC /* UIView+Shadows.swift */,
 				CEC10A3522AF14FF00EC307D /* DateFormatter+String.swift */,
 				CEF32F0322B050D700B2831C /* UIView+xib.swift */,
 				CEF32F0522B0BF8000B2831C /* UIStackView+ViewManage.swift */,
@@ -631,6 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9FEAB122A47A12007E48D8 /* DashboardCell.xib in Resources */,
+				7280ED2722CD5B0100D8E0EC /* UserInfo.storyboard in Resources */,
 				CEB0AF1B22A88A2F000014AB /* TripViewController.xib in Resources */,
 				723AE3A022AC350100D3BFE8 /* MyTripsCell.xib in Resources */,
 				CEDED62522B1F5D000EDEF83 /* InventoryHeaderView.xib in Resources */,
@@ -638,6 +673,7 @@
 				CEF32F0D22B0CE9300B2831C /* InventoryViewController.xib in Resources */,
 				CE9FEABD22A48A8F007E48D8 /* MenuCell.xib in Resources */,
 				CE9FEAA922A47364007E48D8 /* Main.storyboard in Resources */,
+				7280ED2B22CD5E6D00D8E0EC /* UserInfoViewController.xib in Resources */,
 				CEF32F1D22B1BD3B00B2831C /* InventoryViewCell.xib in Resources */,
 				CEB0AF2922A8DA2A000014AB /* Montserrat-Bold.otf in Resources */,
 				CEB0AF2D22A8DA2A000014AB /* Montserrat-Black.otf in Resources */,
@@ -707,6 +743,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7280ED2022CD575C00D8E0EC /* UserInfoHeaderView.swift in Sources */,
 				CEC10A3922AF27B500EC307D /* ActivityView.swift in Sources */,
 				7266EADF22ADCC5E00062507 /* DateItinerary.swift in Sources */,
 				7212D4A422CC7498008460D7 /* BaseFillFieldsView.swift in Sources */,
@@ -721,6 +758,8 @@
 				7266EADD22ADCBB800062507 /* Package.swift in Sources */,
 				72E62BAA22C42F6600C4E3F5 /* TourActivity.swift in Sources */,
 				CE9FEABC22A48A8F007E48D8 /* MenuCell.swift in Sources */,
+				7280ED2122CD575C00D8E0EC /* UserInfoView.swift in Sources */,
+				7280ED2322CD593100D8E0EC /* UIView+Shadows.swift in Sources */,
 				CEF32F0F22B0D13F00B2831C /* Item.swift in Sources */,
 				CEB0AF3122A8DD7F000014AB /* Trip.swift in Sources */,
 				CEC10A3622AF14FF00EC307D /* DateFormatter+String.swift in Sources */,
@@ -736,6 +775,7 @@
 				CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */,
 				CEDED62322B1F5B100EDEF83 /* InventoryHeaderView.swift in Sources */,
 				CEDED62D22B21A3A00EDEF83 /* MainTabViewController.swift in Sources */,
+				7280ED1F22CD575C00D8E0EC /* UserInfoViewController.swift in Sources */,
 				72E62BAD22C475A100C4E3F5 /* ActivityBarMenuView.swift in Sources */,
 				72E62BA822C426B600C4E3F5 /* ActivityDetailView.swift in Sources */,
 				CEF32F0422B050D700B2831C /* UIView+xib.swift in Sources */,
