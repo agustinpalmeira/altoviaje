@@ -3,11 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7212D49C22CC281E008460D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D49B22CC281E008460D7 /* LoginViewController.swift */; };
+		7212D49F22CC73E5008460D7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D49E22CC73E5008460D7 /* LoginView.swift */; };
+		7212D4A422CC7498008460D7 /* BaseFillFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D4A222CC7498008460D7 /* BaseFillFieldsView.swift */; };
+		7212D4A522CC7498008460D7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D4A322CC7498008460D7 /* BaseView.swift */; };
+		7212D4A722CC7579008460D7 /* NSLayoutContraint+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D4A622CC7579008460D7 /* NSLayoutContraint+Util.swift */; };
+		7212D4AA22CC77CF008460D7 /* KeyboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D4A922CC77CF008460D7 /* KeyboardProtocol.swift */; };
+		7212D4AC22CC784D008460D7 /* UIButton+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D4AB22CC784D008460D7 /* UIButton+Custom.swift */; };
+		7212D4AE22CC7A15008460D7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D4AD22CC7A15008460D7 /* UIViewController+Alert.swift */; };
 		721D41A422A8613C00B756AF /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41A322A8613C00B756AF /* TripViewController.swift */; };
 		721D41AF22A8D97D00B756AF /* MyTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41AE22A8D97D00B756AF /* MyTripsView.swift */; };
 		723757EF22B04DFE000686F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723757EE22B04DFE000686F0 /* MapViewController.swift */; };
@@ -77,6 +84,13 @@
 
 /* Begin PBXFileReference section */
 		7212D49B22CC281E008460D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7212D49E22CC73E5008460D7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7212D4A222CC7498008460D7 /* BaseFillFieldsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFillFieldsView.swift; sourceTree = "<group>"; };
+		7212D4A322CC7498008460D7 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		7212D4A622CC7579008460D7 /* NSLayoutContraint+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutContraint+Util.swift"; sourceTree = "<group>"; };
+		7212D4A922CC77CF008460D7 /* KeyboardProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardProtocol.swift; sourceTree = "<group>"; };
+		7212D4AB22CC784D008460D7 /* UIButton+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Custom.swift"; sourceTree = "<group>"; };
+		7212D4AD22CC7A15008460D7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		721D41A322A8613C00B756AF /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		721D41AE22A8D97D00B756AF /* MyTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsView.swift; sourceTree = "<group>"; };
 		723757EE22B04DFE000686F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -181,8 +195,28 @@
 		7212D49D22CC2824008460D7 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				7212D4A122CC7498008460D7 /* BaseView */,
+				7212D49E22CC73E5008460D7 /* LoginView.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		7212D4A122CC7498008460D7 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				7212D4A222CC7498008460D7 /* BaseFillFieldsView.swift */,
+				7212D4A322CC7498008460D7 /* BaseView.swift */,
+			);
+			name = BaseView;
+			path = AltoViaje/Features/Login/LoginView/BaseView;
+			sourceTree = SOURCE_ROOT;
+		};
+		7212D4A822CC77BA008460D7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7212D4A922CC77CF008460D7 /* KeyboardProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		721D41A622A865C400B756AF /* TripViewController */ = {
@@ -197,7 +231,6 @@
 		721D41AD22A8D5F000B756AF /* MisViajes */ = {
 			isa = PBXGroup;
 			children = (
-				72E62BE822CAC97500C4E3F5 /* New Group */,
 				723757FB22B1A55B000686F0 /* MyTripsStoryboard.storyboard */,
 				7266EACE22AC832000062507 /* MyTripsViewController */,
 				7266EACF22AC833500062507 /* ItineraryViewController */,
@@ -324,13 +357,6 @@
 			path = Locations;
 			sourceTree = "<group>";
 		};
-		72E62BE822CAC97500C4E3F5 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		CE9FEA8522A472E8007E48D8 = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +378,7 @@
 		CE9FEA9022A472E8007E48D8 /* AltoViaje */ = {
 			isa = PBXGroup;
 			children = (
+				7212D4A822CC77BA008460D7 /* Protocols */,
 				72E62BD622C876F800C4E3F5 /* Locations */,
 				CEDED62F22B21DF700EDEF83 /* Utils */,
 				CEC10A3422AF14EE00EC307D /* Extension */,
@@ -472,6 +499,9 @@
 				CEC10A3522AF14FF00EC307D /* DateFormatter+String.swift */,
 				CEF32F0322B050D700B2831C /* UIView+xib.swift */,
 				CEF32F0522B0BF8000B2831C /* UIStackView+ViewManage.swift */,
+				7212D4A622CC7579008460D7 /* NSLayoutContraint+Util.swift */,
+				7212D4AB22CC784D008460D7 /* UIButton+Custom.swift */,
+				7212D4AD22CC7A15008460D7 /* UIViewController+Alert.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -653,17 +683,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -675,6 +704,7 @@
 			files = (
 				CEC10A3922AF27B500EC307D /* ActivityView.swift in Sources */,
 				7266EADF22ADCC5E00062507 /* DateItinerary.swift in Sources */,
+				7212D4A422CC7498008460D7 /* BaseFillFieldsView.swift in Sources */,
 				7212D49C22CC281E008460D7 /* LoginViewController.swift in Sources */,
 				CEB0AF1922A87E2E000014AB /* MenuItem.swift in Sources */,
 				CEF32F1C22B1BD3B00B2831C /* InventoryViewCell.swift in Sources */,
@@ -691,11 +721,13 @@
 				CEC10A3622AF14FF00EC307D /* DateFormatter+String.swift in Sources */,
 				CEC10A3F22AF294B00EC307D /* Activity.swift in Sources */,
 				CEF32F0C22B0CE9300B2831C /* InventoryViewController.swift in Sources */,
+				7212D4AC22CC784D008460D7 /* UIButton+Custom.swift in Sources */,
 				CEF32F0622B0BF8000B2831C /* UIStackView+ViewManage.swift in Sources */,
 				72E62BDA22C87A3100C4E3F5 /* CoordinateManager.swift in Sources */,
 				72E62BA322C4268E00C4E3F5 /* ActivityDetailViewController.swift in Sources */,
 				72E62BD822C8771B00C4E3F5 /* Itineraries.swift in Sources */,
 				CE9FEAAD22A478FD007E48D8 /* DashboardViewController.swift in Sources */,
+				7212D4A722CC7579008460D7 /* NSLayoutContraint+Util.swift in Sources */,
 				CE9FEAB022A47A12007E48D8 /* DashboardCell.swift in Sources */,
 				CEDED62322B1F5B100EDEF83 /* InventoryHeaderView.swift in Sources */,
 				CEDED62D22B21A3A00EDEF83 /* MainTabViewController.swift in Sources */,
@@ -703,12 +735,16 @@
 				72E62BA822C426B600C4E3F5 /* ActivityDetailView.swift in Sources */,
 				CEF32F0422B050D700B2831C /* UIView+xib.swift in Sources */,
 				721D41A422A8613C00B756AF /* TripViewController.swift in Sources */,
+				7212D4A522CC7498008460D7 /* BaseView.swift in Sources */,
 				CE53B85E22C424B2007A8791 /* ActivityType.swift in Sources */,
+				7212D4AA22CC77CF008460D7 /* KeyboardProtocol.swift in Sources */,
 				723757EF22B04DFE000686F0 /* MapViewController.swift in Sources */,
 				723AE39E22AC34F000D3BFE8 /* MyTripsCell.swift in Sources */,
 				723757F222B04E1E000686F0 /* MapView.swift in Sources */,
+				7212D4AE22CC7A15008460D7 /* UIViewController+Alert.swift in Sources */,
 				721D41AF22A8D97D00B756AF /* MyTripsView.swift in Sources */,
 				72E62BB022C4835500C4E3F5 /* ItineraryCell.swift in Sources */,
+				7212D49F22CC73E5008460D7 /* LoginView.swift in Sources */,
 				7266EAD122AC83B800062507 /* ItineraryViewController.swift in Sources */,
 				CEDED63222B21E1100EDEF83 /* AltoViajeNotification.swift in Sources */,
 				CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */,
