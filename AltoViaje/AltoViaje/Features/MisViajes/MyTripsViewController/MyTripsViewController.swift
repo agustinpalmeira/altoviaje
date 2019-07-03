@@ -94,6 +94,8 @@ extension MyTripsViewController: UITableViewDataSource {
 		cell.dateToLabel.text = DateFormatter().string(from: package.to, with: "dd/MM/YYYY")
 		cell.destinyTitleLabel.text = package.destiny.place
 		cell.placeImageView.image = package.destiny.image
+		cell.delegate = self
+		cell.indexPath = indexPath
 		
 		return cell
 	}
@@ -122,5 +124,23 @@ extension MyTripsViewController: ItineraryViewControllerDelegate {
 	func updatePackage(packageIndexPath: IndexPath, activityIndexPath: IndexPath) {
         packagesArray[packageIndexPath.row].destiny.activities.remove(at: activityIndexPath.row)
 		User.shared.trips[packageIndexPath.row].destiny.activities.remove(at: activityIndexPath.row)
+	}
+}
+
+extension MyTripsViewController: MyTripsCellDelegate {
+	func deletePackage(indexPath: IndexPath) {
+		let alert = UIAlertController(title: "Seguro desea eliminar el paquete?",
+									  message: "Se eliminará el paquete seleccionado.",
+									  preferredStyle: UIAlertController.Style.alert)
+		alert.addAction(UIAlertAction(title: "Eliminar", style: .default, handler: { (action: UIAlertAction!) in
+			self.packagesArray.remove(at: indexPath.row)
+			User.shared.trips.remove(at: indexPath.row)
+		}))
+
+		alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+			//Nothing to do here.
+		}))
+
+		present(alert, animated: true, completion: nil)
 	}
 }
