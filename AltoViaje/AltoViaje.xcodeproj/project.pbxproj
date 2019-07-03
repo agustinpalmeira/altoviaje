@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -112,7 +112,8 @@
 		72E62BD722C8771A00C4E3F5 /* Itineraries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itineraries.swift; sourceTree = "<group>"; };
 		72E62BD922C87A3100C4E3F5 /* CoordinateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateManager.swift; sourceTree = "<group>"; };
 		865B1D1D3107957BF3F2A111 /* Pods_AltoViaje.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AltoViaje.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B64E74D71C71B4BF5724FEF5 /* Pods-AltoViaje.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.release.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.release.xcconfig"; sourceTree = "<group>"; };
+		871748A7522E6386E9DBAA17 /* Pods-AltoViaje.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.debug.xcconfig"; sourceTree = "<group>"; };
+		A92EB1DF6BEDCFDD971D62F7 /* Pods-AltoViaje.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.release.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.release.xcconfig"; sourceTree = "<group>"; };
 		CE53B85D22C424B2007A8791 /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
 		CE53B85F22C43478007A8791 /* Destiny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destiny.swift; sourceTree = "<group>"; };
 		CE53B86222CAB4EA007A8791 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -159,7 +160,6 @@
 		CEF32F1722B1B2BB00B2831C /* TripView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		CEF32F1A22B1BD3B00B2831C /* InventoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewCell.swift; sourceTree = "<group>"; };
 		CEF32F1B22B1BD3B00B2831C /* InventoryViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryViewCell.xib; sourceTree = "<group>"; };
-		DF64E31A639626E707A0EC52 /* Pods-AltoViaje.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AltoViaje.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +174,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B9058B248484976A20831BF /* Pods */ = {
+		1E66CE36C69975799F0A2B4B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DF64E31A639626E707A0EC52 /* Pods-AltoViaje.debug.xcconfig */,
-				B64E74D71C71B4BF5724FEF5 /* Pods-AltoViaje.release.xcconfig */,
+				871748A7522E6386E9DBAA17 /* Pods-AltoViaje.debug.xcconfig */,
+				A92EB1DF6BEDCFDD971D62F7 /* Pods-AltoViaje.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 				CE9FEA9022A472E8007E48D8 /* AltoViaje */,
 				CE9FEA8F22A472E8007E48D8 /* Products */,
 				E4BE4A3774EFC604B3EB9898 /* Frameworks */,
-				6B9058B248484976A20831BF /* Pods */,
+				1E66CE36C69975799F0A2B4B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -577,11 +577,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE9FEAA022A472E9007E48D8 /* Build configuration list for PBXNativeTarget "AltoViaje" */;
 			buildPhases = (
-				142448D5490A80184A59EC6B /* [CP] Check Pods Manifest.lock */,
+				DB43F2537FEFD3DF4485CE08 /* [CP] Check Pods Manifest.lock */,
 				CE9FEA8A22A472E8007E48D8 /* Sources */,
 				CE9FEA8B22A472E8007E48D8 /* Frameworks */,
 				CE9FEA8C22A472E8007E48D8 /* Resources */,
-				A19D70100B6464118FCC733B /* [CP] Embed Pods Frameworks */,
+				665620F76A87125E86E924CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -660,7 +660,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		142448D5490A80184A59EC6B /* [CP] Check Pods Manifest.lock */ = {
+		665620F76A87125E86E924CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB43F2537FEFD3DF4485CE08 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -676,23 +698,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A19D70100B6464118FCC733B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AltoViaje/Pods-AltoViaje-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -885,7 +890,7 @@
 		};
 		CE9FEAA122A472E9007E48D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF64E31A639626E707A0EC52 /* Pods-AltoViaje.debug.xcconfig */;
+			baseConfigurationReference = 871748A7522E6386E9DBAA17 /* Pods-AltoViaje.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -906,7 +911,7 @@
 		};
 		CE9FEAA222A472E9007E48D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B64E74D71C71B4BF5724FEF5 /* Pods-AltoViaje.release.xcconfig */;
+			baseConfigurationReference = A92EB1DF6BEDCFDD971D62F7 /* Pods-AltoViaje.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

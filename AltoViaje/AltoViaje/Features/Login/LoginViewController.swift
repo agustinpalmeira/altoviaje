@@ -60,7 +60,9 @@ class LoginViewController: UIViewController {
 			showAlert(text: "No pueden haber campos vacios.")
 		}
 		if areFieldsValid {
-			//TODO: Go to the view controller
+			let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+            guard let vc = storyboard.instantiateInitialViewController() else { return }
+            self.present(vc, animated: true, completion: nil)
 		} else {
 			if let errorMessage = errorMessages.first {
 				showAlert(text: errorMessage)
