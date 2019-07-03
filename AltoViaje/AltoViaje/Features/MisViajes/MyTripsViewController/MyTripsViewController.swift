@@ -59,7 +59,6 @@ class MyTripsViewController: UIViewController {
 		navigationController?.setNavigationBarHidden(false, animated: true)
 		navigationItem.title = "Mis Viajes"
         packagesArray = User.shared.trips
-
 	}
 
 	//MARK: - Configure subviews
@@ -122,6 +121,6 @@ extension MyTripsViewController: MyTripsViewDelegate {
 extension MyTripsViewController: ItineraryViewControllerDelegate {
 	func updatePackage(packageIndexPath: IndexPath, activityIndexPath: IndexPath) {
         packagesArray[packageIndexPath.row].destiny.activities.remove(at: activityIndexPath.row)
-		//packagesArray[packageIndexPath.row].itineraries[activityIndexPath.section].activities.remove(at: activityIndexPath.row)
+		User.shared.trips[packageIndexPath.row].destiny.activities.remove(at: activityIndexPath.row)
 	}
 }
