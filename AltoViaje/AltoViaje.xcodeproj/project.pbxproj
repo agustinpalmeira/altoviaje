@@ -66,6 +66,10 @@
 		CEB0AF2D22A8DA2A000014AB /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEB0AF2722A8DA2A000014AB /* Montserrat-Black.otf */; };
 		CEB0AF2E22A8DA2A000014AB /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CEB0AF2822A8DA2A000014AB /* Montserrat-SemiBold.otf */; };
 		CEB0AF3122A8DD7F000014AB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0AF3022A8DD7F000014AB /* Trip.swift */; };
+		CEB6A06022CD626D008D36CB /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB6A05F22CD626D008D36CB /* Shop.storyboard */; };
+		CEB6A06222CD6B84008D36CB /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6A06122CD6B84008D36CB /* ShopViewController.swift */; };
+		CEB6A06422CD6C6F008D36CB /* BuytedInventoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6A06322CD6C6F008D36CB /* BuytedInventoryViewCell.swift */; };
+		CEB6A06622CD6C75008D36CB /* BuyedInventoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6A06522CD6C75008D36CB /* BuyedInventoryViewCell.xib */; };
 		CEC10A3622AF14FF00EC307D /* DateFormatter+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3522AF14FF00EC307D /* DateFormatter+String.swift */; };
 		CEC10A3922AF27B500EC307D /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3822AF27B500EC307D /* ActivityView.swift */; };
 		CEC10A3B22AF27C200EC307D /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC10A3A22AF27C200EC307D /* ActivityView.xib */; };
@@ -153,6 +157,10 @@
 		CEB0AF2722A8DA2A000014AB /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
 		CEB0AF2822A8DA2A000014AB /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
 		CEB0AF3022A8DD7F000014AB /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		CEB6A05F22CD626D008D36CB /* Shop.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop.storyboard; sourceTree = "<group>"; };
+		CEB6A06122CD6B84008D36CB /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		CEB6A06322CD6C6F008D36CB /* BuytedInventoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuytedInventoryViewCell.swift; sourceTree = "<group>"; };
+		CEB6A06522CD6C75008D36CB /* BuyedInventoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyedInventoryViewCell.xib; sourceTree = "<group>"; };
 		CEC10A3522AF14FF00EC307D /* DateFormatter+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+String.swift"; sourceTree = "<group>"; };
 		CEC10A3822AF27B500EC307D /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		CEC10A3A22AF27C200EC307D /* ActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
@@ -426,6 +434,7 @@
 		CE9FEAA322A47311007E48D8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CEB6A05E22CD6252008D36CB /* Shop */,
 				7212D49A22CC2810008460D7 /* Login */,
 				721D41AD22A8D5F000B756AF /* MisViajes */,
 				CE9FEAA622A47327007E48D8 /* Perfil */,
@@ -524,6 +533,17 @@
 				CE53B86422CAB7C8007A8791 /* TripPackage.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CEB6A05E22CD6252008D36CB /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				CEB6A05F22CD626D008D36CB /* Shop.storyboard */,
+				CEB6A06322CD6C6F008D36CB /* BuytedInventoryViewCell.swift */,
+				CEB6A06522CD6C75008D36CB /* BuyedInventoryViewCell.xib */,
+				CEB6A06122CD6B84008D36CB /* ShopViewController.swift */,
+			);
+			path = Shop;
 			sourceTree = "<group>";
 		};
 		CEC10A3422AF14EE00EC307D /* Extension */ = {
@@ -675,6 +695,7 @@
 				CE9FEAA922A47364007E48D8 /* Main.storyboard in Resources */,
 				7280ED2B22CD5E6D00D8E0EC /* UserInfoViewController.xib in Resources */,
 				CEF32F1D22B1BD3B00B2831C /* InventoryViewCell.xib in Resources */,
+				CEB6A06022CD626D008D36CB /* Shop.storyboard in Resources */,
 				CEB0AF2922A8DA2A000014AB /* Montserrat-Bold.otf in Resources */,
 				CEB0AF2D22A8DA2A000014AB /* Montserrat-Black.otf in Resources */,
 				CEB0AF2A22A8DA2A000014AB /* Montserrat Medium.otf in Resources */,
@@ -682,6 +703,7 @@
 				CEB0AF2E22A8DA2A000014AB /* Montserrat-SemiBold.otf in Resources */,
 				CE9FEA9C22A472E9007E48D8 /* LaunchScreen.storyboard in Resources */,
 				CEB0AF2C22A8DA2A000014AB /* Montserrat-ExtraBold.otf in Resources */,
+				CEB6A06622CD6C75008D36CB /* BuyedInventoryViewCell.xib in Resources */,
 				7266EAD422AC842C00062507 /* MyTripsView.xib in Resources */,
 				7266EAD622ACA02D00062507 /* MyTripsViewController.xib in Resources */,
 				CE9FEA9922A472E9007E48D8 /* Assets.xcassets in Resources */,
@@ -749,6 +771,7 @@
 				7212D4A422CC7498008460D7 /* BaseFillFieldsView.swift in Sources */,
 				7212D49C22CC281E008460D7 /* LoginViewController.swift in Sources */,
 				CEB0AF1922A87E2E000014AB /* MenuItem.swift in Sources */,
+				CEB6A06222CD6B84008D36CB /* ShopViewController.swift in Sources */,
 				CEF32F1C22B1BD3B00B2831C /* InventoryViewCell.swift in Sources */,
 				CEF32F1922B1B2BB00B2831C /* TripView.swift in Sources */,
 				723AE39A22AA0BE500D3BFE8 /* MyTripsViewController.swift in Sources */,
@@ -792,6 +815,7 @@
 				7212D49F22CC73E5008460D7 /* LoginView.swift in Sources */,
 				7266EAD122AC83B800062507 /* ItineraryViewController.swift in Sources */,
 				CEDED63222B21E1100EDEF83 /* AltoViajeNotification.swift in Sources */,
+				CEB6A06422CD6C6F008D36CB /* BuytedInventoryViewCell.swift in Sources */,
 				CE9FEA9222A472E8007E48D8 /* AppDelegate.swift in Sources */,
 				CE53B86322CAB4EA007A8791 /* User.swift in Sources */,
 				CE53B86522CAB7C8007A8791 /* TripPackage.swift in Sources */,

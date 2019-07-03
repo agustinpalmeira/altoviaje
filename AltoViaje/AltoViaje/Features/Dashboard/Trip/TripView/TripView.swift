@@ -69,19 +69,26 @@ class TripView: UIView {
     func setupViews(with destiny: Destiny) {
         descriptionLabel.text = destiny.description
         destinyImageView.image = destiny.image
+
+        let multiplier = destiny.place == "Bariloche" ? 30 : destiny.place == "Iguazu" ? 60 : 90
+        fromDate = Date(timeInterval: TimeInterval(86400 * multiplier), since: Date())
+        toDate = Date(timeInterval: TimeInterval(86400 * multiplier + 86400*15), since: Date())
+
+        toDateLabel.text = DateFormatter().string(from: toDate, with: "dd/MM/YY")
+        fromDateLabel.text = DateFormatter().string(from: fromDate, with: "dd/MM/YY")
     }
 
     private func setupInitalDate() {
-        var dateComponent = DateComponents()
-        dateComponent.day = 1
-        dateComponent.month = 1
-        dateComponent.year = 2020
-        let fromDay = Calendar.current.date(from: dateComponent)
-
-        dateComponent.day = 15
-        let toDay = Calendar.current.date(from: dateComponent)
-        fromDate = fromDay!
-        toDate = toDay!
+//        var dateComponent = DateComponents()
+//        dateComponent.day = 1
+//        dateComponent.month = 1
+//        dateComponent.year = 2020
+//        let fromDay = Calendar.current.date(from: dateComponent)
+//
+//        dateComponent.day = 15
+//        let toDay = Calendar.current.date(from: dateComponent)
+//        fromDate = fromDay!
+//        toDate = toDay!
     }
 
     func setupActivities() {

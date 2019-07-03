@@ -11,6 +11,7 @@ import UIKit
 class MenuCell: UICollectionViewCell {
     static let itemIdentifier = "MenuCell"
     
+    @IBOutlet weak var availableView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var menuIcon: UIImageView!
     @IBOutlet weak var menuTitle: UILabel!
@@ -20,11 +21,16 @@ class MenuCell: UICollectionViewCell {
         containerView.layer.cornerRadius = 35
         containerView.layer.borderColor = UIColor.black.cgColor
         containerView.layer.borderWidth = 2
+
+        availableView.layer.cornerRadius = 35
+        availableView.layer.borderColor = UIColor.black.cgColor
+        availableView.layer.borderWidth = 2
     }
 
     func configureCell(_ model: MenuItemModel) {
         menuIcon.image = model.image
         menuTitle.text = model.name
+        availableView.isHidden = model.active
     }
 
 }

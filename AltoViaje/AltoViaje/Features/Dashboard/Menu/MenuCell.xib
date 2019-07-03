@@ -28,13 +28,21 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="planeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0xC-5O-2AF">
                                         <rect key="frame" x="15" y="15" width="40" height="40"/>
                                     </imageView>
+                                    <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4L1-eJ-gLf">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="0xC-5O-2AF" secondAttribute="trailing" constant="15" id="8Cv-yw-3uh"/>
+                                    <constraint firstItem="4L1-eJ-gLf" firstAttribute="centerY" secondItem="3Sz-uR-rve" secondAttribute="centerY" id="CMZ-RO-MJy"/>
                                     <constraint firstAttribute="bottom" secondItem="0xC-5O-2AF" secondAttribute="bottom" constant="15" id="NGy-oJ-Mct"/>
+                                    <constraint firstItem="4L1-eJ-gLf" firstAttribute="centerX" secondItem="3Sz-uR-rve" secondAttribute="centerX" id="U6u-6O-w2V"/>
                                     <constraint firstItem="0xC-5O-2AF" firstAttribute="leading" secondItem="3Sz-uR-rve" secondAttribute="leading" constant="15" id="a2K-Uq-SNP"/>
+                                    <constraint firstItem="4L1-eJ-gLf" firstAttribute="height" secondItem="3Sz-uR-rve" secondAttribute="height" id="c0A-K8-ids"/>
                                     <constraint firstAttribute="height" constant="70" id="coE-3P-iye"/>
+                                    <constraint firstItem="4L1-eJ-gLf" firstAttribute="width" secondItem="3Sz-uR-rve" secondAttribute="width" id="e6S-Zk-m6M"/>
                                     <constraint firstAttribute="width" constant="70" id="ydI-A0-rgI"/>
                                     <constraint firstItem="0xC-5O-2AF" firstAttribute="top" secondItem="3Sz-uR-rve" secondAttribute="top" constant="15" id="yqJ-MQ-g52"/>
                                 </constraints>
@@ -66,6 +74,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="81" height="71"/>
             <connections>
+                <outlet property="availableView" destination="4L1-eJ-gLf" id="v0b-Uz-h8R"/>
                 <outlet property="containerView" destination="3Sz-uR-rve" id="rFY-FB-dgb"/>
                 <outlet property="menuIcon" destination="0xC-5O-2AF" id="QeQ-4J-ixl"/>
                 <outlet property="menuTitle" destination="qLs-GQ-Qdw" id="kSF-vH-l3G"/>

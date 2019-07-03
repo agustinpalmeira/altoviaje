@@ -12,4 +12,5 @@ import UIKit
 struct MenuItemModel {
     let image: UIImage
     let name: String
+    let active: Bool
 }

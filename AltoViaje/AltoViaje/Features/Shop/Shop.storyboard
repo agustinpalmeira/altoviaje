@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KHt-cv-ftJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Shop View Controller-->
+        <scene sceneID="hCd-vV-vix">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ag-7D-fRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="KHt-cv-ftJ" customClass="ShopViewController" customModule="AltoViaje" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dQQ-Qe-gQW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundApp" translatesAutoresizingMaskIntoConstraints="NO" id="t4E-dU-z6V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VPb-ju-3Zg">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" white="0.92702907990000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KHt-cv-ftJ" id="kSA-Lx-d9b"/>
+                                    <outlet property="delegate" destination="KHt-cv-ftJ" id="wel-vZ-lKj"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOH-Pp-Cdn" userLabel="SwitchView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Hsc-tc-3PH">
+                                        <rect key="frame" x="10" y="23.5" width="355" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rP8-wE-2C5">
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="33"/>
+                                                <color key="backgroundColor" red="0.42745098040000001" green="0.5568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                                <state key="normal" title="Comprar">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goToShop:" destination="KHt-cv-ftJ" eventType="touchUpInside" id="2Qh-WC-gpm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Hsc-tc-3PH" firstAttribute="centerY" secondItem="hOH-Pp-Cdn" secondAttribute="centerY" id="Cbg-7W-Q9D"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hsc-tc-3PH" secondAttribute="trailing" constant="10" id="Evm-hQ-b7J"/>
+                                    <constraint firstAttribute="height" constant="80" id="nh7-Vp-0lM"/>
+                                    <constraint firstItem="Hsc-tc-3PH" firstAttribute="leading" secondItem="hOH-Pp-Cdn" secondAttribute="leading" constant="10" id="phi-b5-3sr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yVe-pW-KTV" firstAttribute="bottom" secondItem="VPb-ju-3Zg" secondAttribute="bottom" id="2Jr-WI-d82"/>
+                            <constraint firstItem="t4E-dU-z6V" firstAttribute="top" secondItem="dQQ-Qe-gQW" secondAttribute="top" id="3FS-Xl-JFb"/>
+                            <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="hOH-Pp-Cdn" secondAttribute="trailing" id="D4J-Lc-vaJ"/>
+                            <constraint firstItem="hOH-Pp-Cdn" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="HJ0-92-tik"/>
+                            <constraint firstItem="VPb-ju-3Zg" firstAttribute="top" secondItem="hOH-Pp-Cdn" secondAttribute="bottom" id="M9y-10-api"/>
+                            <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="t4E-dU-z6V" secondAttribute="trailing" id="OGj-ZL-5Ig"/>
+                            <constraint firstItem="VPb-ju-3Zg" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="RNL-Xx-xAw"/>
+                            <constraint firstItem="hOH-Pp-Cdn" firstAttribute="top" secondItem="yVe-pW-KTV" secondAttribute="top" id="bHX-4A-obj"/>
+                            <constraint firstItem="yVe-pW-KTV" firstAttribute="bottom" secondItem="t4E-dU-z6V" secondAttribute="bottom" id="idH-Hi-hpH"/>
+                            <constraint firstItem="t4E-dU-z6V" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="mOH-vI-u4g"/>
+                            <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="VPb-ju-3Zg" secondAttribute="trailing" id="y5O-0Z-KHa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yVe-pW-KTV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xj1-gm-fB0"/>
+                    <connections>
+                        <outlet property="buyButton" destination="rP8-wE-2C5" id="BvN-6L-aj3"/>
+                        <outlet property="itemsTable" destination="VPb-ju-3Zg" id="IMc-vx-pyY"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-334" y="193"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundApp" width="254" height="497"/>
+    </resources>
+</document>
