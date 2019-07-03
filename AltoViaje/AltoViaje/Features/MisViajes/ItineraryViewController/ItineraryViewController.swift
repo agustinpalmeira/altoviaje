@@ -40,9 +40,13 @@ class ItineraryViewController: UIViewController {
 
 	// MARK: - Initialization
 
-	init(itineraries: [DateItinerary]) {
+	init(itineraries: [Activity]) {
 		super.init(nibName: nil, bundle: nil)
-		self.itineraries = itineraries
+        var newItinerary: [DateItinerary] = []
+        for activity in itineraries {
+            newItinerary.append(DateItinerary(date: activity.date, activities: [activity.name]))
+        }
+		self.itineraries = newItinerary
 	}
 
 	required init?(coder aDecoder: NSCoder) {

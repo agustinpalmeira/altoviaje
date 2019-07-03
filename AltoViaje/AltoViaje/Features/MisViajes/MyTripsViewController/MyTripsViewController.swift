@@ -42,7 +42,7 @@ import UIKit
 class MyTripsViewController: UIViewController {
 
 	@IBOutlet weak var myTripsView: MyTripsView!
-	var packagesArray: [Package]! {
+	var packagesArray: [TripPackage]! {
 		didSet {
 			myTripsView.tableView.reloadData()
 		}
@@ -53,63 +53,13 @@ class MyTripsViewController: UIViewController {
 		super.viewDidLoad()
 		setSubviews()
 
-		var dateComponent = DateComponents()
-		dateComponent.day = 1
-		dateComponent.month = 1
-		dateComponent.year = 2020
-		var date = Calendar.current.date(from: dateComponent)
-
-		var activitiesArray = [BarilocheItinerary.buenosAiresBariloche, BarilocheItinerary.accommodation]
-		var dateItinerary = DateItinerary(date: date!, activities: activitiesArray)
-		var datesItineraries = [dateItinerary]
-
-		dateComponent.day = 5
-		dateComponent.month = 1
-		dateComponent.year = 2020
-		date = Calendar.current.date(from: dateComponent)
-
-		activitiesArray = [BarilocheItinerary.firstExcursion]
-		dateItinerary = DateItinerary(date: date!, activities: activitiesArray)
-		datesItineraries.append(dateItinerary)
-
-		dateComponent.day = 9
-		dateComponent.month = 1
-		dateComponent.year = 2020
-		date = Calendar.current.date(from: dateComponent)
-		activitiesArray = [BarilocheItinerary.secondExcursion]
-		dateItinerary = DateItinerary(date: date!, activities: activitiesArray)
-		datesItineraries.append(dateItinerary)
-
-		dateComponent.day = 15
-		dateComponent.month = 1
-		dateComponent.year = 2020
-		date = Calendar.current.date(from: dateComponent)
-
-		activitiesArray = [BarilocheItinerary.secondExcursion, BarilocheItinerary.barilocheBuenosAires]
-		dateItinerary = DateItinerary(date: date!, activities: activitiesArray)
-		datesItineraries.append(dateItinerary)
-
-		dateComponent.day = 1
-		dateComponent.month = 1
-		dateComponent.year = 2020
-		date = Calendar.current.date(from: dateComponent)
-
-		dateComponent.day = 15
-		dateComponent.month = 1
-		dateComponent.year = 2020
-		let toDate = Calendar.current.date(from: dateComponent)
-
-		let package = Package(dateFrom: date!, dateTo: toDate!,
-							  destiny: "Bariloche",
-							  image: #imageLiteral(resourceName: "Bariloche"),
-							  itineraries: datesItineraries)
-
-		packagesArray = [package]
 	}
 
 	override func viewWillAppear(_ animated: Bool) {
 		navigationController?.setNavigationBarHidden(false, animated: true)
 		navigationItem.title = "Mis Viajes"
+        packagesArray = User.shared.trips
+
 	}
 
 	//MARK: - Configure subviews
@@ -141,10 +91,10 @@ extension MyTripsViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell: MyTripsCell = tableView.dequeueReusableCell(withIdentifier: MyTripsCell.cellIdentifier) as! MyTripsCell
 		let package = packagesArray![indexPath.row]
-		cell.dateFromLabel.text = DateFormatter().string(from: package.dateFrom, with: "dd/MM/YYYY")
-		cell.dateToLabel.text = DateFormatter().string(from: package.dateTo, with: "dd/MM/YYYY")
-		cell.destinyTitleLabel.text = package.destiny
-		cell.placeImageView.image = package.image
+		cell.dateFromLabel.text = DateFormatter().string(from: package.from, with: "dd/MM/YYYY")
+		cell.dateToLabel.text = DateFormatter().string(from: package.to, with: "dd/MM/YYYY")
+		cell.destinyTitleLabel.text = package.destiny.place
+		cell.placeImageView.image = package.destiny.image
 		
 		return cell
 	}
@@ -156,7 +106,7 @@ extension MyTripsViewController: UITableViewDataSource {
 
 extension MyTripsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let viewController = ItineraryViewController(itineraries: packagesArray[indexPath.row].itineraries)
+		let viewController = ItineraryViewController(itineraries: packagesArray[indexPath.row].destiny.activities)
 		viewController.indexPath = indexPath
 		viewController.delegate = self
 		navigationController?.pushViewController(viewController, animated: true)
@@ -171,6 +121,7 @@ extension MyTripsViewController: MyTripsViewDelegate {
 
 extension MyTripsViewController: ItineraryViewControllerDelegate {
 	func updatePackage(packageIndexPath: IndexPath, activityIndexPath: IndexPath) {
-		packagesArray[packageIndexPath.row].itineraries[activityIndexPath.section].activities.remove(at: activityIndexPath.row)
+        packagesArray[packageIndexPath.row].destiny.activities.remove(at: activityIndexPath.row)
+		//packagesArray[packageIndexPath.row].itineraries[activityIndexPath.section].activities.remove(at: activityIndexPath.row)
 	}
 }
