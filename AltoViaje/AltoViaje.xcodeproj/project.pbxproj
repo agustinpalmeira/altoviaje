@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7212D49C22CC281E008460D7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D49B22CC281E008460D7 /* LoginViewController.swift */; };
 		721D41A422A8613C00B756AF /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41A322A8613C00B756AF /* TripViewController.swift */; };
 		721D41AF22A8D97D00B756AF /* MyTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721D41AE22A8D97D00B756AF /* MyTripsView.swift */; };
 		723757EF22B04DFE000686F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723757EE22B04DFE000686F0 /* MapViewController.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7212D49B22CC281E008460D7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		721D41A322A8613C00B756AF /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		721D41AE22A8D97D00B756AF /* MyTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsView.swift; sourceTree = "<group>"; };
 		723757EE22B04DFE000686F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,22 @@
 				B64E74D71C71B4BF5724FEF5 /* Pods-AltoViaje.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7212D49A22CC2810008460D7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7212D49B22CC281E008460D7 /* LoginViewController.swift */,
+				7212D49D22CC2824008460D7 /* LoginView */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7212D49D22CC2824008460D7 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginView;
 			sourceTree = "<group>";
 		};
 		721D41A622A865C400B756AF /* TripViewController */ = {
@@ -352,6 +370,7 @@
 		CE9FEAA322A47311007E48D8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7212D49A22CC2810008460D7 /* Login */,
 				721D41AD22A8D5F000B756AF /* MisViajes */,
 				CE9FEAA622A47327007E48D8 /* Perfil */,
 				CE9FEAA522A47321007E48D8 /* Dashboard */,
@@ -656,6 +675,7 @@
 			files = (
 				CEC10A3922AF27B500EC307D /* ActivityView.swift in Sources */,
 				7266EADF22ADCC5E00062507 /* DateItinerary.swift in Sources */,
+				7212D49C22CC281E008460D7 /* LoginViewController.swift in Sources */,
 				CEB0AF1922A87E2E000014AB /* MenuItem.swift in Sources */,
 				CEF32F1C22B1BD3B00B2831C /* InventoryViewCell.swift in Sources */,
 				CEF32F1922B1B2BB00B2831C /* TripView.swift in Sources */,

@@ -9,11 +9,18 @@
 import Foundation
 import UIKit
 
+protocol MyTripsCellDelegate: class {
+	func deletePackage(indexPath: IndexPath)
+}
+
 class MyTripsCell: UITableViewCell {
 
 	//MARK: - Variables
 	static let cellIdentifier = "MyTripsCell"
+	weak var delegate: MyTripsCellDelegate?
+	var indexPath: IndexPath?
 
+	@IBOutlet weak var deleteButton: UIButton!
 	@IBOutlet weak var cellContainerView: UIView!
 	@IBOutlet weak var placeImageView: UIImageView!
 	@IBOutlet weak var dateFromLabel: UILabel!
@@ -49,5 +56,12 @@ class MyTripsCell: UITableViewCell {
 	//MARK: - 
 	override func setSelected(_ selected: Bool, animated: Bool) {
 		super.setSelected(selected, animated: animated)
+	}
+
+	//MARK: - Actions
+	@IBAction func deleteButtonTouched(_ sender: Any) {
+		if let indexP = indexPath {
+			delegate?.deletePackage(indexPath: indexP)
+		}
 	}
 }

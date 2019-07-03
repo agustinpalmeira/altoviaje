@@ -34,7 +34,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="416" height="181.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bariloche" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VC-2i-P9T" userLabel="placeTitleLabel">
-                                <rect key="frame" x="20" y="10" width="85" height="22"/>
+                                <rect key="frame" x="20" y="10" width="151" height="22"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" red="1" green="0.42534180360000001" blue="0.38816105610000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,6 +70,19 @@
                                 <color key="highlightedColor" red="1" green="0.42534180360000001" blue="0.38816105610000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLz-eM-JYs">
+                                <rect key="frame" x="376" y="10" width="40" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Tpe-sr-y9u"/>
+                                    <constraint firstAttribute="width" constant="40" id="hdb-cq-mFQ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cancel">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonTouched:" destination="CbG-Fh-v1S" eventType="touchUpInside" id="pel-ji-Q1N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -79,13 +92,17 @@
                             <constraint firstItem="OvE-cv-HUT" firstAttribute="leading" secondItem="u78-fs-iE9" secondAttribute="leading" id="Eok-uR-pTN"/>
                             <constraint firstItem="gls-HM-gQE" firstAttribute="top" secondItem="u78-fs-iE9" secondAttribute="top" constant="34" id="FTA-Dy-WNQ"/>
                             <constraint firstAttribute="trailing" secondItem="OvE-cv-HUT" secondAttribute="trailing" id="KMk-8j-7B2"/>
+                            <constraint firstItem="mLz-eM-JYs" firstAttribute="top" secondItem="u78-fs-iE9" secondAttribute="top" constant="10" id="TPP-Vn-VEp"/>
+                            <constraint firstAttribute="bottom" secondItem="mLz-eM-JYs" secondAttribute="bottom" constant="141.5" id="aHi-Mj-Jpv"/>
                             <constraint firstItem="SEO-lu-5zA" firstAttribute="centerY" secondItem="fok-HQ-bTo" secondAttribute="centerY" id="fzY-Br-WHR"/>
                             <constraint firstItem="SEO-lu-5zA" firstAttribute="top" secondItem="u78-fs-iE9" secondAttribute="top" constant="33" id="hWo-rR-A8o"/>
                             <constraint firstItem="gls-HM-gQE" firstAttribute="centerY" secondItem="fok-HQ-bTo" secondAttribute="centerY" id="iJ3-ps-RAq"/>
                             <constraint firstItem="SEO-lu-5zA" firstAttribute="leading" secondItem="gls-HM-gQE" secondAttribute="trailing" id="jQm-kB-yEC"/>
                             <constraint firstAttribute="bottom" secondItem="OvE-cv-HUT" secondAttribute="bottom" id="nmk-JZ-vLc"/>
+                            <constraint firstItem="mLz-eM-JYs" firstAttribute="leading" secondItem="5VC-2i-P9T" secondAttribute="trailing" constant="205" id="r18-gJ-374"/>
                             <constraint firstItem="OvE-cv-HUT" firstAttribute="top" secondItem="u78-fs-iE9" secondAttribute="top" id="rZe-ny-up2"/>
                             <constraint firstItem="5VC-2i-P9T" firstAttribute="leading" secondItem="u78-fs-iE9" secondAttribute="leading" constant="20" id="s78-Qc-pHN"/>
+                            <constraint firstAttribute="trailing" secondItem="mLz-eM-JYs" secondAttribute="trailing" id="wkJ-V8-rm1"/>
                             <constraint firstItem="fok-HQ-bTo" firstAttribute="top" secondItem="5VC-2i-P9T" secondAttribute="bottom" constant="7" id="zWO-tK-shA"/>
                         </constraints>
                     </view>
@@ -104,6 +121,7 @@
                 <outlet property="cellContainerView" destination="u78-fs-iE9" id="zko-de-Zt8"/>
                 <outlet property="dateFromLabel" destination="fok-HQ-bTo" id="Zz4-Id-1NY"/>
                 <outlet property="dateToLabel" destination="SEO-lu-5zA" id="aA0-SM-T0K"/>
+                <outlet property="deleteButton" destination="mLz-eM-JYs" id="bxs-XO-cj2"/>
                 <outlet property="destinyTitleLabel" destination="5VC-2i-P9T" id="bz5-tf-75V"/>
                 <outlet property="placeImageView" destination="OvE-cv-HUT" id="nPe-OX-1yr"/>
             </connections>
@@ -112,5 +130,6 @@
     </objects>
     <resources>
         <image name="Bariloche" width="200" height="100"/>
+        <image name="cancel" width="32" height="32"/>
     </resources>
 </document>
