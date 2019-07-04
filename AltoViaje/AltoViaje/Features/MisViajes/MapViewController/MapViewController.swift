@@ -256,6 +256,106 @@ class MapViewController: UIViewController {
 
 		geodesic = MKGeodesicPolyline(coordinates: [annotation16.coordinate , annotation17.coordinate], count: 2)
 		mapView.mkMapView.addOverlay(geodesic)
+
+		//Catedral
+		annotation1.coordinate = CLLocationCoordinate2DMake(-41.168777, -71.439372)
+		annotation1.title = "Base cerro catedral"
+		annotation1.subtitle = "Comiendo recorrido de Catedral"
+		mapView.mkMapView.addAnnotation(annotation1)
+
+		annotation2.coordinate = CLLocationCoordinate2DMake(-41.174208, -71.439949)
+		mapView.mkMapView.addAnnotation(annotation2)
+
+		annotation3.coordinate = CLLocationCoordinate2DMake(-41.178770, -71.437207)
+		mapView.mkMapView.addAnnotation(annotation3)
+
+		annotation4.coordinate = CLLocationCoordinate2DMake(-41.184419, -71.438073)
+		mapView.mkMapView.addAnnotation(annotation4)
+
+		annotation5.coordinate = CLLocationCoordinate2DMake(-41.188655, -71.436629)
+		mapView.mkMapView.addAnnotation(annotation5)
+
+		annotation6.coordinate = CLLocationCoordinate2DMake(-41.195606, -71.432876)
+		mapView.mkMapView.addAnnotation(annotation6)
+
+		annotation7.coordinate = CLLocationCoordinate2DMake(-41.201906, -71.432586)
+		mapView.mkMapView.addAnnotation(annotation7)
+
+		annotation8.coordinate = CLLocationCoordinate2DMake(-41.207446, -71.437206)
+		mapView.mkMapView.addAnnotation(annotation8)
+
+		annotation9.coordinate = CLLocationCoordinate2DMake(-41.209836, -71.447023)
+		mapView.mkMapView.addAnnotation(annotation9)
+
+		annotation10.coordinate = CLLocationCoordinate2DMake(-41.207772, -71.453376)
+		mapView.mkMapView.addAnnotation(annotation10)
+
+		annotation11.coordinate = CLLocationCoordinate2DMake(-41.203643, -71.462038)
+		mapView.mkMapView.addAnnotation(annotation11)
+
+		annotation12.coordinate = CLLocationCoordinate2DMake(-41.199405, -71.468966)
+		mapView.mkMapView.addAnnotation(annotation12)
+
+		annotation13.coordinate = CLLocationCoordinate2DMake(-41.195928, -71.473872)
+		mapView.mkMapView.addAnnotation(annotation13)
+
+		annotation14.coordinate = CLLocationCoordinate2DMake(-41.194623, -71.480223)
+		mapView.mkMapView.addAnnotation(annotation14)
+
+		annotation15.coordinate = CLLocationCoordinate2DMake(-41.198217, -71.482747)
+		mapView.mkMapView.addAnnotation(annotation15)
+
+		annotation16.coordinate = CLLocationCoordinate2DMake(-41.198003, -71.486025)
+		mapView.mkMapView.addAnnotation(annotation16)
+		annotation16.title = "Refugio Frey"
+		annotation16.subtitle = "Fin recorrido de Catedral"
+
+		mapView.mkMapView.addAnnotation(annotation17)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation1.coordinate , annotation2.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation2.coordinate , annotation3.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation3.coordinate , annotation4.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation4.coordinate , annotation5.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation5.coordinate , annotation6.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation6.coordinate , annotation7.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation7.coordinate , annotation8.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation8.coordinate , annotation9.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation9.coordinate , annotation10.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation10.coordinate , annotation11.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation11.coordinate , annotation12.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation12.coordinate , annotation13.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation13.coordinate , annotation14.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation14.coordinate , annotation15.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation15.coordinate , annotation16.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
 	}
 }
 
