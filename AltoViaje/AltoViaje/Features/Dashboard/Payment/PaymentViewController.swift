@@ -47,6 +47,9 @@ class PaymentViewController: UIViewController {
         if let aPackage = package {
             NotificationCenter.default.post(name: AltoViajeNotification.newTripBoocked.name, object: nil)
             user.trips.append(aPackage)
+        } else {
+            NotificationCenter.default.post(name: AltoViajeNotification.itemBuyed.name, object: nil)
+
         }
         navigationController?.popToRootViewController(animated: true)
 

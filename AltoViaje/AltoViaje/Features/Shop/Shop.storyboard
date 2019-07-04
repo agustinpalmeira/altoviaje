@@ -34,6 +34,37 @@
                                     <outlet property="delegate" destination="KHt-cv-ftJ" id="wel-vZ-lKj"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPE-pD-oIT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dau-c0-re9">
+                                        <rect key="frame" x="37.5" y="25" width="300" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compra Exitosa!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U87-zs-11I">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.42745098040000001" green="0.5568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="U87-zs-11I" firstAttribute="top" secondItem="dau-c0-re9" secondAttribute="top" id="6pM-ke-doD"/>
+                                            <constraint firstAttribute="bottom" secondItem="U87-zs-11I" secondAttribute="bottom" id="HIM-6m-ibH"/>
+                                            <constraint firstAttribute="trailing" secondItem="U87-zs-11I" secondAttribute="trailing" id="bD0-RV-hP3"/>
+                                            <constraint firstAttribute="height" constant="50" id="bFU-Y0-liG"/>
+                                            <constraint firstItem="U87-zs-11I" firstAttribute="leading" secondItem="dau-c0-re9" secondAttribute="leading" id="vyt-zO-6Mu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dau-c0-re9" firstAttribute="centerX" secondItem="KPE-pD-oIT" secondAttribute="centerX" id="7MM-5R-wjv"/>
+                                    <constraint firstItem="dau-c0-re9" firstAttribute="centerY" secondItem="KPE-pD-oIT" secondAttribute="centerY" id="VFE-rm-NMb"/>
+                                    <constraint firstAttribute="height" constant="100" id="rbu-Av-bXn"/>
+                                    <constraint firstItem="dau-c0-re9" firstAttribute="width" secondItem="KPE-pD-oIT" secondAttribute="width" multiplier="0.8" id="uIK-5p-hOd"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOH-Pp-Cdn" userLabel="SwitchView">
                                 <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                                 <subviews>
@@ -67,13 +98,16 @@
                         <constraints>
                             <constraint firstItem="t4E-dU-z6V" firstAttribute="top" secondItem="dQQ-Qe-gQW" secondAttribute="top" id="3FS-Xl-JFb"/>
                             <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="hOH-Pp-Cdn" secondAttribute="trailing" id="D4J-Lc-vaJ"/>
+                            <constraint firstItem="KPE-pD-oIT" firstAttribute="top" secondItem="yVe-pW-KTV" secondAttribute="top" id="Ezf-dv-w2x"/>
                             <constraint firstItem="hOH-Pp-Cdn" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="HJ0-92-tik"/>
+                            <constraint firstItem="KPE-pD-oIT" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="JlW-LE-wjl"/>
                             <constraint firstItem="VPb-ju-3Zg" firstAttribute="bottom" secondItem="hOH-Pp-Cdn" secondAttribute="top" id="M9y-10-api"/>
                             <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="t4E-dU-z6V" secondAttribute="trailing" id="OGj-ZL-5Ig"/>
                             <constraint firstItem="yVe-pW-KTV" firstAttribute="bottom" secondItem="hOH-Pp-Cdn" secondAttribute="bottom" id="QdD-Ge-enU"/>
                             <constraint firstItem="VPb-ju-3Zg" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="RNL-Xx-xAw"/>
                             <constraint firstItem="VPb-ju-3Zg" firstAttribute="top" secondItem="yVe-pW-KTV" secondAttribute="top" id="hDm-HU-ZGx"/>
                             <constraint firstItem="yVe-pW-KTV" firstAttribute="bottom" secondItem="t4E-dU-z6V" secondAttribute="bottom" id="idH-Hi-hpH"/>
+                            <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="KPE-pD-oIT" secondAttribute="trailing" id="keW-Zm-Vmq"/>
                             <constraint firstItem="t4E-dU-z6V" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="mOH-vI-u4g"/>
                             <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="VPb-ju-3Zg" secondAttribute="trailing" id="y5O-0Z-KHa"/>
                         </constraints>
@@ -82,6 +116,8 @@
                     <navigationItem key="navigationItem" id="xj1-gm-fB0"/>
                     <connections>
                         <outlet property="buyButton" destination="rP8-wE-2C5" id="BvN-6L-aj3"/>
+                        <outlet property="describedView" destination="dau-c0-re9" id="ncq-6D-M84"/>
+                        <outlet property="itemsBuyedView" destination="KPE-pD-oIT" id="HZg-jr-ojy"/>
                         <outlet property="itemsTable" destination="VPb-ju-3Zg" id="IMc-vx-pyY"/>
                     </connections>
                 </viewController>

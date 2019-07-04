@@ -58,7 +58,7 @@ class InventoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationItem.title = "Carrito"
+        navigationItem.title = "Shop"
         billView.layer.borderColor = UIColor.lightGray.cgColor
         billView.layer.borderWidth = 1
         billToPay = 0

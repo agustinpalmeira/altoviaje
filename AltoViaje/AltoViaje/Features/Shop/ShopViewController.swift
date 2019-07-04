@@ -12,12 +12,21 @@ class ShopViewController: UIViewController {
 
     @IBOutlet weak var buyButton: UIButton!
     @IBOutlet weak var itemsTable: UITableView!
+    @IBOutlet weak var describedView: UIView!
 
+    @IBOutlet weak var itemsBuyedView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationItem.title = "Forma de Pago"
+
         itemsTable.register(UINib.init(nibName: "BuyedInventoryViewCell", bundle: nil), forCellReuseIdentifier: BuyedInventoryViewCell.identifier)
+        NotificationCenter.default.addObserver(self, selector: #selector(newItemsBuyed), name: AltoViajeNotification.itemBuyed.name, object: nil)
+
+        describedView.layer.cornerRadius = 15
+        itemsBuyedView.alpha = 0
+
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +38,20 @@ class ShopViewController: UIViewController {
         let cartVC = InventoryWithoutTripViewController(nibName: "InventoryWithoutTripViewController", bundle: nil)
         
         navigationController?.pushViewController(cartVC, animated: true)
+    }
+
+    @objc
+    func newItemsBuyed() {
+        UIView.animate(withDuration: 0.5, animations: {  [weak self] in
+            self?.itemsBuyedView.alpha = 1
+            }, completion: { _ in
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: false, block: { [weak self] _ in
+                    UIView.animate(withDuration: 0.5, animations: {
+                        self?.itemsBuyedView.alpha = 0
+
+                    })
+                })
+        })
     }
 }
 
