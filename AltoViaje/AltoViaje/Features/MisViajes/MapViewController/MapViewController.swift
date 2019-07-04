@@ -116,7 +116,7 @@ class MapViewController: UIViewController {
 
 	private func addCustomAnnotations() {
 
-		//Bariloche
+		//Cataratas
 //		[-25.6842081, -54.4458484, 17],
 //		[-25.6837223, -54.4459691, 17],
 //		[-25.6852984, -54.4465314, 17]
@@ -146,74 +146,122 @@ class MapViewController: UIViewController {
 		geodesic = MKGeodesicPolyline(coordinates: [annotation1.coordinate , annotation3.coordinate], count: 2)
 		mapView.mkMapView.addOverlay(geodesic)
 
+		//Tronador
+		annotation1.coordinate = CLLocationCoordinate2DMake(-41.226620, -71.787543)
+		annotation1.title = "Comienzo recorrido Tronador"
+		mapView.mkMapView.addAnnotation(annotation1)
 
+		annotation2.coordinate = CLLocationCoordinate2DMake(-41.222170, -71.787740)
+		mapView.mkMapView.addAnnotation(annotation2)
 
-//
-//		let request = MKDirections.Request()
-//		request.source = MKMapItem(placemark: MKPlacemark(coordinate: annotation1.coordinate, addressDictionary: nil))
-//		request.destination = MKMapItem(placemark: MKPlacemark(coordinate: annotation2.coordinate, addressDictionary: nil))
-//		request.requestsAlternateRoutes = false
-//		request.transportType = .walking
-//
-//		let directions = MKDirections(request: request)
-//
-//		directions.calculate { [unowned self] response, error in
-//			guard let unwrappedResponse = response else { return }
-//
-//			if (unwrappedResponse.routes.count > 0) {
-//				self.mapView.mkMapView.addOverlay(unwrappedResponse.routes[0].polyline)
-//				self.mapView.mkMapView.setVisibleMapRect(unwrappedResponse.routes[0].polyline.boundingMapRect, animated: false)
-//			}
-//		}
+		annotation3.coordinate = CLLocationCoordinate2DMake(-41.219388, -71.787673)
+		annotation3.title = ""
+		mapView.mkMapView.addAnnotation(annotation3)
 
+		var annotation4 = MKPointAnnotation()
+		annotation4.coordinate = CLLocationCoordinate2DMake(-41.216797, -71.787341)
+		mapView.mkMapView.addAnnotation(annotation4)
 
+		var  annotation5 = MKPointAnnotation()
+		annotation5.coordinate = CLLocationCoordinate2DMake(-41.208820, -71.788240)
+		mapView.mkMapView.addAnnotation(annotation5)
 
-//		let sourcePlacemark = MKPlacemark(coordinate: CLLocationCoordinate2DMake(-25.6842081, -54.445844), addressDictionary: nil)
-//		let destinationPlacemark = MKPlacemark(coordinate: CLLocationCoordinate2DMake(-25.6852984, -54.4465314), addressDictionary: nil)
-//
-//		let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
-//		let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
-//
-//		let sourceAnnotation = MKPointAnnotation()
-//
-//		if let location = sourcePlacemark.location {
-//			sourceAnnotation.coordinate = location.coordinate
-//		}
-//
-//		let destinationAnnotation = MKPointAnnotation()
-//
-//		if let location = destinationPlacemark.location {
-//			destinationAnnotation.coordinate = location.coordinate
-//		}
-//
-//		//self.mapView.mkMapView.showAnnotations([sourceAnnotation,destinationAnnotation], animated: true )
-//
-//		let directionRequest = MKDirections.Request()
-//		directionRequest.source = sourceMapItem
-//		directionRequest.destination = destinationMapItem
-//		directionRequest.transportType = .any
-//
-//		// Calculate the direction
-//		let directions = MKDirections(request: directionRequest)
-//
-//		directions.calculate {
-//			(response, error) -> Void in
-//
-//			guard let response = response else {
-//				if let error = error {
-//					print("Error: \(error)")
-//				}
-//
-//				return
-//			}
-//
-//			let route = response.routes[0]
-//
-//			self.mapView.mkMapView.addOverlay((route.polyline), level: MKOverlayLevel.aboveLabels)
-//
-//			let rect = route.polyline.boundingMapRect
-//			self.mapView.mkMapView.setRegion(MKCoordinateRegion(rect), animated: true)
-//		}
+		var annotation6 = MKPointAnnotation()
+		annotation6.coordinate = CLLocationCoordinate2DMake(-41.199709, -71.787983)
+		mapView.mkMapView.addAnnotation(annotation6)
+
+		var annotation7 = MKPointAnnotation()
+		annotation7.coordinate = CLLocationCoordinate2DMake(-41.189304, -71.788242)
+		mapView.mkMapView.addAnnotation(annotation7)
+
+		var annotation8 = MKPointAnnotation()
+		annotation8.coordinate = CLLocationCoordinate2DMake(-41.183712, -71.787519)
+		mapView.mkMapView.addAnnotation(annotation8)
+
+		var annotation9 = MKPointAnnotation()
+		annotation9.coordinate = CLLocationCoordinate2DMake(-41.177458, -71.789005)
+		mapView.mkMapView.addAnnotation(annotation9)
+
+		var annotation10 = MKPointAnnotation()
+		annotation10.coordinate = CLLocationCoordinate2DMake(-41.171526, -71.804267)
+		mapView.mkMapView.addAnnotation(annotation10)
+
+		var annotation11 = MKPointAnnotation()
+		annotation11.coordinate = CLLocationCoordinate2DMake(-41.173298, -71.812810)
+		mapView.mkMapView.addAnnotation(annotation11)
+
+		var annotation12 = MKPointAnnotation()
+		annotation12.coordinate = CLLocationCoordinate2DMake(-41.167705, -71.818693)
+		mapView.mkMapView.addAnnotation(annotation12)
+
+		var annotation13 = MKPointAnnotation()
+		annotation13.coordinate = CLLocationCoordinate2DMake(-41.164906, -71.817345)
+		mapView.mkMapView.addAnnotation(annotation13)
+
+		var annotation14 = MKPointAnnotation()
+		annotation14.coordinate = CLLocationCoordinate2DMake(-41.160798, -71.821771)
+		mapView.mkMapView.addAnnotation(annotation14)
+
+		var annotation15 = MKPointAnnotation()
+		annotation15.coordinate = CLLocationCoordinate2DMake(-41.156949, -71.825768)
+		mapView.mkMapView.addAnnotation(annotation15)
+
+		var annotation16 = MKPointAnnotation()
+		annotation16.coordinate = CLLocationCoordinate2DMake(-41.149739, -71.829594)
+		mapView.mkMapView.addAnnotation(annotation16)
+
+		var annotation17 = MKPointAnnotation()
+		annotation17.coordinate = CLLocationCoordinate2DMake(-41.151270, -71.836916)
+		annotation17.title = "Fin recorrido tronador"
+		mapView.mkMapView.addAnnotation(annotation17)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation1.coordinate , annotation2.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation2.coordinate , annotation3.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation3.coordinate , annotation4.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation4.coordinate , annotation5.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation5.coordinate , annotation6.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation6.coordinate , annotation7.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation7.coordinate , annotation8.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation8.coordinate , annotation9.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation9.coordinate , annotation10.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation10.coordinate , annotation11.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation11.coordinate , annotation12.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation12.coordinate , annotation13.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation13.coordinate , annotation14.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation14.coordinate , annotation15.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation15.coordinate , annotation16.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		geodesic = MKGeodesicPolyline(coordinates: [annotation16.coordinate , annotation17.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
 	}
 }
 
