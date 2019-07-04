@@ -64,6 +64,8 @@ class MapViewController: UIViewController {
 		mapView.delegate = self
 		mapView.setMapViewDelegate(self)
 
+		addCustomAnnotations()
+
 		setLocation(title: titleText, coordinate: tourCoordinate)
 
 		//		let location: CLLocationCoordinate2D =  CLLocationCoordinate2DMake(-41.1805557, -72.055416)
@@ -111,6 +113,105 @@ class MapViewController: UIViewController {
 		annotation.subtitle = subtitle
 		mapView.mkMapView.addAnnotation(annotation)
 	}
+
+	private func addCustomAnnotations() {
+
+		//Bariloche
+
+		//First
+		var annotation1 = MKPointAnnotation()
+		annotation1.coordinate = CLLocationCoordinate2DMake(-25.6842081, -54.445844)
+		annotation1.title = "Comienzo recorrido a las cataratas"
+		annotation1.subtitle = ""
+		mapView.mkMapView.addAnnotation(annotation1)
+
+		var annotation2 = MKPointAnnotation()
+		annotation2.coordinate = CLLocationCoordinate2DMake(-25.6837223, -54.4459691)
+		annotation2.title = "Fin recorrido a las cataratas"
+		annotation2.subtitle = ""
+		mapView.mkMapView.addAnnotation(annotation2)
+
+		var points: [CLLocationCoordinate2D]
+
+		let geodesic = MKGeodesicPolyline(coordinates: [annotation1.coordinate , annotation2.coordinate ], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
+
+		let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+		//let region1 = MKCoordinateRegion(center: point1, span: span)
+		//self.mapView.mkMapView.setRegion(region1, animated: true)
+
+		//let point3 = CLLocationCoordinate2DMake(-25.6852984, -54.4465314);
+		//points = [point2, point3]
+
+
+
+//
+//		let request = MKDirections.Request()
+//		request.source = MKMapItem(placemark: MKPlacemark(coordinate: annotation1.coordinate, addressDictionary: nil))
+//		request.destination = MKMapItem(placemark: MKPlacemark(coordinate: annotation2.coordinate, addressDictionary: nil))
+//		request.requestsAlternateRoutes = false
+//		request.transportType = .walking
+//
+//		let directions = MKDirections(request: request)
+//
+//		directions.calculate { [unowned self] response, error in
+//			guard let unwrappedResponse = response else { return }
+//
+//			if (unwrappedResponse.routes.count > 0) {
+//				self.mapView.mkMapView.addOverlay(unwrappedResponse.routes[0].polyline)
+//				self.mapView.mkMapView.setVisibleMapRect(unwrappedResponse.routes[0].polyline.boundingMapRect, animated: false)
+//			}
+//		}
+
+
+
+//		let sourcePlacemark = MKPlacemark(coordinate: CLLocationCoordinate2DMake(-25.6842081, -54.445844), addressDictionary: nil)
+//		let destinationPlacemark = MKPlacemark(coordinate: CLLocationCoordinate2DMake(-25.6852984, -54.4465314), addressDictionary: nil)
+//
+//		let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+//		let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+//
+//		let sourceAnnotation = MKPointAnnotation()
+//
+//		if let location = sourcePlacemark.location {
+//			sourceAnnotation.coordinate = location.coordinate
+//		}
+//
+//		let destinationAnnotation = MKPointAnnotation()
+//
+//		if let location = destinationPlacemark.location {
+//			destinationAnnotation.coordinate = location.coordinate
+//		}
+//
+//		//self.mapView.mkMapView.showAnnotations([sourceAnnotation,destinationAnnotation], animated: true )
+//
+//		let directionRequest = MKDirections.Request()
+//		directionRequest.source = sourceMapItem
+//		directionRequest.destination = destinationMapItem
+//		directionRequest.transportType = .any
+//
+//		// Calculate the direction
+//		let directions = MKDirections(request: directionRequest)
+//
+//		directions.calculate {
+//			(response, error) -> Void in
+//
+//			guard let response = response else {
+//				if let error = error {
+//					print("Error: \(error)")
+//				}
+//
+//				return
+//			}
+//
+//			let route = response.routes[0]
+//
+//			self.mapView.mkMapView.addOverlay((route.polyline), level: MKOverlayLevel.aboveLabels)
+//
+//			let rect = route.polyline.boundingMapRect
+//			self.mapView.mkMapView.setRegion(MKCoordinateRegion(rect), animated: true)
+//		}
+	}
 }
 
 //MARK: - Extensions
@@ -131,6 +232,22 @@ extension MapViewController: CLLocationManagerDelegate {
 
 extension MapViewController: MKMapViewDelegate {
 	//MARK: - Do magic here.
+	func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+//		if overlay is MKPolyline {
+//			var polylineRenderer = MKPolylineRenderer(overlay: overlay)
+//			polylineRenderer.strokeColor = UIColor.blue
+//			polylineRenderer.lineWidth = 2
+//			return polylineRenderer
+//		}
+//		return MKPolylineRenderer()
+//	}
+
+	let renderer = MKPolylineRenderer(overlay: overlay)
+	renderer.strokeColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
+	renderer.lineWidth = 2.0
+
+	return renderer
+	}
 }
 
 extension MapViewController: MapViewDelegate {
