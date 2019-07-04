@@ -70,6 +70,8 @@
 		CEB6A06222CD6B84008D36CB /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6A06122CD6B84008D36CB /* ShopViewController.swift */; };
 		CEB6A06422CD6C6F008D36CB /* BuytedInventoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6A06322CD6C6F008D36CB /* BuytedInventoryViewCell.swift */; };
 		CEB6A06622CD6C75008D36CB /* BuyedInventoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6A06522CD6C75008D36CB /* BuyedInventoryViewCell.xib */; };
+		CEB6A06822CE3768008D36CB /* InventoryWithoutTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB6A06722CE3767008D36CB /* InventoryWithoutTripViewController.swift */; };
+		CEB6A06A22CE391E008D36CB /* InventoryWithoutTripViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB6A06922CE391E008D36CB /* InventoryWithoutTripViewController.xib */; };
 		CEC10A3622AF14FF00EC307D /* DateFormatter+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3522AF14FF00EC307D /* DateFormatter+String.swift */; };
 		CEC10A3922AF27B500EC307D /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC10A3822AF27B500EC307D /* ActivityView.swift */; };
 		CEC10A3B22AF27C200EC307D /* ActivityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEC10A3A22AF27C200EC307D /* ActivityView.xib */; };
@@ -161,6 +163,8 @@
 		CEB6A06122CD6B84008D36CB /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		CEB6A06322CD6C6F008D36CB /* BuytedInventoryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuytedInventoryViewCell.swift; sourceTree = "<group>"; };
 		CEB6A06522CD6C75008D36CB /* BuyedInventoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyedInventoryViewCell.xib; sourceTree = "<group>"; };
+		CEB6A06722CE3767008D36CB /* InventoryWithoutTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryWithoutTripViewController.swift; sourceTree = "<group>"; };
+		CEB6A06922CE391E008D36CB /* InventoryWithoutTripViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryWithoutTripViewController.xib; sourceTree = "<group>"; };
 		CEC10A3522AF14FF00EC307D /* DateFormatter+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+String.swift"; sourceTree = "<group>"; };
 		CEC10A3822AF27B500EC307D /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		CEC10A3A22AF27C200EC307D /* ActivityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityView.xib; sourceTree = "<group>"; };
@@ -542,6 +546,8 @@
 				CEB6A06322CD6C6F008D36CB /* BuytedInventoryViewCell.swift */,
 				CEB6A06522CD6C75008D36CB /* BuyedInventoryViewCell.xib */,
 				CEB6A06122CD6B84008D36CB /* ShopViewController.swift */,
+				CEB6A06722CE3767008D36CB /* InventoryWithoutTripViewController.swift */,
+				CEB6A06922CE391E008D36CB /* InventoryWithoutTripViewController.xib */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -701,6 +707,7 @@
 				CEB0AF2A22A8DA2A000014AB /* Montserrat Medium.otf in Resources */,
 				CEC10A3B22AF27C200EC307D /* ActivityView.xib in Resources */,
 				CEB0AF2E22A8DA2A000014AB /* Montserrat-SemiBold.otf in Resources */,
+				CEB6A06A22CE391E008D36CB /* InventoryWithoutTripViewController.xib in Resources */,
 				CE9FEA9C22A472E9007E48D8 /* LaunchScreen.storyboard in Resources */,
 				CEB0AF2C22A8DA2A000014AB /* Montserrat-ExtraBold.otf in Resources */,
 				CEB6A06622CD6C75008D36CB /* BuyedInventoryViewCell.xib in Resources */,
@@ -790,6 +797,7 @@
 				CEF32F0C22B0CE9300B2831C /* InventoryViewController.swift in Sources */,
 				7212D4AC22CC784D008460D7 /* UIButton+Custom.swift in Sources */,
 				CEF32F0622B0BF8000B2831C /* UIStackView+ViewManage.swift in Sources */,
+				CEB6A06822CE3768008D36CB /* InventoryWithoutTripViewController.swift in Sources */,
 				72E62BDA22C87A3100C4E3F5 /* CoordinateManager.swift in Sources */,
 				72E62BA322C4268E00C4E3F5 /* ActivityDetailViewController.swift in Sources */,
 				72E62BD822C8771B00C4E3F5 /* Itineraries.swift in Sources */,

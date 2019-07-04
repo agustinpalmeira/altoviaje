@@ -11,7 +11,7 @@ import UIKit
 class PaymentViewController: UIViewController {
     var toPay: Int = 0
     var items: [Buyable] = []
-    var package: TripPackage!
+    var package: TripPackage?
     @IBOutlet weak var cvvTextField: UITextField!
     @IBOutlet weak var totalToPayLabel: UILabel!
     @IBOutlet weak var payButton: UIButton!
@@ -42,11 +42,14 @@ class PaymentViewController: UIViewController {
     }
 
     @IBAction func payAction(_ sender: Any) {
-        NotificationCenter.default.post(name: AltoViajeNotification.newTripBoocked.name, object: nil)
         let user = User.shared
         user.buyedItems.append(contentsOf: items)
-        user.trips.append(package)
+        if let aPackage = package {
+            NotificationCenter.default.post(name: AltoViajeNotification.newTripBoocked.name, object: nil)
+            user.trips.append(aPackage)
+        }
         navigationController?.popToRootViewController(animated: true)
+
     }
 
 }

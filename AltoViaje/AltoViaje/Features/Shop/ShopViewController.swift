@@ -22,10 +22,13 @@ class ShopViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        itemsTable.reloadData()
     }
 
     @IBAction func goToShop(_ sender: Any) {
+        let cartVC = InventoryWithoutTripViewController(nibName: "InventoryWithoutTripViewController", bundle: nil)
+        
+        navigationController?.pushViewController(cartVC, animated: true)
     }
 }
 
@@ -42,8 +45,7 @@ extension ShopViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let data: [[Buyable]] = [flights, housing, transports, equips]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: InventoryViewCell.identifier) as? InventoryViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BuyedInventoryViewCell.identifier) as? BuyedInventoryViewCell else {
             return UITableViewCell()
         }
 

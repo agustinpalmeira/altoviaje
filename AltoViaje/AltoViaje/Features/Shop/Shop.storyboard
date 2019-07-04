@@ -18,7 +18,6 @@
         <!--Shop View Controller-->
         <scene sceneID="hCd-vV-vix">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ag-7D-fRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="KHt-cv-ftJ" customClass="ShopViewController" customModule="AltoViaje" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dQQ-Qe-gQW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -28,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VPb-ju-3Zg">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="567"/>
                                 <color key="backgroundColor" white="0.92702907990000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="KHt-cv-ftJ" id="kSA-Lx-d9b"/>
@@ -36,7 +35,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOH-Pp-Cdn" userLabel="SwitchView">
-                                <rect key="frame" x="0.0" y="20" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Hsc-tc-3PH">
                                         <rect key="frame" x="10" y="23.5" width="355" height="33"/>
@@ -66,14 +65,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yVe-pW-KTV" firstAttribute="bottom" secondItem="VPb-ju-3Zg" secondAttribute="bottom" id="2Jr-WI-d82"/>
                             <constraint firstItem="t4E-dU-z6V" firstAttribute="top" secondItem="dQQ-Qe-gQW" secondAttribute="top" id="3FS-Xl-JFb"/>
                             <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="hOH-Pp-Cdn" secondAttribute="trailing" id="D4J-Lc-vaJ"/>
                             <constraint firstItem="hOH-Pp-Cdn" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="HJ0-92-tik"/>
-                            <constraint firstItem="VPb-ju-3Zg" firstAttribute="top" secondItem="hOH-Pp-Cdn" secondAttribute="bottom" id="M9y-10-api"/>
+                            <constraint firstItem="VPb-ju-3Zg" firstAttribute="bottom" secondItem="hOH-Pp-Cdn" secondAttribute="top" id="M9y-10-api"/>
                             <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="t4E-dU-z6V" secondAttribute="trailing" id="OGj-ZL-5Ig"/>
+                            <constraint firstItem="yVe-pW-KTV" firstAttribute="bottom" secondItem="hOH-Pp-Cdn" secondAttribute="bottom" id="QdD-Ge-enU"/>
                             <constraint firstItem="VPb-ju-3Zg" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="RNL-Xx-xAw"/>
-                            <constraint firstItem="hOH-Pp-Cdn" firstAttribute="top" secondItem="yVe-pW-KTV" secondAttribute="top" id="bHX-4A-obj"/>
+                            <constraint firstItem="VPb-ju-3Zg" firstAttribute="top" secondItem="yVe-pW-KTV" secondAttribute="top" id="hDm-HU-ZGx"/>
                             <constraint firstItem="yVe-pW-KTV" firstAttribute="bottom" secondItem="t4E-dU-z6V" secondAttribute="bottom" id="idH-Hi-hpH"/>
                             <constraint firstItem="t4E-dU-z6V" firstAttribute="leading" secondItem="yVe-pW-KTV" secondAttribute="leading" id="mOH-vI-u4g"/>
                             <constraint firstItem="yVe-pW-KTV" firstAttribute="trailing" secondItem="VPb-ju-3Zg" secondAttribute="trailing" id="y5O-0Z-KHa"/>
@@ -86,6 +85,7 @@
                         <outlet property="itemsTable" destination="VPb-ju-3Zg" id="IMc-vx-pyY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ag-7D-fRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-334" y="193"/>
         </scene>

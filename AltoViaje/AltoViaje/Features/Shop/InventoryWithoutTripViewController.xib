@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat Medium.otf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Bold.otf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InventoryWithoutTripViewController" customModule="AltoViaje" customModuleProvider="target">
+            <connections>
+                <outlet property="billView" destination="aTT-4P-77i" id="i2Q-83-aRB"/>
+                <outlet property="continueButton" destination="0O1-E6-fmL" id="U8U-Zy-8Ox"/>
+                <outlet property="itemsTable" destination="xwz-3q-yRX" id="iJ2-fG-InE"/>
+                <outlet property="toPayLabel" destination="Tag-Bi-1lx" id="fUF-qi-yyN"/>
+                <outlet property="view" destination="eW4-dB-14l" id="Sdg-Sy-8CX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="eW4-dB-14l">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundApp" translatesAutoresizingMaskIntoConstraints="NO" id="M8F-ut-uWT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xwz-3q-yRX">
+                    <rect key="frame" x="0.0" y="20" width="375" height="559.5"/>
+                    <color key="backgroundColor" white="0.92702907990000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="y4U-wr-Bgd"/>
+                        <outlet property="delegate" destination="-1" id="O6g-ez-zin"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTT-4P-77i">
+                    <rect key="frame" x="-2" y="579.5" width="379" height="93.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZa-5N-CDK">
+                            <rect key="frame" x="20" y="8" width="52" height="26"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$25000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tag-Bi-1lx">
+                            <rect key="frame" x="271" y="6" width="93" height="30"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O1-E6-fmL">
+                            <rect key="frame" x="40" y="45.5" width="299" height="33"/>
+                            <color key="backgroundColor" red="0.42745098040000001" green="0.5568627451" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                            <state key="normal" title="Continuar">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="proceedToBuy:" destination="-1" eventType="touchUpInside" id="O2N-Yv-Gqg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="HZa-5N-CDK" firstAttribute="top" secondItem="aTT-4P-77i" secondAttribute="top" constant="8" id="DJI-ZY-VTR"/>
+                        <constraint firstItem="0O1-E6-fmL" firstAttribute="leading" secondItem="aTT-4P-77i" secondAttribute="leading" constant="40" id="WTc-7Z-aqj"/>
+                        <constraint firstItem="HZa-5N-CDK" firstAttribute="leading" secondItem="aTT-4P-77i" secondAttribute="leading" constant="20" id="Z4a-NX-JFa"/>
+                        <constraint firstItem="Tag-Bi-1lx" firstAttribute="centerY" secondItem="HZa-5N-CDK" secondAttribute="centerY" id="hjP-fl-sGY"/>
+                        <constraint firstAttribute="trailing" secondItem="Tag-Bi-1lx" secondAttribute="trailing" constant="15" id="oWO-hX-B2k"/>
+                        <constraint firstAttribute="bottom" secondItem="0O1-E6-fmL" secondAttribute="bottom" constant="15" id="ofH-lc-UgB"/>
+                        <constraint firstAttribute="trailing" secondItem="0O1-E6-fmL" secondAttribute="trailing" constant="40" id="tFb-Be-7xQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uDQ-YC-t2g" firstAttribute="trailing" secondItem="M8F-ut-uWT" secondAttribute="trailing" id="4rQ-2x-e4a"/>
+                <constraint firstItem="uDQ-YC-t2g" firstAttribute="trailing" secondItem="xwz-3q-yRX" secondAttribute="trailing" id="86d-it-4OD"/>
+                <constraint firstItem="aTT-4P-77i" firstAttribute="height" secondItem="eW4-dB-14l" secondAttribute="height" multiplier="0.14" id="9yJ-sb-I48"/>
+                <constraint firstItem="aTT-4P-77i" firstAttribute="top" secondItem="xwz-3q-yRX" secondAttribute="bottom" id="HJz-S4-V1h"/>
+                <constraint firstItem="xwz-3q-yRX" firstAttribute="leading" secondItem="uDQ-YC-t2g" secondAttribute="leading" id="NIy-vT-Vs3"/>
+                <constraint firstItem="xwz-3q-yRX" firstAttribute="top" secondItem="uDQ-YC-t2g" secondAttribute="top" id="OPu-Ku-Sfh"/>
+                <constraint firstItem="uDQ-YC-t2g" firstAttribute="trailing" secondItem="aTT-4P-77i" secondAttribute="trailing" constant="-2" id="Tu1-LV-YcJ"/>
+                <constraint firstItem="uDQ-YC-t2g" firstAttribute="bottom" secondItem="M8F-ut-uWT" secondAttribute="bottom" id="UOY-8e-d7j"/>
+                <constraint firstItem="M8F-ut-uWT" firstAttribute="leading" secondItem="uDQ-YC-t2g" secondAttribute="leading" id="cRz-38-U7Q"/>
+                <constraint firstItem="aTT-4P-77i" firstAttribute="leading" secondItem="uDQ-YC-t2g" secondAttribute="leading" constant="-2" id="eGB-xZ-D3R"/>
+                <constraint firstItem="aTT-4P-77i" firstAttribute="bottom" secondItem="uDQ-YC-t2g" secondAttribute="bottom" constant="6" id="vNG-Dw-IyP"/>
+                <constraint firstItem="M8F-ut-uWT" firstAttribute="top" secondItem="eW4-dB-14l" secondAttribute="top" id="wYh-sN-AcH"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="uDQ-YC-t2g"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroundApp" width="254" height="497"/>
+    </resources>
+</document>
