@@ -18,7 +18,7 @@ class ShopViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Forma de Pago"
+        navigationItem.title = "Mi Carrito"
 
         itemsTable.register(UINib.init(nibName: "BuyedInventoryViewCell", bundle: nil), forCellReuseIdentifier: BuyedInventoryViewCell.identifier)
         NotificationCenter.default.addObserver(self, selector: #selector(newItemsBuyed), name: AltoViajeNotification.itemBuyed.name, object: nil)

@@ -10,11 +10,8 @@ import Foundation
 
 enum AltoViajeNotification: String {
     case newTripBoocked
-
+    case itemBuyed
     var name: Notification.Name {
-        switch self {
-        case .newTripBoocked:
-            return Notification.Name(self.rawValue)
-        }
+        return Notification.Name(self.rawValue)
     }
 }

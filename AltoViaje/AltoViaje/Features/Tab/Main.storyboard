@@ -85,11 +85,11 @@
             </objects>
             <point key="canvasLocation" x="1240" y="-821"/>
         </scene>
-        <!--Item-->
+        <!--Perfil-->
         <scene sceneID="i0Q-pN-weQ">
             <objects>
                 <navigationController id="rKu-gn-OZv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oJo-Bl-UhE"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="profile" id="oJo-Bl-UhE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VUr-G5-wqq">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -113,11 +113,11 @@
             </objects>
             <point key="canvasLocation" x="754" y="536"/>
         </scene>
-        <!--Item-->
+        <!--Carrito-->
         <scene sceneID="iZ0-4e-1t4">
             <objects>
                 <navigationController id="gao-Nv-ZMy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0YK-Yq-3DF"/>
+                    <tabBarItem key="tabBarItem" title="Carrito" image="carrito" id="0YK-Yq-3DF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dkc-It-Seg">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -143,8 +143,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="carrito" width="25" height="25"/>
         <image name="homeIcon" width="25" height="25"/>
         <image name="plane" width="25" height="25"/>
+        <image name="profile" width="25" height="25"/>
         <image name="userTab" width="15" height="15"/>
     </resources>
 </document>
