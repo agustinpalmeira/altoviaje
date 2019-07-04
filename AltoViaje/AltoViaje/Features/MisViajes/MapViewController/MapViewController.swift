@@ -65,16 +65,7 @@ class MapViewController: UIViewController {
 		mapView.setMapViewDelegate(self)
 
 		addCustomAnnotations()
-
 		setLocation(title: titleText, coordinate: tourCoordinate)
-
-		//		let location: CLLocationCoordinate2D =  CLLocationCoordinate2DMake(-41.1805557, -72.055416)
-		//		//let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(-34.6317146, -58.3737228) //Mi casita :)
-		//		//var span : MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-		//		let region = MKCoordinateRegion(center: location, latitudinalMeters: 10000, longitudinalMeters: 10000)
-		//		if CLLocationCoordinate2DIsValid (location) {
-		//			mapView.setRegion(region)
-		//		}
 	}
 
 	private func setLocation(title: String, coordinate: CLLocationCoordinate2D) {
@@ -121,13 +112,13 @@ class MapViewController: UIViewController {
 //		[-25.6837223, -54.4459691, 17],
 //		[-25.6852984, -54.4465314, 17]
 		//First
-		var annotation1 = MKPointAnnotation()
+		let annotation1 = MKPointAnnotation()
 		annotation1.coordinate = CLLocationCoordinate2DMake(-25.6842081, -54.445844)
 		annotation1.title = "Punto intermedio hacia las cataratas"
 		annotation1.subtitle = ""
 		mapView.mkMapView.addAnnotation(annotation1)
 
-		var annotation2 = MKPointAnnotation()
+		let annotation2 = MKPointAnnotation()
 		annotation2.coordinate = CLLocationCoordinate2DMake(-25.6852984, -54.4465314)
 		annotation2.title = "Fin recorrido a las cataratas"
 		annotation2.subtitle = ""
@@ -137,7 +128,7 @@ class MapViewController: UIViewController {
 		mapView.mkMapView.addOverlay(geodesic)
 
 		//Second
-		var annotation3 = MKPointAnnotation()
+		let annotation3 = MKPointAnnotation()
 		annotation3.coordinate = CLLocationCoordinate2DMake(-25.6837223, -54.4459691)
 		annotation3.title = "Comienzo recorrido a las cataratas"
 		annotation3.subtitle = ""
@@ -148,71 +139,74 @@ class MapViewController: UIViewController {
 
 		//Tronador
 		annotation1.coordinate = CLLocationCoordinate2DMake(-41.226620, -71.787543)
-		annotation1.title = "Comienzo recorrido Tronador"
+		annotation1.title = "Pampa Linda"
+		annotation1.subtitle = "Comiendo recorrido del Tronador"
 		mapView.mkMapView.addAnnotation(annotation1)
 
 		annotation2.coordinate = CLLocationCoordinate2DMake(-41.222170, -71.787740)
 		mapView.mkMapView.addAnnotation(annotation2)
+		annotation2.title = ""
 
 		annotation3.coordinate = CLLocationCoordinate2DMake(-41.219388, -71.787673)
 		annotation3.title = ""
 		mapView.mkMapView.addAnnotation(annotation3)
 
-		var annotation4 = MKPointAnnotation()
+		let annotation4 = MKPointAnnotation()
 		annotation4.coordinate = CLLocationCoordinate2DMake(-41.216797, -71.787341)
 		mapView.mkMapView.addAnnotation(annotation4)
 
-		var  annotation5 = MKPointAnnotation()
+		let  annotation5 = MKPointAnnotation()
 		annotation5.coordinate = CLLocationCoordinate2DMake(-41.208820, -71.788240)
 		mapView.mkMapView.addAnnotation(annotation5)
 
-		var annotation6 = MKPointAnnotation()
+		let annotation6 = MKPointAnnotation()
 		annotation6.coordinate = CLLocationCoordinate2DMake(-41.199709, -71.787983)
 		mapView.mkMapView.addAnnotation(annotation6)
 
-		var annotation7 = MKPointAnnotation()
+		let annotation7 = MKPointAnnotation()
 		annotation7.coordinate = CLLocationCoordinate2DMake(-41.189304, -71.788242)
 		mapView.mkMapView.addAnnotation(annotation7)
 
-		var annotation8 = MKPointAnnotation()
+		let annotation8 = MKPointAnnotation()
 		annotation8.coordinate = CLLocationCoordinate2DMake(-41.183712, -71.787519)
 		mapView.mkMapView.addAnnotation(annotation8)
 
-		var annotation9 = MKPointAnnotation()
+		let annotation9 = MKPointAnnotation()
 		annotation9.coordinate = CLLocationCoordinate2DMake(-41.177458, -71.789005)
 		mapView.mkMapView.addAnnotation(annotation9)
 
-		var annotation10 = MKPointAnnotation()
+		let annotation10 = MKPointAnnotation()
 		annotation10.coordinate = CLLocationCoordinate2DMake(-41.171526, -71.804267)
 		mapView.mkMapView.addAnnotation(annotation10)
 
-		var annotation11 = MKPointAnnotation()
+		let annotation11 = MKPointAnnotation()
 		annotation11.coordinate = CLLocationCoordinate2DMake(-41.173298, -71.812810)
 		mapView.mkMapView.addAnnotation(annotation11)
 
-		var annotation12 = MKPointAnnotation()
+		let annotation12 = MKPointAnnotation()
 		annotation12.coordinate = CLLocationCoordinate2DMake(-41.167705, -71.818693)
 		mapView.mkMapView.addAnnotation(annotation12)
 
-		var annotation13 = MKPointAnnotation()
+		let annotation13 = MKPointAnnotation()
 		annotation13.coordinate = CLLocationCoordinate2DMake(-41.164906, -71.817345)
 		mapView.mkMapView.addAnnotation(annotation13)
 
-		var annotation14 = MKPointAnnotation()
+		let annotation14 = MKPointAnnotation()
 		annotation14.coordinate = CLLocationCoordinate2DMake(-41.160798, -71.821771)
 		mapView.mkMapView.addAnnotation(annotation14)
 
-		var annotation15 = MKPointAnnotation()
+		let annotation15 = MKPointAnnotation()
 		annotation15.coordinate = CLLocationCoordinate2DMake(-41.156949, -71.825768)
 		mapView.mkMapView.addAnnotation(annotation15)
 
-		var annotation16 = MKPointAnnotation()
+		let annotation16 = MKPointAnnotation()
 		annotation16.coordinate = CLLocationCoordinate2DMake(-41.149739, -71.829594)
 		mapView.mkMapView.addAnnotation(annotation16)
 
-		var annotation17 = MKPointAnnotation()
+		let annotation17 = MKPointAnnotation()
 		annotation17.coordinate = CLLocationCoordinate2DMake(-41.151270, -71.836916)
-		annotation17.title = "Fin recorrido tronador"
+		annotation17.title = "Refugio Otto Meilling"
+		annotation17.subtitle = "Fin recorrido tronador"
 		mapView.mkMapView.addAnnotation(annotation17)
 
 		geodesic = MKGeodesicPolyline(coordinates: [annotation1.coordinate , annotation2.coordinate], count: 2)
@@ -275,7 +269,7 @@ extension MapViewController: CLLocationManagerDelegate {
 			// Zoom to user location
 			if let userLocation = locations.last {
 				let viewRegion = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
-				//mapView.setRegion(viewRegion)
+				mapView.setRegion(viewRegion)
 			}
 		}
 	}
@@ -284,20 +278,11 @@ extension MapViewController: CLLocationManagerDelegate {
 extension MapViewController: MKMapViewDelegate {
 	//MARK: - Do magic here.
 	func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-//		if overlay is MKPolyline {
-//			var polylineRenderer = MKPolylineRenderer(overlay: overlay)
-//			polylineRenderer.strokeColor = UIColor.blue
-//			polylineRenderer.lineWidth = 2
-//			return polylineRenderer
-//		}
-//		return MKPolylineRenderer()
-//	}
+		let renderer = MKPolylineRenderer(overlay: overlay)
+		renderer.strokeColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
+		renderer.lineWidth = 2.0
 
-	let renderer = MKPolylineRenderer(overlay: overlay)
-	renderer.strokeColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
-	renderer.lineWidth = 2.0
-
-	return renderer
+		return renderer
 	}
 }
 
