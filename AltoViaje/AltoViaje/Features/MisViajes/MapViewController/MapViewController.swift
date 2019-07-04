@@ -117,31 +117,34 @@ class MapViewController: UIViewController {
 	private func addCustomAnnotations() {
 
 		//Bariloche
-
+//		[-25.6842081, -54.4458484, 17],
+//		[-25.6837223, -54.4459691, 17],
+//		[-25.6852984, -54.4465314, 17]
 		//First
 		var annotation1 = MKPointAnnotation()
 		annotation1.coordinate = CLLocationCoordinate2DMake(-25.6842081, -54.445844)
-		annotation1.title = "Comienzo recorrido a las cataratas"
+		annotation1.title = "Punto intermedio hacia las cataratas"
 		annotation1.subtitle = ""
 		mapView.mkMapView.addAnnotation(annotation1)
 
 		var annotation2 = MKPointAnnotation()
-		annotation2.coordinate = CLLocationCoordinate2DMake(-25.6837223, -54.4459691)
+		annotation2.coordinate = CLLocationCoordinate2DMake(-25.6852984, -54.4465314)
 		annotation2.title = "Fin recorrido a las cataratas"
 		annotation2.subtitle = ""
 		mapView.mkMapView.addAnnotation(annotation2)
 
-		var points: [CLLocationCoordinate2D]
-
-		let geodesic = MKGeodesicPolyline(coordinates: [annotation1.coordinate , annotation2.coordinate ], count: 2)
+		var geodesic = MKGeodesicPolyline(coordinates: [annotation1.coordinate , annotation2.coordinate], count: 2)
 		mapView.mkMapView.addOverlay(geodesic)
 
-		let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-		//let region1 = MKCoordinateRegion(center: point1, span: span)
-		//self.mapView.mkMapView.setRegion(region1, animated: true)
+		//Second
+		var annotation3 = MKPointAnnotation()
+		annotation3.coordinate = CLLocationCoordinate2DMake(-25.6837223, -54.4459691)
+		annotation3.title = "Comienzo recorrido a las cataratas"
+		annotation3.subtitle = ""
+		mapView.mkMapView.addAnnotation(annotation3)
 
-		//let point3 = CLLocationCoordinate2DMake(-25.6852984, -54.4465314);
-		//points = [point2, point3]
+		geodesic = MKGeodesicPolyline(coordinates: [annotation1.coordinate , annotation3.coordinate], count: 2)
+		mapView.mkMapView.addOverlay(geodesic)
 
 
 
